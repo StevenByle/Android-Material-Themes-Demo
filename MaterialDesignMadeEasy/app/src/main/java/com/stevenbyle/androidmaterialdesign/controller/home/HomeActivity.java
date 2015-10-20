@@ -1,4 +1,4 @@
-package com.stevenbyle.androidmaterialdesign;
+package com.stevenbyle.androidmaterialdesign.controller.home;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.stevenbyle.androidmaterialdesign.R;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

@@ -1,4 +1,4 @@
-package com.stevenbyle.androidmaterialdesign;
+package com.stevenbyle.androidmaterialdesign.controller;
 
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -18,6 +18,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+
+import com.stevenbyle.androidmaterialdesign.R;
 
 public class MaterialComponentsActivity extends AppCompatActivity {
 
