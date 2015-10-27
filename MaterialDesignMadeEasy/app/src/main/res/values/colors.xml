@@ -2,20 +2,16 @@
 <resources>
 
     <!-- Material Color Palette -->
-    <color name="material_green_050">#E8F5E9</color>
-    <color name="material_green_100">#C8E6C9</color>
-    <color name="material_green_200">#A5D6A7</color>
-    <color name="material_green_300">#81C784</color>
-    <color name="material_green_400">#66BB6A</color>
-    <color name="material_green_500">#4CAF50</color>
-    <color name="material_green_600">#43A047</color>
-    <color name="material_green_700">#388E3C</color>
-    <color name="material_green_800">#2E7D32</color>
-    <color name="material_green_900">#1B5E20</color>
-    <color name="material_green_a100">#B9F6CA</color>
-    <color name="material_green_a200">#69F0AE</color>
-    <color name="material_green_a400">#00E676</color>
-    <color name="material_green_a700">#00C853</color>
+    <color name="material_gray_050">#FAFAFA</color>
+    <color name="material_gray_100">#F5F5F5</color>
+    <color name="material_gray_200">#EEEEEE</color>
+    <color name="material_gray_300">#E0E0E0</color>
+    <color name="material_gray_400">#BDBDBD</color>
+    <color name="material_gray_500">#9E9E9E</color>
+    <color name="material_gray_600">#757575</color>
+    <color name="material_gray_700">#616161</color>
+    <color name="material_gray_800">#424242</color>
+    <color name="material_gray_900">#212121</color>
 
     <color name="material_red_050">#FFEBEE</color>
     <color name="material_red_100">#FFCDD2</color>
@@ -32,16 +28,35 @@
     <color name="material_red_a400">#FF1744</color>
     <color name="material_red_a700">#D50000</color>
 
-    <color name="material_gray_050">#FAFAFA</color>
-    <color name="material_gray_100">#F5F5F5</color>
-    <color name="material_gray_200">#EEEEEE</color>
-    <color name="material_gray_300">#E0E0E0</color>
-    <color name="material_gray_400">#BDBDBD</color>
-    <color name="material_gray_500">#9E9E9E</color>
-    <color name="material_gray_600">#757575</color>
-    <color name="material_gray_700">#616161</color>
-    <color name="material_gray_800">#424242</color>
-    <color name="material_gray_900">#212121</color>
+    <color name="material_green_050">#E8F5E9</color>
+    <color name="material_green_100">#C8E6C9</color>
+    <color name="material_green_200">#A5D6A7</color>
+    <color name="material_green_300">#81C784</color>
+    <color name="material_green_400">#66BB6A</color>
+    <color name="material_green_500">#4CAF50</color>
+    <color name="material_green_600">#43A047</color>
+    <color name="material_green_700">#388E3C</color>
+    <color name="material_green_800">#2E7D32</color>
+    <color name="material_green_900">#1B5E20</color>
+    <color name="material_green_a100">#B9F6CA</color>
+    <color name="material_green_a200">#69F0AE</color>
+    <color name="material_green_a400">#00E676</color>
+    <color name="material_green_a700">#00C853</color>
+
+    <color name="material_blue_050">#E3F2FD</color>
+    <color name="material_blue_100">#BBDEFB</color>
+    <color name="material_blue_200">#90CAF9</color>
+    <color name="material_blue_300">#64B5F6</color>
+    <color name="material_blue_400">#42A5F5</color>
+    <color name="material_blue_500">#2196F3</color>
+    <color name="material_blue_600">#1E88E5</color>
+    <color name="material_blue_700">#1976D2</color>
+    <color name="material_blue_800">#1565C0</color>
+    <color name="material_blue_900">#0D47A1</color>
+    <color name="material_blue_a100">#82B1FF</color>
+    <color name="material_blue_a200">#448AFF</color>
+    <color name="material_blue_a400">#2979FF</color>
+    <color name="material_blue_a700">#2962FF</color>
 
     <!-- Selectors -->
     <color name="selector_normal">@android:color/transparent</color>

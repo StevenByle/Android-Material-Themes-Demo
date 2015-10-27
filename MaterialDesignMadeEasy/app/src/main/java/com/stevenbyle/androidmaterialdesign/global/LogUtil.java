@@ -1,4 +1,4 @@
-package com.stevenbyle.androidmaterialdesign.controller.home;
+package com.stevenbyle.androidmaterialdesign.global;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

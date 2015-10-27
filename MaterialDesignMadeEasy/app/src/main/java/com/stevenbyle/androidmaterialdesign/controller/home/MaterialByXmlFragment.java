@@ -6,29 +6,29 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.stevenbyle.androidmaterialdesign.BuildConfig;
 import com.stevenbyle.androidmaterialdesign.R;
-import com.stevenbyle.androidmaterialdesign.controller.home.LogUtil.LogLevel;
+import com.stevenbyle.androidmaterialdesign.global.LogUtil;
+import com.stevenbyle.androidmaterialdesign.global.LogUtil.LogLevel;
 
 /**
  * TODO
  */
-public class MaterialComponentsFragment extends Fragment {
-    private static final String TAG = LogUtil.generateTag(MaterialComponentsFragment.class);
+public class MaterialByXmlFragment extends Fragment {
+    private static final String TAG = LogUtil.generateTag(MaterialByXmlFragment.class);
 
     private static final String KEY_ARG_THEMING_METHOD = "KEY_ARG_THEMING_METHOD";
 
     private ThemingMethod mThemingMethod;
 
-    public static MaterialComponentsFragment newInstance(ThemingMethod themingMethod) {
+    public static MaterialByXmlFragment newInstance(ThemingMethod themingMethod) {
         if (BuildConfig.DEBUG) {
             LogUtil.logMessage(LogLevel.DEBUG, TAG, "newInstance");
         }
 
         // Create a new fragment instance
-        MaterialComponentsFragment fragment = new MaterialComponentsFragment();
+        MaterialByXmlFragment fragment = new MaterialByXmlFragment();
 
         // Get arguments passed in, if any
         Bundle args = fragment.getArguments();
@@ -88,10 +88,10 @@ public class MaterialComponentsFragment extends Fragment {
         }
 
         // Inflate the fragment layout into the container
-        View fragmentView = inflater.inflate(R.layout.fragment_material_components, container, false);
+        View fragmentView = inflater.inflate(R.layout.fragment_material_by_xml, container, false);
 
         // Reference views
-        TextView textView = (TextView) fragmentView.findViewById(R.id.section_label);
+
 
         // Set and bind data to views
 

@@ -1,51 +1,127 @@
 <resources>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <!-- AppCompat attributes -->
-        <item name="colorPrimary">@color/material_green_500</item>
-        <item name="colorPrimaryDark">@color/material_green_700</item>
-        <item name="colorAccent">@color/material_green_a200</item>
-        <item name="colorControlNormal">@color/material_green_500</item>
-        <item name="colorControlActivated">@color/material_green_500</item>
-        <item name="colorControlHighlight">@color/selector_gray_pressed</item>
-        <item name="colorButtonNormal">@color/material_green_500</item>
-        <item name="colorSwitchThumbNormal">@color/material_green_500</item>
-        <item name="dialogTheme">@style/AppTheme.Dialog.Green</item>
-        <item name="alertDialogTheme">@style/AppTheme.AlertDialog.Green</item>
-    </style>
+    <!-- Base App Theme -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
 
-    <style name="AppTheme.NoActionBar">
+        <!-- Remove action bar, since toolbar is being used -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!-- App Theme -->
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+
+
+    <!-- App Theme Variants -->
+    <style name="AppTheme.Red">
+        <item name="colorPrimary">@color/material_red_500</item>
+        <item name="colorPrimaryDark">@color/material_red_700</item>
+        <item name="colorAccent">@color/material_red_a200</item>
+        <item name="colorButtonNormal">@color/material_red_500</item>
+        <item name="colorSwitchThumbNormal">@color/material_red_500</item>
+        <item name="colorControlNormal">@color/material_red_500</item>
+        <item name="colorControlActivated">@color/material_red_500</item>
+        <item name="colorControlHighlight">@color/material_red_700</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog.Red</item>
+        <item name="alertDialogTheme">@style/AppTheme.AlertDialog.Red</item>
+    </style>
+
+    <style name="AppTheme.Green">
+        <item name="colorPrimary">@color/material_green_500</item>
+        <item name="colorPrimaryDark">@color/material_green_700</item>
+        <item name="colorAccent">@color/material_green_a200</item>
+        <item name="colorButtonNormal">@color/material_green_500</item>
+        <item name="colorSwitchThumbNormal">@color/material_green_500</item>
+        <item name="colorControlNormal">@color/material_green_500</item>
+        <item name="colorControlActivated">@color/material_green_500</item>
+        <item name="colorControlHighlight">@color/material_green_700</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog.Green</item>
+        <item name="alertDialogTheme">@style/AppTheme.AlertDialog.Green</item>
+    </style>
+
+    <style name="AppTheme.Blue">
+        <item name="colorPrimary">@color/material_blue_500</item>
+        <item name="colorPrimaryDark">@color/material_blue_700</item>
+        <item name="colorAccent">@color/material_blue_a200</item>
+        <item name="colorButtonNormal">@color/material_blue_500</item>
+        <item name="colorSwitchThumbNormal">@color/material_blue_500</item>
+        <item name="colorControlNormal">@color/material_blue_500</item>
+        <item name="colorControlActivated">@color/material_blue_500</item>
+        <item name="colorControlHighlight">@color/material_blue_700</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog.Blue</item>
+        <item name="alertDialogTheme">@style/AppTheme.AlertDialog.Blue</item>
+    </style>
+
+
+    <!-- Control Themes -->
+    <style name="AppTheme.Control">
+    </style>
+
+    <style name="AppTheme.Control.Red">
+        <item name="colorButtonNormal">@color/material_red_500</item>
+        <item name="colorSwitchThumbNormal">@color/material_red_500</item>
+        <item name="colorControlNormal">@color/material_red_500</item>
+        <item name="colorControlActivated">@color/material_red_500</item>
+        <item name="colorControlHighlight">@color/material_red_700</item>
+    </style>
+
+    <style name="AppTheme.Control.Green">
+        <item name="colorButtonNormal">@color/material_green_500</item>
+        <item name="colorSwitchThumbNormal">@color/material_green_500</item>
+        <item name="colorControlNormal">@color/material_green_500</item>
+        <item name="colorControlActivated">@color/material_green_500</item>
+        <item name="colorControlHighlight">@color/material_green_700</item>
+    </style>
+
+    <style name="AppTheme.Control.Blue">
+        <item name="colorButtonNormal">@color/material_blue_500</item>
+        <item name="colorSwitchThumbNormal">@color/material_blue_500</item>
+        <item name="colorControlNormal">@color/material_blue_500</item>
+        <item name="colorControlActivated">@color/material_blue_500</item>
+        <item name="colorControlHighlight">@color/material_blue_700</item>
+    </style>
+
+
     <!-- AppBar Overlay Themes -->
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
 
     <!-- Popup Overlay Themes -->
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
+
     <!-- Dialog Themes -->
     <style name="AppTheme.Dialog" parent="Theme.AppCompat.Light.Dialog">
-    </style>
-
-    <style name="AppTheme.Dialog.Green">
-        <item name="colorAccent">@color/material_green_500</item>
     </style>
 
     <style name="AppTheme.Dialog.Red">
         <item name="colorAccent">@color/material_red_500</item>
     </style>
 
+    <style name="AppTheme.Dialog.Green">
+        <item name="colorAccent">@color/material_green_500</item>
+    </style>
+
+    <style name="AppTheme.Dialog.Blue">
+        <item name="colorAccent">@color/material_blue_500</item>
+    </style>
+
+
+    <!-- AlertDialog Themes -->
     <style name="AppTheme.AlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+    </style>
+
+    <style name="AppTheme.AlertDialog.Red">
+        <item name="colorAccent">@color/material_red_500</item>
     </style>
 
     <style name="AppTheme.AlertDialog.Green">
         <item name="colorAccent">@color/material_green_500</item>
     </style>
 
-    <style name="AppTheme.AlertDialog.Red">
-        <item name="colorAccent">@color/material_red_500</item>
+    <style name="AppTheme.AlertDialog.Blue">
+        <item name="colorAccent">@color/material_blue_500</item>
     </style>
 
 </resources>
