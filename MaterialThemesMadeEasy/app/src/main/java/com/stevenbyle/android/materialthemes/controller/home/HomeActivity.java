@@ -1,4 +1,4 @@
-package com.stevenbyle.androidmaterialdesign.controller.home;
+package com.stevenbyle.android.materialthemes.controller.home;
 
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -13,7 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.stevenbyle.androidmaterialdesign.R;
+import com.stevenbyle.android.materialthemes.R;
 
 public class HomeActivity extends AppCompatActivity {
 

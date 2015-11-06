@@ -1,4 +1,4 @@
-package com.stevenbyle.androidmaterialdesign;
+package com.stevenbyle.android.materialthemes;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.stevenbyle.androidmaterialdesign.controller.home;
+package com.stevenbyle.android.materialthemes.controller.home;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,10 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.stevenbyle.androidmaterialdesign.BuildConfig;
-import com.stevenbyle.androidmaterialdesign.R;
-import com.stevenbyle.androidmaterialdesign.global.LogUtil;
-import com.stevenbyle.androidmaterialdesign.global.LogUtil.LogLevel;
+import com.stevenbyle.android.materialthemes.BuildConfig;
+import com.stevenbyle.android.materialthemes.R;
+import com.stevenbyle.android.materialthemes.global.LogUtil;
+import com.stevenbyle.android.materialthemes.global.LogUtil.LogLevel;
 
 /**
  * TODO

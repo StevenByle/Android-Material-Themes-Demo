@@ -1,12 +1,12 @@
-package com.stevenbyle.androidmaterialdesign.controller.home;
+package com.stevenbyle.android.materialthemes.controller.home;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.stevenbyle.androidmaterialdesign.R;
-import com.stevenbyle.androidmaterialdesign.controller.home.MaterialByXmlFragment.ThemingMethod;
+import com.stevenbyle.android.materialthemes.R;
+import com.stevenbyle.android.materialthemes.controller.home.MaterialByXmlFragment.ThemingMethod;
 
 import java.lang.ref.WeakReference;
 

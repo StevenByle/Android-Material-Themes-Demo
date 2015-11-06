@@ -1,6 +1,6 @@
 <resources>
     <!-- Global app -->
-    <string name="app_name">Material Design Made Easy</string>
+    <string name="app_name">Material Themes Made Easy</string>
 
     <!-- Menu actions -->
     <string name="action_settings">Settings</string>
