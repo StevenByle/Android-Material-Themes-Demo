@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.stevenbyle.android.materialthemes.R;
-import com.stevenbyle.android.materialthemes.controller.home.MaterialByXmlFragment.ThemingMethod;
+import com.stevenbyle.android.materialthemes.controller.home.MaterialThemeFragment.ThemingMethod;
 
 import java.lang.ref.WeakReference;
 
@@ -27,7 +27,7 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        return MaterialByXmlFragment.newInstance(ThemingMethod.XML);
+        return MaterialThemeFragment.newInstance(ThemingMethod.XML);
     }
 
     @Override

@@ -15,20 +15,20 @@ import com.stevenbyle.android.materialthemes.global.LogUtil.LogLevel;
 /**
  * TODO
  */
-public class MaterialByXmlFragment extends Fragment {
-    private static final String TAG = LogUtil.generateTag(MaterialByXmlFragment.class);
+public class MaterialThemeFragment extends Fragment {
+    private static final String TAG = LogUtil.generateTag(MaterialThemeFragment.class);
 
     private static final String KEY_ARG_THEMING_METHOD = "KEY_ARG_THEMING_METHOD";
 
     private ThemingMethod mThemingMethod;
 
-    public static MaterialByXmlFragment newInstance(ThemingMethod themingMethod) {
+    public static MaterialThemeFragment newInstance(ThemingMethod themingMethod) {
         if (BuildConfig.DEBUG) {
             LogUtil.logMessage(LogLevel.DEBUG, TAG, "newInstance");
         }
 
         // Create a new fragment instance
-        MaterialByXmlFragment fragment = new MaterialByXmlFragment();
+        MaterialThemeFragment fragment = new MaterialThemeFragment();
 
         // Get arguments passed in, if any
         Bundle args = fragment.getArguments();
@@ -88,7 +88,7 @@ public class MaterialByXmlFragment extends Fragment {
         }
 
         // Inflate the fragment layout into the container
-        View fragmentView = inflater.inflate(R.layout.fragment_material_by_xml, container, false);
+        View fragmentView = inflater.inflate(R.layout.fragment_theme_by_xml, container, false);
 
         // Reference views
 

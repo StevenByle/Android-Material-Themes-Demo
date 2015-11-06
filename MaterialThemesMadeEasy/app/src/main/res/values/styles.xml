@@ -2,13 +2,14 @@
 
     <!-- Base App Theme -->
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-
         <!-- Remove action bar, since toolbar is being used -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
+
     <!-- App Theme -->
+    <!-- FIXME FIGURE OUT INHERITANCE -->
     <style name="AppTheme" parent="AppBaseTheme">
     </style>
 
@@ -124,4 +125,27 @@
         <item name="colorAccent">@color/material_blue_500</item>
     </style>
 
+
+    <!-- Button Styles -->
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+    </style>
+
+    <style name="ButtonStyle.Borderless" parent="Widget.AppCompat.Button.Borderless">
+    </style>
+
+
+    <!-- CardView Styles -->
+    <style name="CardViewStyle" parent="CardView.Light">
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="contentPaddingBottom">@dimen/content_vertical_spacing</item>
+        <item name="contentPaddingLeft">@dimen/content_horizontal_spacing</item>
+        <item name="contentPaddingRight">@dimen/content_horizontal_spacing</item>
+        <item name="contentPaddingTop">@dimen/content_vertical_spacing</item>
+        <item name="android:layout_marginBottom">@dimen/material_element_spacing_small</item>
+        <item name="android:layout_marginLeft">@dimen/screen_horizontal_spacing</item>
+        <item name="android:layout_marginRight">@dimen/screen_horizontal_spacing</item>
+        <item name="android:layout_marginTop">@dimen/material_element_spacing_small</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
 </resources>
