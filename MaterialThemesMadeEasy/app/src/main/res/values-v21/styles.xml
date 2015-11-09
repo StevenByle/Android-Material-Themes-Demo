@@ -1,6 +1,7 @@
 <resources>>
 
-    <style name="AppTheme" parent="AppBaseTheme">
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <!-- Base App Theme, v21+ -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
     </style>
+
 </resources>

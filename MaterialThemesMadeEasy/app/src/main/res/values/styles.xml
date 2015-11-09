@@ -2,15 +2,17 @@
 
     <!-- Base App Theme -->
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Remove action bar, since toolbar is being used -->
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
     </style>
 
 
     <!-- App Theme -->
     <!-- FIXME FIGURE OUT INHERITANCE -->
     <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- Remove action bar, since toolbar is being used -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
     </style>
 
 
