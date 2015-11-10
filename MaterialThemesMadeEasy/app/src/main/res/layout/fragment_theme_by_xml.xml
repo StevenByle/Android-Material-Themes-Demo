@@ -245,20 +245,20 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/material_element_spacing_small"
+                        android:layout_marginTop="@dimen/material_element_spacing_medium"
                         android:text="Current Theme"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/material_element_spacing_small"
+                        android:layout_marginTop="@dimen/material_element_spacing_medium"
                         android:text="Green Theme"
                         android:theme="@style/AppTheme.Green"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/material_element_spacing_small"
+                        android:layout_marginTop="@dimen/material_element_spacing_medium"
                         android:text="Blue Theme"
                         android:theme="@style/AppTheme.Blue"/>
                 </RadioGroup>
@@ -284,20 +284,20 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
                     android:text="Current Theme"/>
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
                     android:text="Green Theme"
                     android:theme="@style/AppTheme.Green"/>
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
                     android:text="Blue Theme"
                     android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
@@ -322,20 +322,23 @@
                 <Switch
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:switchPadding="@dimen/material_element_spacing_extra_small"
                     android:text="Current Theme"/>
 
                 <Switch
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:switchPadding="@dimen/material_element_spacing_extra_small"
                     android:text="Green Theme"
                     android:theme="@style/AppTheme.Green"/>
 
                 <Switch
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:switchPadding="@dimen/material_element_spacing_extra_small"
                     android:text="Blue Theme"
                     android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
