@@ -28,6 +28,21 @@
     <color name="material_red_a400">#FF1744</color>
     <color name="material_red_a700">#D50000</color>
 
+    <color name="material_orange_050">#FFF3E0</color>
+    <color name="material_orange_100">#FFE0B2</color>
+    <color name="material_orange_200">#FFCC80</color>
+    <color name="material_orange_300">#FFB74D</color>
+    <color name="material_orange_400">#FFA726</color>
+    <color name="material_orange_500">#FF9800</color>
+    <color name="material_orange_600">#FB8C00</color>
+    <color name="material_orange_700">#F57C00</color>
+    <color name="material_orange_800">#EF6C00</color>
+    <color name="material_orange_900">#E65100</color>
+    <color name="material_orange_a100">#FFD180</color>
+    <color name="material_orange_a200">#FFAB40</color>
+    <color name="material_orange_a400">#FF9100</color>
+    <color name="material_orange_a700">#FF6D00</color>
+
     <color name="material_green_050">#E8F5E9</color>
     <color name="material_green_100">#C8E6C9</color>
     <color name="material_green_200">#A5D6A7</color>

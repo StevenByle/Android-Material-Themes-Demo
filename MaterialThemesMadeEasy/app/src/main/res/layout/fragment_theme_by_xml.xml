@@ -34,44 +34,91 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Current Theme"/>
+                    android:text="Current Theme (Standard)"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Green Theme"
-                    android:theme="@style/AppTheme.Control.Green"/>
+                    android:text="Green Theme (Standard)"
+                    android:theme="@style/AppTheme.Green"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Blue Theme"
-                    android:theme="@style/AppTheme.Control.Blue"/>
+                    android:text="Blue Theme (Standard)"
+                    android:theme="@style/AppTheme.Blue"/>
 
                 <Button
-                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    style="@style/ButtonStyle.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Current Theme (borderless)"/>
+                    android:text="Current Theme (Colored)"/>
 
                 <Button
-                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    style="@style/ButtonStyle.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Green Theme (borderless)"
-                    android:theme="@style/AppTheme.Control.Green"/>
+                    android:text="Green Theme (Colored)"
+                    android:theme="@style/AppTheme.Green"/>
 
                 <Button
-                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    style="@style/ButtonStyle.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Blue Theme (borderless)"
-                    android:theme="@style/AppTheme.Control.Blue"/>
+                    android:text="Blue Theme (Colored)"
+                    android:theme="@style/AppTheme.Blue"/>
+
+                <Button
+                    style="@style/ButtonStyle.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Current Theme (Borderless)"/>
+
+                <Button
+                    style="@style/ButtonStyle.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Green Theme (Borderless)"
+                    android:theme="@style/AppTheme.Green"/>
+
+                <Button
+                    style="@style/ButtonStyle.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Blue Theme (Borderless)"
+                    android:theme="@style/AppTheme.Blue"/>
+
+                <Button
+                    style="@style/ButtonStyle.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Current Theme (Borderless Colored)"/>
+
+                <Button
+                    style="@style/ButtonStyle.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Green Theme (Borderless Colored)"
+                    android:theme="@style/AppTheme.Green"/>
+
+                <Button
+                    style="@style/ButtonStyle.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Blue Theme (Borderless Colored)"
+                    android:theme="@style/AppTheme.Blue"/>
+
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -120,14 +167,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:hint="Green Theme"
-                    android:theme="@style/AppTheme.Control.Green"/>
+                    android:theme="@style/AppTheme.Green"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:hint="Blue Theme"
-                    android:theme="@style/AppTheme.Control.Blue"/>
+                    android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -163,14 +210,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/material_element_spacing_small"
                         android:text="Green Theme"
-                        android:theme="@style/AppTheme.Control.Green"/>
+                        android:theme="@style/AppTheme.Green"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/material_element_spacing_small"
                         android:text="Blue Theme"
-                        android:theme="@style/AppTheme.Control.Blue"/>
+                        android:theme="@style/AppTheme.Blue"/>
                 </RadioGroup>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -202,14 +249,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:text="Green Theme"
-                    android:theme="@style/AppTheme.Control.Green"/>
+                    android:theme="@style/AppTheme.Green"/>
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:text="Blue Theme"
-                    android:theme="@style/AppTheme.Control.Blue"/>
+                    android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -240,14 +287,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:text="Green Theme"
-                    android:theme="@style/AppTheme.Control.Green"/>
+                    android:theme="@style/AppTheme.Green"/>
 
                 <Switch
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:text="Blue Theme"
-                    android:theme="@style/AppTheme.Control.Blue"/>
+                    android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -278,14 +325,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:text="Green Theme"
-                    android:theme="@style/AppTheme.Control.Green"/>
+                    android:theme="@style/AppTheme.Green"/>
 
                 <Spinner
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:text="Blue Theme"
-                    android:theme="@style/AppTheme.Control.Blue"/>
+                    android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -316,14 +363,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:text="Green Theme"
-                    android:theme="@style/AppTheme.Control.Green"/>
+                    android:theme="@style/AppTheme.Green"/>
 
                 <SeekBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:text="Blue Theme"
-                    android:theme="@style/AppTheme.Control.Blue"/>
+                    android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -356,7 +403,7 @@
                     android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:indeterminate="true"
                     android:text="Green Theme"
-                    android:theme="@style/AppTheme.Control.Green"/>
+                    android:theme="@style/AppTheme.Green"/>
 
                 <ProgressBar
                     android:layout_width="wrap_content"
@@ -364,7 +411,7 @@
                     android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:indeterminate="true"
                     android:text="Blue Theme"
-                    android:theme="@style/AppTheme.Control.Blue"/>
+                    android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 

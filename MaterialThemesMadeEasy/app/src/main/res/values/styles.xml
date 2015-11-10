@@ -6,7 +6,6 @@
 
 
     <!-- App Theme -->
-    <!-- FIXME FIGURE OUT INHERITANCE -->
     <style name="AppTheme" parent="AppBaseTheme">
 
         <!-- Remove action bar, since toolbar is being used -->
@@ -16,73 +15,38 @@
     </style>
 
 
-    <!-- App Theme Variants -->
+    <!-- App Theme Variants TODO -->
     <style name="AppTheme.Red">
         <item name="colorPrimary">@color/material_red_500</item>
         <item name="colorPrimaryDark">@color/material_red_700</item>
         <item name="colorAccent">@color/material_red_a200</item>
-        <item name="colorButtonNormal">@color/material_red_500</item>
-        <item name="colorSwitchThumbNormal">@color/material_red_500</item>
-        <item name="colorControlNormal">@color/material_red_500</item>
-        <item name="colorControlActivated">@color/material_red_500</item>
-        <item name="colorControlHighlight">@color/material_red_700</item>
-        <item name="dialogTheme">@style/AppTheme.Dialog.Red</item>
-        <item name="alertDialogTheme">@style/AppTheme.AlertDialog.Red</item>
+    </style>
+
+    <style name="AppTheme.Orange">
+        <item name="colorPrimary">@color/material_orange_500</item>
+        <item name="colorPrimaryDark">@color/material_orange_700</item>
+        <item name="colorAccent">@color/material_orange_a200</item>
+
+        <!-- TODO
+        <item name="colorControlNormal">@color/material_orange_500</item>
+        <item name="colorSwitchThumbNormal">@color/material_green_500</item>
+        <item name="colorControlActivated">@color/material_green_500</item>
+        <item name="colorControlHighlight">@color/material_green_700</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog.Green</item>
+        <item name="alertDialogTheme">@style/AppTheme.AlertDialog.Green</item>
+        -->
     </style>
 
     <style name="AppTheme.Green">
         <item name="colorPrimary">@color/material_green_500</item>
         <item name="colorPrimaryDark">@color/material_green_700</item>
         <item name="colorAccent">@color/material_green_a200</item>
-        <item name="colorButtonNormal">@color/material_green_500</item>
-        <item name="colorSwitchThumbNormal">@color/material_green_500</item>
-        <item name="colorControlNormal">@color/material_green_500</item>
-        <item name="colorControlActivated">@color/material_green_500</item>
-        <item name="colorControlHighlight">@color/material_green_700</item>
-        <item name="dialogTheme">@style/AppTheme.Dialog.Green</item>
-        <item name="alertDialogTheme">@style/AppTheme.AlertDialog.Green</item>
     </style>
 
     <style name="AppTheme.Blue">
         <item name="colorPrimary">@color/material_blue_500</item>
         <item name="colorPrimaryDark">@color/material_blue_700</item>
         <item name="colorAccent">@color/material_blue_a200</item>
-        <item name="colorButtonNormal">@color/material_blue_500</item>
-        <item name="colorSwitchThumbNormal">@color/material_blue_500</item>
-        <item name="colorControlNormal">@color/material_blue_500</item>
-        <item name="colorControlActivated">@color/material_blue_500</item>
-        <item name="colorControlHighlight">@color/material_blue_700</item>
-        <item name="dialogTheme">@style/AppTheme.Dialog.Blue</item>
-        <item name="alertDialogTheme">@style/AppTheme.AlertDialog.Blue</item>
-    </style>
-
-
-    <!-- Control Themes -->
-    <style name="AppTheme.Control">
-    </style>
-
-    <style name="AppTheme.Control.Red">
-        <item name="colorButtonNormal">@color/material_red_500</item>
-        <item name="colorSwitchThumbNormal">@color/material_red_500</item>
-        <item name="colorControlNormal">@color/material_red_500</item>
-        <item name="colorControlActivated">@color/material_red_500</item>
-        <item name="colorControlHighlight">@color/material_red_700</item>
-    </style>
-
-    <style name="AppTheme.Control.Green">
-        <item name="colorButtonNormal">@color/material_green_500</item>
-        <item name="colorSwitchThumbNormal">@color/material_green_500</item>
-        <item name="colorControlNormal">@color/material_green_500</item>
-        <item name="colorControlActivated">@color/material_green_500</item>
-        <item name="colorControlHighlight">@color/material_green_700</item>
-    </style>
-
-    <style name="AppTheme.Control.Blue">
-        <item name="colorButtonNormal">@color/material_blue_500</item>
-        <item name="colorSwitchThumbNormal">@color/material_blue_500</item>
-        <item name="colorControlNormal">@color/material_blue_500</item>
-        <item name="colorControlActivated">@color/material_blue_500</item>
-        <item name="colorControlHighlight">@color/material_blue_700</item>
     </style>
 
 
@@ -98,16 +62,8 @@
     <style name="AppTheme.Dialog" parent="Theme.AppCompat.Light.Dialog">
     </style>
 
-    <style name="AppTheme.Dialog.Red">
-        <item name="colorAccent">@color/material_red_500</item>
-    </style>
-
     <style name="AppTheme.Dialog.Green">
         <item name="colorAccent">@color/material_green_500</item>
-    </style>
-
-    <style name="AppTheme.Dialog.Blue">
-        <item name="colorAccent">@color/material_blue_500</item>
     </style>
 
 
@@ -115,26 +71,22 @@
     <style name="AppTheme.AlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
     </style>
 
-    <style name="AppTheme.AlertDialog.Red">
-        <item name="colorAccent">@color/material_red_500</item>
-    </style>
-
     <style name="AppTheme.AlertDialog.Green">
         <item name="colorAccent">@color/material_green_500</item>
     </style>
-
-    <style name="AppTheme.AlertDialog.Blue">
-        <item name="colorAccent">@color/material_blue_500</item>
-    </style>
-
 
     <!-- Button Styles -->
     <style name="ButtonStyle" parent="Widget.AppCompat.Button">
     </style>
 
+    <style name="ButtonStyle.Colored" parent="Widget.AppCompat.Button.Colored">
+    </style>
+
     <style name="ButtonStyle.Borderless" parent="Widget.AppCompat.Button.Borderless">
     </style>
 
+    <style name="ButtonStyle.Borderless.Colored" parent="Widget.AppCompat.Button.Borderless.Colored">
+    </style>
 
     <!-- CardView Styles -->
     <style name="CardViewStyle" parent="CardView.Light">
@@ -150,4 +102,5 @@
         <item name="android:layout_marginTop">@dimen/material_element_spacing_small</item>
         <item name="android:layout_gravity">center</item>
     </style>
+
 </resources>
