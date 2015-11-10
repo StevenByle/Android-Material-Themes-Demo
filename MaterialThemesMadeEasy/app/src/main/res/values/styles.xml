@@ -28,6 +28,7 @@
         <item name="colorAccent">@color/material_orange_a200</item>
 
         <!-- TODO
+        <item name="colorButtonNormal">@color/material_orange_500</item>
         <item name="colorControlNormal">@color/material_orange_500</item>
         <item name="colorSwitchThumbNormal">@color/material_green_500</item>
         <item name="colorControlActivated">@color/material_green_500</item>
@@ -87,6 +88,17 @@
 
     <style name="ButtonStyle.Borderless.Colored" parent="Widget.AppCompat.Button.Borderless.Colored">
     </style>
+
+    <!-- Text Styles -->
+    <style name="TextStyle" parent="TextAppearance.AppCompat">
+    </style>
+
+    <style name="TextStyle.Title" parent="TextAppearance.AppCompat.Title">
+    </style>
+
+    <style name="TextStyle.Body1" parent="TextAppearance.AppCompat.Body1">
+    </style>
+
 
     <!-- CardView Styles -->
     <style name="CardViewStyle" parent="CardView.Light">
