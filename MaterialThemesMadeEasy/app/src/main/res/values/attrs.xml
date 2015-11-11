@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App Theme attributes -->
+    <declare-styleable name="AppThemeAttributes">
+        <attr name="selectableDrawableColorDefault" format="reference|color"/>
+        <attr name="selectableDrawableColor" format="reference|color"/>
+        <attr name="selectableRectDrawable" format="reference"/>
+        <attr name="selectableRectDrawableColored" format="reference"/>
+        <attr name="selectableRoundedRectDrawable" format="reference"/>
+        <attr name="selectableCircleDrawable" format="reference"/>
+    </declare-styleable>
+
+</resources>

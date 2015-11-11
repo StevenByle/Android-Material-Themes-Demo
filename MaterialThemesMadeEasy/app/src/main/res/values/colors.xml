@@ -75,10 +75,14 @@
 
     <!-- Selectors -->
     <color name="selector_normal">@android:color/transparent</color>
-    <color name="selector_white_focused">#08FFFFFF</color>
-    <color name="selector_white_pressed">#4DFFFFFF</color>
-    <color name="selector_gray_focused">#08888888</color>
-    <color name="selector_gray_pressed">#4D888888</color>
-    <color name="selector_black_focused">#08000000</color>
-    <color name="selector_black_pressed">#4D000000</color>
+    <color name="selector_white_pressed">#33FFFFFF</color>
+    <color name="selector_white_focused">#22FFFFFF</color>
+    <color name="selector_black_focused">#12000000</color>
+    <color name="selector_black_pressed">#1F000000</color>
+    <color name="selector_orange_pressed">#44FF9800</color>
+    <color name="selector_orange_focused">#22FF9800</color>
+    <color name="selector_green_pressed">#444CAF50</color>
+    <color name="selector_green_focused">#224CAF50</color>
+    <color name="selector_blue_pressed">#442196F3</color>
+    <color name="selector_blue_focused">#222196F3</color>
 </resources>

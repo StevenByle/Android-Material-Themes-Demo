@@ -1,17 +1,20 @@
 <resources>
 
-    <!-- Base App Theme -->
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-    </style>
-
-
-    <!-- App Theme -->
-    <style name="AppTheme" parent="AppBaseTheme">
-
-        <!-- Remove action bar, since toolbar is being used -->
+    <!-- Base Theme -->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- No actionbar, use toolbar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
+        <!-- App specific attributes -->
+        <item name="selectableDrawableColorDefault">@color/selector_black_pressed</item>
+        <item name="selectableDrawableColor">@color/selector_black_pressed</item>
+    </style>
+
+    <!-- App Theme -->
+    <style name="AppTheme" parent="BaseTheme">
+        <item name="selectableRectDrawable">@drawable/state_list_selectable_rect_black</item>
+        <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_black</item>
     </style>
 
 
@@ -22,7 +25,8 @@
         <item name="colorAccent">@color/material_red_a200</item>
     </style>
 
-    <style name="AppTheme.Orange">
+    <!-- Orange App Theme -->
+    <style name="BaseTheme.Orange" parent="AppTheme">
         <item name="colorPrimary">@color/material_orange_500</item>
         <item name="colorPrimaryDark">@color/material_orange_700</item>
         <item name="colorAccent">@color/material_orange_a200</item>
@@ -38,16 +42,33 @@
         -->
     </style>
 
-    <style name="AppTheme.Green">
+    <style name="AppTheme.Orange" parent="BaseTheme.Orange">
+        <!-- API specific attributes 14+ -->
+        <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_orange</item>
+    </style>
+
+    <!-- Green App Theme -->
+    <style name="BaseTheme.Green" parent="AppTheme">
         <item name="colorPrimary">@color/material_green_500</item>
         <item name="colorPrimaryDark">@color/material_green_700</item>
         <item name="colorAccent">@color/material_green_a200</item>
     </style>
 
-    <style name="AppTheme.Blue">
+    <style name="AppTheme.Green" parent="BaseTheme.Green">
+        <!-- API specific attributes 14+ -->
+        <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_green</item>
+    </style>
+
+    <!-- Blue App Theme -->
+    <style name="BaseTheme.Blue" parent="AppTheme">
         <item name="colorPrimary">@color/material_blue_500</item>
         <item name="colorPrimaryDark">@color/material_blue_700</item>
         <item name="colorAccent">@color/material_blue_a200</item>
+    </style>
+
+    <style name="AppTheme.Blue" parent="BaseTheme.Blue">
+        <!-- API specific attributes 14+ -->
+        <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_blue</item>
     </style>
 
 

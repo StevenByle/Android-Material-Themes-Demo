@@ -1,7 +1,23 @@
 <resources>>
-
-    <!-- Base App Theme, v21+ -->
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Base Theme -->
+    <style name="AppTheme" parent="BaseTheme">
+        <!-- API specific attributes 21+ -->
+        <item name="selectableRectDrawable">@drawable/ripple_selectable_rect</item>
+        <item name="selectableRectDrawableColored">@drawable/ripple_selectable_rect_colored</item>
     </style>
 
+    <style name="AppTheme.Orange" parent="BaseTheme.Orange">
+        <!-- API specific attributes 21+ -->
+        <item name="selectableDrawableColor">@color/selector_orange_pressed</item>
+    </style>
+
+    <style name="AppTheme.Green" parent="BaseTheme.Green">
+        <!-- API specific attributes 21+ -->
+        <item name="selectableDrawableColor">@color/selector_green_pressed</item>
+    </style>
+
+    <style name="AppTheme.Blue" parent="BaseTheme.Blue">
+        <!-- API specific attributes 21+ -->
+        <item name="selectableDrawableColor">@color/selector_blue_pressed</item>
+    </style>
 </resources>

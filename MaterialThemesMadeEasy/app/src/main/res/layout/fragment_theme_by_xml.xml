@@ -140,7 +140,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?selectableItemBackground"
+                    android:background="?selectableRectDrawable"
                     android:clickable="true"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
@@ -155,14 +155,60 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Current Theme"
+                        android:text="Current Theme (Default)"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?selectableItemBackgroundBorderless"
+                    android:background="?selectableRectDrawable"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:theme="@style/AppTheme.Green">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Green Theme (Default)"
+                        android:textAppearance="@style/TextStyle.Body1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableRectDrawable"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:theme="@style/AppTheme.Blue">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blue Theme (Default)"
+                        android:textAppearance="@style/TextStyle.Body1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableRectDrawableColored"
                     android:clickable="true"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
@@ -177,7 +223,53 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Current Theme"
+                        android:text="Current Theme (Colored)"
+                        android:textAppearance="@style/TextStyle.Body1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableRectDrawableColored"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:theme="@style/AppTheme.Green">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Green Theme (Colored)"
+                        android:textAppearance="@style/TextStyle.Body1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableRectDrawableColored"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:theme="@style/AppTheme.Blue">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blue Theme (Colored)"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
             </LinearLayout>
