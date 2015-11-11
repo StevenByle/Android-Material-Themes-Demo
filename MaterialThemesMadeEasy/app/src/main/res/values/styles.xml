@@ -110,6 +110,20 @@
     <style name="ButtonStyle.Borderless.Colored" parent="Widget.AppCompat.Button.Borderless.Colored">
     </style>
 
+    <!-- Selectable Item Styles -->
+    <style name="SelectableItemStyle">
+    </style>
+
+    <style name="SelectableItemStyle.Rect">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?selectableRectDrawable</item>
+    </style>
+
+    <style name="SelectableItemStyle.Rect.Colored">
+        <item name="android:background">?selectableRectDrawableColored</item>
+    </style>
+
     <!-- Text Styles -->
     <style name="TextStyle" parent="TextAppearance.AppCompat">
     </style>
@@ -119,7 +133,6 @@
 
     <style name="TextStyle.Body1" parent="TextAppearance.AppCompat.Body1">
     </style>
-
 
     <!-- CardView Styles -->
     <style name="CardViewStyle" parent="CardView.Light">

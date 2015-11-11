@@ -138,10 +138,9 @@
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <LinearLayout
+                    style="@style/SelectableItemStyle.Rect"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?selectableRectDrawable"
-                    android:clickable="true"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -162,8 +161,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?selectableRectDrawable"
-                    android:clickable="true"
+                    style="@style/SelectableItemStyle.Rect"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:theme="@style/AppTheme.Green">
@@ -185,8 +183,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?selectableRectDrawable"
-                    android:clickable="true"
+                    style="@style/SelectableItemStyle.Rect"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:theme="@style/AppTheme.Blue">
@@ -208,8 +205,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?selectableRectDrawableColored"
-                    android:clickable="true"
+                    style="@style/SelectableItemStyle.Rect.Colored"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -230,8 +226,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?selectableRectDrawableColored"
-                    android:clickable="true"
+                    style="@style/SelectableItemStyle.Rect.Colored"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:theme="@style/AppTheme.Green">
@@ -253,8 +248,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?selectableRectDrawableColored"
-                    android:clickable="true"
+                    style="@style/SelectableItemStyle.Rect.Colored"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:theme="@style/AppTheme.Blue">
