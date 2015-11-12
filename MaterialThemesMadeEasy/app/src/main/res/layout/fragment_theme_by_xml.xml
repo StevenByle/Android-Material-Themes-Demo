@@ -258,14 +258,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Selectable Items"
+                    android:text="Selectable Items: Rectangle"
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Rectangle"
+                    android:text="Default"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <LinearLayout
@@ -286,7 +286,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Current Theme (Default Rect)"
+                        android:text="Current Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -308,7 +308,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Green Theme (Default Rect)"
+                        android:text="Green Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -330,9 +330,16 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Blue Theme (Default Rect)"
+                        android:text="Blue Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Colored"
+                    android:textAppearance="@style/TextStyle.Body2"/>
 
                 <LinearLayout
                     style="@style/SelectableItemStyle.Rect.Colored"
@@ -351,7 +358,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Current Theme (Colored Rect)"
+                        android:text="Current Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -373,7 +380,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Green Theme (Colored Rect)"
+                        android:text="Green Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -395,15 +402,33 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Blue Theme (Colored Rect)"
+                        android:text="Blue Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selectable Items: Rounded Rectangle"
+                    android:textAppearance="@style/TextStyle.Title"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Rounded Rectangle"
+                    android:text="Default"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <LinearLayout
@@ -471,6 +496,13 @@
                         android:text="Blue Theme (Default Rounded Rect)"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Colored"
+                    android:textAppearance="@style/TextStyle.Body2"/>
 
                 <LinearLayout
                     style="@style/SelectableItemStyle.RoundedRect.Colored"
