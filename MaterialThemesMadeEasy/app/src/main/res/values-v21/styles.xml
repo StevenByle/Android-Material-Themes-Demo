@@ -2,6 +2,8 @@
     <!-- Base Theme -->
     <style name="AppTheme" parent="BaseTheme">
         <!-- API specific attributes 21+ -->
+        <item name="selectableDrawableColorDefault">?colorControlHighlight</item>
+        <item name="selectableDrawableColor">?colorControlHighlight</item>
         <item name="selectableRectDrawable">@drawable/ripple_selectable_rect</item>
         <item name="selectableRectDrawableColored">@drawable/ripple_selectable_rect_colored</item>
         <item name="selectableRoundedRectDrawable">@drawable/ripple_selectable_rounded_rect</item>

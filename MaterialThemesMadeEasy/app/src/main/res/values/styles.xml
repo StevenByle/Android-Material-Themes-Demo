@@ -7,9 +7,7 @@
         <item name="windowNoTitle">true</item>
 
         <!-- App specific attributes all APIs -->
-        <item name="selectableDrawableColorDefault">@color/selector_black_pressed</item>
-        <item name="selectableDrawableColor">?selectableDrawableColorDefault</item>
-        <item name="colorControlHighlight">?selectableDrawableColorDefault</item>
+        <item name="colorControlHighlight">@color/selector_black_pressed</item>
     </style>
 
     <!-- App Theme -->
