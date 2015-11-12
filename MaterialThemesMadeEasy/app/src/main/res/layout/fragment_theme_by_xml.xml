@@ -277,8 +277,8 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:layout_margin="@dimen/material_element_spacing_small"
                         android:adjustViewBounds="true"
                         android:src="@mipmap/ic_launcher"/>
@@ -286,6 +286,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_element_spacing_small"
                         android:text="Current Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
@@ -299,8 +300,8 @@
                     android:theme="@style/AppTheme.Green">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:layout_margin="@dimen/material_element_spacing_small"
                         android:adjustViewBounds="true"
                         android:src="@mipmap/ic_launcher"/>
@@ -308,6 +309,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_element_spacing_small"
                         android:text="Green Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
@@ -321,8 +323,8 @@
                     android:theme="@style/AppTheme.Blue">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:layout_margin="@dimen/material_element_spacing_small"
                         android:adjustViewBounds="true"
                         android:src="@mipmap/ic_launcher"/>
@@ -330,6 +332,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_element_spacing_small"
                         android:text="Blue Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
@@ -345,12 +348,13 @@
                     style="@style/SelectableItemStyle.Rect.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:layout_margin="@dimen/material_element_spacing_small"
                         android:adjustViewBounds="true"
                         android:src="@mipmap/ic_launcher"/>
@@ -358,6 +362,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_element_spacing_small"
                         android:text="Current Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
@@ -371,8 +376,8 @@
                     android:theme="@style/AppTheme.Green">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:layout_margin="@dimen/material_element_spacing_small"
                         android:adjustViewBounds="true"
                         android:src="@mipmap/ic_launcher"/>
@@ -380,6 +385,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_element_spacing_small"
                         android:text="Green Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
@@ -393,8 +399,8 @@
                     android:theme="@style/AppTheme.Blue">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:layout_margin="@dimen/material_element_spacing_small"
                         android:adjustViewBounds="true"
                         android:src="@mipmap/ic_launcher"/>
@@ -402,6 +408,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_element_spacing_small"
                         android:text="Blue Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
@@ -440,8 +447,8 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:layout_margin="@dimen/material_element_spacing_small"
                         android:adjustViewBounds="true"
                         android:src="@mipmap/ic_launcher"/>
@@ -449,7 +456,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Current Theme (Default Rounded Rect)"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:text="Current Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -462,8 +470,8 @@
                     android:theme="@style/AppTheme.Green">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:layout_margin="@dimen/material_element_spacing_small"
                         android:adjustViewBounds="true"
                         android:src="@mipmap/ic_launcher"/>
@@ -471,7 +479,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Green Theme (Default Rounded Rect)"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:text="Green Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -484,8 +493,8 @@
                     android:theme="@style/AppTheme.Blue">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:layout_margin="@dimen/material_element_spacing_small"
                         android:adjustViewBounds="true"
                         android:src="@mipmap/ic_launcher"/>
@@ -493,7 +502,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Blue Theme (Default Rounded Rect)"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:text="Blue Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -508,12 +518,13 @@
                     style="@style/SelectableItemStyle.RoundedRect.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:layout_margin="@dimen/material_element_spacing_small"
                         android:adjustViewBounds="true"
                         android:src="@mipmap/ic_launcher"/>
@@ -521,7 +532,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Current Theme (Colored Rounded Rect)"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:text="Current Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -534,8 +546,8 @@
                     android:theme="@style/AppTheme.Green">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:layout_margin="@dimen/material_element_spacing_small"
                         android:adjustViewBounds="true"
                         android:src="@mipmap/ic_launcher"/>
@@ -543,7 +555,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Green Theme (Colored Rounded Rect)"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:text="Green Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -556,8 +569,8 @@
                     android:theme="@style/AppTheme.Blue">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:layout_margin="@dimen/material_element_spacing_small"
                         android:adjustViewBounds="true"
                         android:src="@mipmap/ic_launcher"/>
@@ -565,7 +578,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Blue Theme (Colored Rounded Rect)"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:text="Blue Theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
             </LinearLayout>
