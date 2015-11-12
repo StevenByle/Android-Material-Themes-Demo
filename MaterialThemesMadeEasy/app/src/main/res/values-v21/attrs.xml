@@ -4,6 +4,7 @@
     <!-- App Theme attributes -->
     <declare-styleable name="AppThemeAttributes">
         <attr name="selectableDrawableColorDefault" format="reference|color"/>
+        <attr name="selectableDrawableColorInverse" format="reference|color"/>
         <attr name="selectableDrawableColor" format="reference|color"/>
     </declare-styleable>
 

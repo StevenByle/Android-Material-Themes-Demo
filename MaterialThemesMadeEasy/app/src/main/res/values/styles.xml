@@ -15,8 +15,10 @@
 
         <!-- API specific attributes 14+ -->
         <item name="selectableRectDrawable">@drawable/state_list_selectable_rect_black</item>
+        <item name="selectableRectDrawableInverse">@drawable/state_list_selectable_rect_white</item>
         <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_black</item>
         <item name="selectableRoundedRectDrawable">@drawable/state_list_selectable_rounded_rect_black</item>
+        <item name="selectableRoundedRectDrawableInverse">@drawable/state_list_selectable_rounded_rect_white</item>
         <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_black</item>
     </style>
 
@@ -133,12 +135,20 @@
         <item name="android:background">?selectableRectDrawableColored</item>
     </style>
 
+    <style name="SelectableItemStyle.Rect.Inverse">
+        <item name="android:background">?selectableRectDrawableInverse</item>
+    </style>
+
     <style name="SelectableItemStyle.RoundedRect">
         <item name="android:background">?selectableRoundedRectDrawable</item>
     </style>
 
     <style name="SelectableItemStyle.RoundedRect.Colored">
         <item name="android:background">?selectableRoundedRectDrawableColored</item>
+    </style>
+
+    <style name="SelectableItemStyle.RoundedRect.Inverse">
+        <item name="android:background">?selectableRoundedRectDrawableInverse</item>
     </style>
 
     <!-- Text Styles -->

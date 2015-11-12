@@ -3,10 +3,13 @@
     <style name="AppTheme" parent="BaseTheme">
         <!-- API specific attributes 21+ -->
         <item name="selectableDrawableColorDefault">?colorControlHighlight</item>
+        <item name="selectableDrawableColorInverse">@color/selector_white_pressed</item>
         <item name="selectableDrawableColor">?colorControlHighlight</item>
         <item name="selectableRectDrawable">@drawable/ripple_selectable_rect</item>
+        <item name="selectableRectDrawableInverse">@drawable/ripple_selectable_rect_inverse</item>
         <item name="selectableRectDrawableColored">@drawable/ripple_selectable_rect_colored</item>
         <item name="selectableRoundedRectDrawable">@drawable/ripple_selectable_rounded_rect</item>
+        <item name="selectableRoundedRectDrawableInverse">@drawable/ripple_selectable_rounded_rect_inverse</item>
         <item name="selectableRoundedRectDrawableColored">@drawable/ripple_selectable_rounded_rect_colored</item>
     </style>
 
