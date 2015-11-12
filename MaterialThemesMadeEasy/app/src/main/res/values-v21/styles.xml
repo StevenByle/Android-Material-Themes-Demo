@@ -4,6 +4,8 @@
         <!-- API specific attributes 21+ -->
         <item name="selectableRectDrawable">@drawable/ripple_selectable_rect</item>
         <item name="selectableRectDrawableColored">@drawable/ripple_selectable_rect_colored</item>
+        <item name="selectableRoundedRectDrawable">@drawable/ripple_selectable_rounded_rect</item>
+        <item name="selectableRoundedRectDrawableColored">@drawable/ripple_selectable_rounded_rect_colored</item>
     </style>
 
     <style name="AppTheme.Orange" parent="BaseTheme.Orange">

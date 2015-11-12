@@ -137,8 +137,81 @@
                     android:text="Selectable Items"
                     android:textAppearance="@style/TextStyle.Title"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Rectangle"
+                    android:textAppearance="@style/TextStyle.Body2"/>
+
                 <LinearLayout
                     style="@style/SelectableItemStyle.Rect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Theme (Default Rect)"
+                        android:textAppearance="@style/TextStyle.Body1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/SelectableItemStyle.Rect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:theme="@style/AppTheme.Green">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Green Theme (Default Rect)"
+                        android:textAppearance="@style/TextStyle.Body1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/SelectableItemStyle.Rect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:theme="@style/AppTheme.Blue">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blue Theme (Default Rect)"
+                        android:textAppearance="@style/TextStyle.Body1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/SelectableItemStyle.Rect.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
@@ -154,14 +227,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Current Theme (Default)"
+                        android:text="Current Theme (Colored Rect)"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
                 <LinearLayout
+                    style="@style/SelectableItemStyle.Rect.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/SelectableItemStyle.Rect"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:theme="@style/AppTheme.Green">
@@ -176,14 +249,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Green Theme (Default)"
+                        android:text="Green Theme (Colored Rect)"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
                 <LinearLayout
+                    style="@style/SelectableItemStyle.Rect.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/SelectableItemStyle.Rect"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:theme="@style/AppTheme.Blue">
@@ -198,14 +271,22 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Blue Theme (Default)"
+                        android:text="Blue Theme (Colored Rect)"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Rounded Rectangle"
+                    android:textAppearance="@style/TextStyle.Body2"/>
+
                 <LinearLayout
+                    style="@style/SelectableItemStyle.RoundedRect"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/SelectableItemStyle.Rect.Colored"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -219,14 +300,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Current Theme (Colored)"
+                        android:text="Current Theme (Default Rounded Rect)"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
                 <LinearLayout
+                    style="@style/SelectableItemStyle.RoundedRect"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/SelectableItemStyle.Rect.Colored"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:theme="@style/AppTheme.Green">
@@ -241,14 +322,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Green Theme (Colored)"
+                        android:text="Green Theme (Default Rounded Rect)"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
                 <LinearLayout
+                    style="@style/SelectableItemStyle.RoundedRect"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/SelectableItemStyle.Rect.Colored"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:theme="@style/AppTheme.Blue">
@@ -263,7 +344,72 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Blue Theme (Colored)"
+                        android:text="Blue Theme (Default Rounded Rect)"
+                        android:textAppearance="@style/TextStyle.Body1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/SelectableItemStyle.RoundedRect.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Theme (Colored Rounded Rect)"
+                        android:textAppearance="@style/TextStyle.Body1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/SelectableItemStyle.RoundedRect.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:theme="@style/AppTheme.Green">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Green Theme (Colored Rounded Rect)"
+                        android:textAppearance="@style/TextStyle.Body1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/SelectableItemStyle.RoundedRect.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:theme="@style/AppTheme.Blue">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blue Theme (Colored Rounded Rect)"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
             </LinearLayout>

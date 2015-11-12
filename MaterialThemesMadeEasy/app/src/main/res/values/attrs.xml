@@ -8,6 +8,8 @@
         <attr name="selectableRectDrawable" format="reference"/>
         <attr name="selectableRectDrawableColored" format="reference"/>
         <attr name="selectableRoundedRectDrawable" format="reference"/>
+        <attr name="selectableRoundedRectDrawableColored" format="reference"/>
+
         <attr name="selectableCircleDrawable" format="reference"/>
     </declare-styleable>
 

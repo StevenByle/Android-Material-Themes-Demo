@@ -23,6 +23,6 @@
     </item>
 
     <!-- Normal state -->
-    <item android:drawable="@android:color/transparent"/>
+    <item android:drawable="@color/selector_normal"/>
 
 </selector>

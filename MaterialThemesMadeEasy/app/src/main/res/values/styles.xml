@@ -15,6 +15,8 @@
     <style name="AppTheme" parent="BaseTheme">
         <item name="selectableRectDrawable">@drawable/state_list_selectable_rect_black</item>
         <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_black</item>
+        <item name="selectableRoundedRectDrawable">@drawable/state_list_selectable_rounded_rect_black</item>
+        <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_black</item>
     </style>
 
 
@@ -45,6 +47,7 @@
     <style name="AppTheme.Orange" parent="BaseTheme.Orange">
         <!-- API specific attributes 14+ -->
         <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_orange</item>
+        <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_orange</item>
     </style>
 
     <!-- Green App Theme -->
@@ -57,6 +60,7 @@
     <style name="AppTheme.Green" parent="BaseTheme.Green">
         <!-- API specific attributes 14+ -->
         <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_green</item>
+        <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_green</item>
     </style>
 
     <!-- Blue App Theme -->
@@ -69,6 +73,7 @@
     <style name="AppTheme.Blue" parent="BaseTheme.Blue">
         <!-- API specific attributes 14+ -->
         <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_blue</item>
+        <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_blue</item>
     </style>
 
 
@@ -112,16 +117,24 @@
 
     <!-- Selectable Item Styles -->
     <style name="SelectableItemStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
     </style>
 
     <style name="SelectableItemStyle.Rect">
-        <item name="android:clickable">true</item>
-        <item name="android:focusable">true</item>
         <item name="android:background">?selectableRectDrawable</item>
     </style>
 
     <style name="SelectableItemStyle.Rect.Colored">
         <item name="android:background">?selectableRectDrawableColored</item>
+    </style>
+
+    <style name="SelectableItemStyle.RoundedRect">
+        <item name="android:background">?selectableRoundedRectDrawable</item>
+    </style>
+
+    <style name="SelectableItemStyle.RoundedRect.Colored">
+        <item name="android:background">?selectableRoundedRectDrawableColored</item>
     </style>
 
     <!-- Text Styles -->
@@ -132,6 +145,9 @@
     </style>
 
     <style name="TextStyle.Body1" parent="TextAppearance.AppCompat.Body1">
+    </style>
+
+    <style name="TextStyle.Body2" parent="TextAppearance.AppCompat.Body2">
     </style>
 
     <!-- CardView Styles -->

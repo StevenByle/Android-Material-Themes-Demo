@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="?selectableDrawableColor">
+    <!-- This mask color is not shown, just used as an alpha mask to fill -->
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/black"/>
+            <corners android:radius="@dimen/selectable_rounded_rect_corner_radius"/>
+        </shape>
+    </item>
+</ripple>
