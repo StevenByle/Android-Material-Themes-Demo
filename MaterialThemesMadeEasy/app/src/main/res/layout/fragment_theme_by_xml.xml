@@ -30,6 +30,13 @@
                     android:text="Buttons"
                     android:textAppearance="@style/TextStyle.Title"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:text="Raised (Default)"
+                    android:textAppearance="@style/TextStyle.Body2"/>
+
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -72,6 +79,13 @@
                     android:layout_marginTop="@dimen/material_element_spacing_small"
                     android:text="Blue Theme (Colored)"
                     android:theme="@style/AppTheme.Blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:text="Flat (Borderless)"
+                    android:textAppearance="@style/TextStyle.Body2"/>
 
                 <Button
                     style="@style/ButtonStyle.Borderless"
