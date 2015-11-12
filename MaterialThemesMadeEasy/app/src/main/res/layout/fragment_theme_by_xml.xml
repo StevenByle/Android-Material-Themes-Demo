@@ -27,64 +27,167 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Buttons"
+                    android:text="Buttons: Raised (Default)"
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="Raised (Default)"
+                    android:text="Default"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Current Theme (Standard)"/>
+                    android:text="Current Theme"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Green Theme (Standard)"
+                    android:text="Green Theme"
                     android:theme="@style/AppTheme.Green"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Blue Theme (Standard)"
-                    android:theme="@style/AppTheme.Blue"/>
-
-                <Button
-                    style="@style/ButtonStyle.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Current Theme (Colored)"/>
-
-                <Button
-                    style="@style/ButtonStyle.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Green Theme (Colored)"
-                    android:theme="@style/AppTheme.Green"/>
-
-                <Button
-                    style="@style/ButtonStyle.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Blue Theme (Colored)"
+                    android:text="Blue Theme"
                     android:theme="@style/AppTheme.Blue"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="Flat (Borderless)"
+                    android:text="Colored"
+                    android:textAppearance="@style/TextStyle.Body2"/>
+
+                <Button
+                    style="@style/ButtonStyle.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Current Theme"/>
+
+                <Button
+                    style="@style/ButtonStyle.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Green Theme"
+                    android:theme="@style/AppTheme.Green"/>
+
+                <Button
+                    style="@style/ButtonStyle.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Blue Theme"
+                    android:theme="@style/AppTheme.Blue"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buttons: No Raise"
+                    android:textAppearance="@style/TextStyle.Title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:text="Default"
+                    android:textAppearance="@style/TextStyle.Body2"/>
+
+                <Button
+                    style="@style/ButtonStyle.NoRaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Current Theme"/>
+
+                <Button
+                    style="@style/ButtonStyle.NoRaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Green Theme"
+                    android:theme="@style/AppTheme.Green"/>
+
+                <Button
+                    style="@style/ButtonStyle.NoRaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Blue Theme"
+                    android:theme="@style/AppTheme.Blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:text="Colored"
+                    android:textAppearance="@style/TextStyle.Body2"/>
+
+                <Button
+                    style="@style/ButtonStyle.Colored.NoRaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Current Theme"/>
+
+                <Button
+                    style="@style/ButtonStyle.Colored.NoRaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Green Theme"
+                    android:theme="@style/AppTheme.Green"/>
+
+                <Button
+                    style="@style/ButtonStyle.Colored.NoRaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Blue Theme"
+                    android:theme="@style/AppTheme.Blue"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buttons: Flat"
+                    android:textAppearance="@style/TextStyle.Title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:text="Default"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <Button
@@ -92,14 +195,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Current Theme (Borderless)"/>
+                    android:text="Current Theme"/>
 
                 <Button
                     style="@style/ButtonStyle.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Green Theme (Borderless)"
+                    android:text="Green Theme"
                     android:theme="@style/AppTheme.Green"/>
 
                 <Button
@@ -107,30 +210,37 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Blue Theme (Borderless)"
+                    android:text="Blue Theme"
                     android:theme="@style/AppTheme.Blue"/>
 
-                <Button
-                    style="@style/ButtonStyle.Borderless.Colored"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Current Theme (Borderless Colored)"/>
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:text="Colored Text"
+                    android:textAppearance="@style/TextStyle.Body2"/>
 
                 <Button
-                    style="@style/ButtonStyle.Borderless.Colored"
+                    style="@style/ButtonStyle.Borderless.ColoredText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Green Theme (Borderless Colored)"
+                    android:text="Current Theme"/>
+
+                <Button
+                    style="@style/ButtonStyle.Borderless.ColoredText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:text="Green Theme"
                     android:theme="@style/AppTheme.Green"/>
 
                 <Button
-                    style="@style/ButtonStyle.Borderless.Colored"
+                    style="@style/ButtonStyle.Borderless.ColoredText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Blue Theme (Borderless Colored)"
+                    android:text="Blue Theme"
                     android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>

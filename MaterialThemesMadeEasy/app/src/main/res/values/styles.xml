@@ -6,13 +6,16 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
-        <!-- App specific attributes -->
+        <!-- App specific attributes all APIs -->
         <item name="selectableDrawableColorDefault">@color/selector_black_pressed</item>
-        <item name="selectableDrawableColor">@color/selector_black_pressed</item>
+        <item name="selectableDrawableColor">?selectableDrawableColorDefault</item>
+        <item name="colorControlHighlight">?selectableDrawableColorDefault</item>
     </style>
 
     <!-- App Theme -->
     <style name="AppTheme" parent="BaseTheme">
+
+        <!-- API specific attributes 14+ -->
         <item name="selectableRectDrawable">@drawable/state_list_selectable_rect_black</item>
         <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_black</item>
         <item name="selectableRoundedRectDrawable">@drawable/state_list_selectable_rounded_rect_black</item>
@@ -21,11 +24,6 @@
 
 
     <!-- App Theme Variants TODO -->
-    <style name="AppTheme.Red">
-        <item name="colorPrimary">@color/material_red_500</item>
-        <item name="colorPrimaryDark">@color/material_red_700</item>
-        <item name="colorAccent">@color/material_red_a200</item>
-    </style>
 
     <!-- Orange App Theme -->
     <style name="BaseTheme.Orange" parent="AppTheme">
@@ -106,13 +104,21 @@
     <style name="ButtonStyle" parent="Widget.AppCompat.Button">
     </style>
 
+    <style name="ButtonStyle.NoRaise">
+        <!-- Pre API 21 has no raise effect by default -->
+    </style>
+
     <style name="ButtonStyle.Colored" parent="Widget.AppCompat.Button.Colored">
+    </style>
+
+    <style name="ButtonStyle.Colored.NoRaise">
+        <!-- Pre API 21 has no raise effect by default -->
     </style>
 
     <style name="ButtonStyle.Borderless" parent="Widget.AppCompat.Button.Borderless">
     </style>
 
-    <style name="ButtonStyle.Borderless.Colored" parent="Widget.AppCompat.Button.Borderless.Colored">
+    <style name="ButtonStyle.Borderless.ColoredText" parent="Widget.AppCompat.Button.Borderless.Colored">
     </style>
 
     <!-- Selectable Item Styles -->

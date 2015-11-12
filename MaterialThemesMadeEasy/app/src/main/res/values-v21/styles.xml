@@ -22,4 +22,15 @@
         <!-- API specific attributes 21+ -->
         <item name="selectableDrawableColor">@color/selector_blue_pressed</item>
     </style>
+
+    <!-- Button Styles -->
+    <style name="ButtonStyle.NoRaise">
+        <!-- API specific attributes 21+ -->
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="ButtonStyle.Colored.NoRaise">
+        <!-- API specific attributes 21+ -->
+        <item name="android:stateListAnimator">@null</item>
+    </style>
 </resources>
