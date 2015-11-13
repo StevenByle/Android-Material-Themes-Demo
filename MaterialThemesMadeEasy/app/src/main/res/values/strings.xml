@@ -8,4 +8,19 @@
     <!-- Home page -->
     <string name="home_tab_xml">XML</string>
     <string name="home_tab_code">Code</string>
+
+    <!-- Theme page -->
+    <string-array name="android_version_names_array">
+        <item>Cupcake</item>
+        <item>Donut</item>
+        <item>Eclair</item>
+        <item>Froyo</item>
+        <item>Gingerbread</item>
+        <item>Honeycomb</item>
+        <item>Ice Cream Sandwich</item>
+        <item>Jellybean</item>
+        <item>Kit Kat</item>
+        <item>Lollipop</item>
+        <item>Marshmallow</item>
+    </string-array>
 </resources>

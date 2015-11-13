@@ -762,24 +762,51 @@
                     android:text="Spinners"
                     android:textAppearance="@style/TextStyle.Title"/>
 
-                <Spinner
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Current Theme"/>
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:text="Current Theme"
+                    android:textAppearance="@style/TextStyle.Body2"/>
 
                 <Spinner
+                    android:id="@+id/fragment_theme_by_xml_spinner_current_theme"
+                    style="@style/SpinnerStyle.Underlined"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:spinnerMode="dropdown"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
                     android:text="Green Theme"
+                    android:textAppearance="@style/TextStyle.Body2"/>
+
+                <Spinner
+                    android:id="@+id/fragment_theme_by_xml_spinner_green_theme"
+                    style="@style/SpinnerStyle.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:spinnerMode="dropdown"
                     android:theme="@style/AppTheme.Green"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:text="Blue Theme"
+                    android:textAppearance="@style/TextStyle.Body2"/>
+
                 <Spinner
+                    android:id="@+id/fragment_theme_by_xml_spinner_blue_theme"
+                    style="@style/SpinnerStyle.Underlined"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Blue Theme"
+                    android:spinnerMode="dropdown"
                     android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -800,24 +827,42 @@
                     android:text="Sliders"
                     android:textAppearance="@style/TextStyle.Title"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:text="Current Theme"
+                    android:textAppearance="@style/TextStyle.Body2"/>
+
                 <SeekBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Current Theme"/>
+                    android:layout_marginTop="@dimen/material_element_spacing_small"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:text="Green Theme"
+                    android:textAppearance="@style/TextStyle.Body2"/>
 
                 <SeekBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Green Theme"
                     android:theme="@style/AppTheme.Green"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:text="Blue Theme"
+                    android:textAppearance="@style/TextStyle.Body2"/>
+
                 <SeekBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Blue Theme"
                     android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -838,28 +883,88 @@
                     android:text="Progress Indicators"
                     android:textAppearance="@style/TextStyle.Title"/>
 
-                <ProgressBar
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:indeterminate="true"
-                    android:text="Current Theme"/>
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
+                    android:text="Current Theme"
+                    android:textAppearance="@style/TextStyle.Body2"/>
 
-                <ProgressBar
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:indeterminate="true"
+                    android:gravity="center_vertical">
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:indeterminate="true"/>
+
+                    <ProgressBar
+                        style="@style/ProgressBarStyle.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:indeterminate="true"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
                     android:text="Green Theme"
-                    android:theme="@style/AppTheme.Green"/>
+                    android:textAppearance="@style/TextStyle.Body2"/>
 
-                <ProgressBar
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:indeterminate="true"
+                    android:gravity="center_vertical"
+                    android:theme="@style/AppTheme.Green">
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:indeterminate="true"/>
+
+                    <ProgressBar
+                        style="@style/ProgressBarStyle.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:indeterminate="true"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_medium"
                     android:text="Blue Theme"
-                    android:theme="@style/AppTheme.Blue"/>
+                    android:textAppearance="@style/TextStyle.Body2"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/material_element_spacing_small"
+                    android:gravity="center_vertical"
+                    android:theme="@style/AppTheme.Blue">
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:indeterminate="true"/>
+
+                    <ProgressBar
+                        style="@style/ProgressBarStyle.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_element_spacing_small"
+                        android:indeterminate="true"/>
+                </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 

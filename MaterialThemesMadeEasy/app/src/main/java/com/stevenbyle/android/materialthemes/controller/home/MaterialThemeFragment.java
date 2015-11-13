@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
@@ -21,6 +23,7 @@ public class MaterialThemeFragment extends Fragment {
     private static final String KEY_ARG_THEMING_METHOD = "KEY_ARG_THEMING_METHOD";
 
     private ThemingMethod mThemingMethod;
+    private Spinner mCurrentThemeSpinner, mGreenThemeSpinner, mBlueThemeSpinner;
 
     public static MaterialThemeFragment newInstance(ThemingMethod themingMethod) {
         if (BuildConfig.DEBUG) {
@@ -91,10 +94,20 @@ public class MaterialThemeFragment extends Fragment {
         View fragmentView = inflater.inflate(R.layout.fragment_theme_by_xml, container, false);
 
         // Reference views
-
+        mCurrentThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_theme_by_xml_spinner_current_theme);
+        mGreenThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_theme_by_xml_spinner_green_theme);
+        mBlueThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_theme_by_xml_spinner_blue_theme);
 
         // Set and bind data to views
+        ArrayAdapter<CharSequence> spinnerArrayAdapter = ArrayAdapter.createFromResource(
+                container.getContext(),
+                R.array.android_version_names_array,
+                android.R.layout.simple_spinner_item);
+        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+        mCurrentThemeSpinner.setAdapter(spinnerArrayAdapter);
+        mGreenThemeSpinner.setAdapter(spinnerArrayAdapter);
+        mBlueThemeSpinner.setAdapter(spinnerArrayAdapter);
 
         return fragmentView;
     }

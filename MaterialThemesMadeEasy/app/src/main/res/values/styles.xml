@@ -31,6 +31,7 @@
         <item name="colorPrimaryDark">@color/material_orange_700</item>
         <item name="colorAccent">@color/material_orange_a200</item>
 
+
         <!-- TODO
         <item name="colorButtonNormal">@color/material_orange_500</item>
         <item name="colorControlNormal">@color/material_orange_500</item>
@@ -75,7 +76,7 @@
     </style>
 
 
-    <!-- AppBar Overlay Themes -->
+    <!-- App Bar Overlay Themes -->
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
 
@@ -162,6 +163,20 @@
     </style>
 
     <style name="TextStyle.Body2" parent="TextAppearance.AppCompat.Body2">
+    </style>
+
+    <!-- Spinner Styles -->
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
+    </style>
+
+    <style name="SpinnerStyle.Underlined" parent="Widget.AppCompat.Spinner.Underlined">
+    </style>
+
+    <!-- Progress Bar Styles -->
+    <style name="ProgressBarStyle" parent="Widget.AppCompat.ProgressBar">
+    </style>
+
+    <style name="ProgressBarStyle.Horizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
     </style>
 
     <!-- CardView Styles -->
