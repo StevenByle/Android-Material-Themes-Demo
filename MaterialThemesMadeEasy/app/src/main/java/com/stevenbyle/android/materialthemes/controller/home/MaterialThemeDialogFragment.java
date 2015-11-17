@@ -14,13 +14,13 @@ import android.view.ViewGroup;
 
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
-import com.stevenbyle.android.materialthemes.global.LogUtil;
+import com.stevenbyle.android.materialthemes.global.LogUtils;
 
 /**
  * @author Steven Byle
  */
 public class MaterialThemeDialogFragment extends DialogFragment implements DialogInterface.OnClickListener {
-    private static final String TAG = LogUtil.generateTag(MaterialThemeFragment.class);
+    private static final String TAG = LogUtils.generateTag(MaterialThemeFragment.class);
 
     private static final String KEY_ARG_TITLE = "KEY_ARG_TITLE";
     private static final String KEY_ARG_MESSAGE = "KEY_ARG_MESSAGE";
@@ -34,7 +34,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
 
     public static MaterialThemeDialogFragment newInstance(String title, String message) {
         if (BuildConfig.DEBUG) {
-            LogUtil.logMethod(TAG, "newInstance");
+            LogUtils.logMethod(TAG, "newInstance");
         }
 
         MaterialThemeDialogFragment fragment = new MaterialThemeDialogFragment();
@@ -55,7 +55,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         super.onAttach(context);
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnAttach(TAG);
+            LogUtils.logOnAttach(TAG);
         }
     }
 
@@ -64,7 +64,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         super.onCreate(savedInstanceState);
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnCreate(TAG, savedInstanceState);
+            LogUtils.logOnCreate(TAG, savedInstanceState);
         }
 
         // Get passed in parameters
@@ -93,7 +93,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnCreateDialog(TAG, savedInstanceState);
+            LogUtils.logOnCreateDialog(TAG, savedInstanceState);
         }
 
         Activity parentActivity = getActivity();
@@ -111,7 +111,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnCreateView(TAG, savedInstanceState);
+            LogUtils.logOnCreateView(TAG, savedInstanceState);
         }
 
         return super.onCreateView(inflater, container, savedInstanceState);
@@ -122,7 +122,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         super.onViewCreated(view, savedInstanceState);
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnViewCreated(TAG, savedInstanceState);
+            LogUtils.logOnViewCreated(TAG, savedInstanceState);
         }
     }
 
@@ -131,7 +131,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         super.onActivityCreated(savedInstanceState);
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnActivityCreated(TAG, savedInstanceState);
+            LogUtils.logOnActivityCreated(TAG, savedInstanceState);
         }
     }
 
@@ -140,7 +140,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         super.onViewStateRestored(savedInstanceState);
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnViewStateRestored(TAG, savedInstanceState);
+            LogUtils.logOnViewStateRestored(TAG, savedInstanceState);
         }
     }
 
@@ -149,7 +149,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         super.onStart();
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnStart(TAG);
+            LogUtils.logOnStart(TAG);
         }
     }
 
@@ -158,7 +158,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         super.onResume();
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnResume(TAG);
+            LogUtils.logOnResume(TAG);
         }
     }
 
@@ -167,7 +167,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         super.onPause();
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnPause(TAG);
+            LogUtils.logOnPause(TAG);
         }
     }
 
@@ -176,7 +176,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         super.onSaveInstanceState(outState);
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnSaveInstanceState(TAG);
+            LogUtils.logOnSaveInstanceState(TAG);
         }
     }
 
@@ -185,7 +185,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         super.onStop();
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnStop(TAG);
+            LogUtils.logOnStop(TAG);
         }
     }
 
@@ -194,7 +194,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         super.onDestroyView();
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnDestroyView(TAG);
+            LogUtils.logOnDestroyView(TAG);
         }
     }
 
@@ -203,7 +203,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         super.onDestroy();
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnDestroy(TAG);
+            LogUtils.logOnDestroy(TAG);
         }
     }
 

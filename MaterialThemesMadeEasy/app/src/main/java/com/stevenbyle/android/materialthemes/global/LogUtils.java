@@ -8,7 +8,7 @@ import android.util.Log;
 /**
  * @author Steven Byle
  */
-public class LogUtil {
+public class LogUtils {
 
     public static String generateTag(Class c) {
         return c.getSimpleName();

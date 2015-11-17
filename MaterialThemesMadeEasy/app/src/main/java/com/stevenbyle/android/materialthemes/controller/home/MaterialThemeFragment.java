@@ -2,6 +2,7 @@ package com.stevenbyle.android.materialthemes.controller.home;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,24 +15,25 @@ import android.widget.Spinner;
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
 import com.stevenbyle.android.materialthemes.controller.global.DialogUtils;
-import com.stevenbyle.android.materialthemes.global.LogUtil;
-import com.stevenbyle.android.materialthemes.global.LogUtil.LogLevel;
+import com.stevenbyle.android.materialthemes.global.LogUtils;
+import com.stevenbyle.android.materialthemes.global.LogUtils.LogLevel;
 
 /**
  * TODO
  */
 public class MaterialThemeFragment extends Fragment implements OnClickListener {
-    private static final String TAG = LogUtil.generateTag(MaterialThemeFragment.class);
+    private static final String TAG = LogUtils.generateTag(MaterialThemeFragment.class);
 
     private static final String KEY_ARG_THEMING_METHOD = "KEY_ARG_THEMING_METHOD";
 
     private ThemingMethod mThemingMethod;
     private Button mCurrentThemeDialogButton, mGreenThemeDialogButton, mBlueThemeDialogButton;
+    private Button mCurrentThemeSnackbarButton, mGreenThemeSnackbarButton, mBlueThemeSnackbarButton;
     private Spinner mCurrentThemeSpinner, mGreenThemeSpinner, mBlueThemeSpinner;
 
     public static MaterialThemeFragment newInstance(ThemingMethod themingMethod) {
         if (BuildConfig.DEBUG) {
-            LogUtil.logMethod(TAG, "newInstance");
+            LogUtils.logMethod(TAG, "newInstance");
         }
 
         // Create a new fragment instance
@@ -55,7 +57,7 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         super.onAttach(context);
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnAttach(TAG);
+            LogUtils.logOnAttach(TAG);
         }
     }
 
@@ -64,7 +66,7 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         super.onCreate(savedInstanceState);
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnCreate(TAG, savedInstanceState);
+            LogUtils.logOnCreate(TAG, savedInstanceState);
         }
 
         // Get passed in parameters
@@ -90,7 +92,7 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnCreateView(TAG, savedInstanceState);
+            LogUtils.logOnCreateView(TAG, savedInstanceState);
         }
 
         // Inflate the fragment layout into the container
@@ -103,6 +105,9 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         mCurrentThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_theme_dialog_button_current);
         mGreenThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_theme_dialog_button_green);
         mBlueThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_theme_dialog_button_blue);
+        mCurrentThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_theme_snackbar_button_current);
+        mGreenThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_theme_snackbar_button_green);
+        mBlueThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_theme_snackbar_button_blue);
 
         // Set and bind data to views
         ArrayAdapter<CharSequence> spinnerArrayAdapter = ArrayAdapter.createFromResource(
@@ -118,6 +123,9 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         mCurrentThemeDialogButton.setOnClickListener(this);
         mGreenThemeDialogButton.setOnClickListener(this);
         mBlueThemeDialogButton.setOnClickListener(this);
+        mCurrentThemeSnackbarButton.setOnClickListener(this);
+        mGreenThemeSnackbarButton.setOnClickListener(this);
+        mBlueThemeSnackbarButton.setOnClickListener(this);
 
         return fragmentView;
     }
@@ -127,7 +135,7 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         super.onViewCreated(view, savedInstanceState);
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnViewCreated(TAG, savedInstanceState);
+            LogUtils.logOnViewCreated(TAG, savedInstanceState);
         }
     }
 
@@ -136,7 +144,7 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         super.onActivityCreated(savedInstanceState);
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnActivityCreated(TAG, savedInstanceState);
+            LogUtils.logOnActivityCreated(TAG, savedInstanceState);
         }
     }
 
@@ -145,7 +153,7 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         super.onViewStateRestored(savedInstanceState);
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnViewStateRestored(TAG, savedInstanceState);
+            LogUtils.logOnViewStateRestored(TAG, savedInstanceState);
         }
     }
 
@@ -154,7 +162,7 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         super.onStart();
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnStart(TAG);
+            LogUtils.logOnStart(TAG);
         }
     }
 
@@ -163,7 +171,7 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         super.onResume();
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnResume(TAG);
+            LogUtils.logOnResume(TAG);
         }
     }
 
@@ -172,7 +180,7 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         super.onPause();
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnPause(TAG);
+            LogUtils.logOnPause(TAG);
         }
     }
 
@@ -181,7 +189,7 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         super.onSaveInstanceState(outState);
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnSaveInstanceState(TAG);
+            LogUtils.logOnSaveInstanceState(TAG);
         }
     }
 
@@ -190,7 +198,7 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         super.onStop();
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnStop(TAG);
+            LogUtils.logOnStop(TAG);
         }
     }
 
@@ -199,7 +207,7 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         super.onDestroyView();
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnDestroyView(TAG);
+            LogUtils.logOnDestroyView(TAG);
         }
     }
 
@@ -208,14 +216,14 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         super.onDestroy();
 
         if (BuildConfig.DEBUG) {
-            LogUtil.logOnDestroy(TAG);
+            LogUtils.logOnDestroy(TAG);
         }
     }
 
     @Override
     public void onClick(View v) {
         if (BuildConfig.DEBUG) {
-            LogUtil.logMethod(TAG, "onClick");
+            LogUtils.logMethod(TAG, "onClick");
         }
 
         switch (v.getId()) {
@@ -243,8 +251,23 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
                 DialogUtils.showDialogFragment(getChildFragmentManager(), dialogFragment);
                 break;
 
+            case R.id.fragment_theme_snackbar_button_current:
+                Snackbar.make(v, R.string.home_current_theme, Snackbar.LENGTH_LONG)
+                        .setAction(R.string.home_current_theme, this).show();
+                break;
+
+            case R.id.fragment_theme_snackbar_button_green:
+                Snackbar.make(v, R.string.home_green_theme, Snackbar.LENGTH_LONG)
+                        .setAction(R.string.home_green_theme, this).show();
+                break;
+
+            case R.id.fragment_theme_snackbar_button_blue:
+                Snackbar.make(v, R.string.home_blue_theme, Snackbar.LENGTH_LONG)
+                        .setAction(R.string.home_blue_theme, this).show();
+                break;
+
             default:
-                LogUtil.logMessage(LogLevel.WARN, TAG, "onClick", "unknown view clicked");
+                LogUtils.logMessage(LogLevel.WARN, TAG, "onClick", "unknown view clicked");
                 break;
         }
 
