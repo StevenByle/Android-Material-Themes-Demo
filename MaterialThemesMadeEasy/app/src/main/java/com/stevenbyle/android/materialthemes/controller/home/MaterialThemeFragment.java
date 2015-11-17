@@ -5,29 +5,33 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
+import com.stevenbyle.android.materialthemes.controller.global.DialogUtils;
 import com.stevenbyle.android.materialthemes.global.LogUtil;
 import com.stevenbyle.android.materialthemes.global.LogUtil.LogLevel;
 
 /**
  * TODO
  */
-public class MaterialThemeFragment extends Fragment {
+public class MaterialThemeFragment extends Fragment implements OnClickListener {
     private static final String TAG = LogUtil.generateTag(MaterialThemeFragment.class);
 
     private static final String KEY_ARG_THEMING_METHOD = "KEY_ARG_THEMING_METHOD";
 
     private ThemingMethod mThemingMethod;
+    private Button mCurrentThemeDialogButton, mGreenThemeDialogButton, mBlueThemeDialogButton;
     private Spinner mCurrentThemeSpinner, mGreenThemeSpinner, mBlueThemeSpinner;
 
     public static MaterialThemeFragment newInstance(ThemingMethod themingMethod) {
         if (BuildConfig.DEBUG) {
-            LogUtil.logMessage(LogLevel.DEBUG, TAG, "newInstance");
+            LogUtil.logMethod(TAG, "newInstance");
         }
 
         // Create a new fragment instance
@@ -75,7 +79,6 @@ public class MaterialThemeFragment extends Fragment {
             mThemingMethod = (ThemingMethod) args.getSerializable(KEY_ARG_THEMING_METHOD);
         }
 
-
         // If this is the first creation, default state variables
         if (savedInstanceState == null) {
         }
@@ -97,6 +100,9 @@ public class MaterialThemeFragment extends Fragment {
         mCurrentThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_theme_by_xml_spinner_current_theme);
         mGreenThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_theme_by_xml_spinner_green_theme);
         mBlueThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_theme_by_xml_spinner_blue_theme);
+        mCurrentThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_theme_dialog_button_current);
+        mGreenThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_theme_dialog_button_green);
+        mBlueThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_theme_dialog_button_blue);
 
         // Set and bind data to views
         ArrayAdapter<CharSequence> spinnerArrayAdapter = ArrayAdapter.createFromResource(
@@ -108,6 +114,10 @@ public class MaterialThemeFragment extends Fragment {
         mCurrentThemeSpinner.setAdapter(spinnerArrayAdapter);
         mGreenThemeSpinner.setAdapter(spinnerArrayAdapter);
         mBlueThemeSpinner.setAdapter(spinnerArrayAdapter);
+
+        mCurrentThemeDialogButton.setOnClickListener(this);
+        mGreenThemeDialogButton.setOnClickListener(this);
+        mBlueThemeDialogButton.setOnClickListener(this);
 
         return fragmentView;
     }
@@ -200,6 +210,44 @@ public class MaterialThemeFragment extends Fragment {
         if (BuildConfig.DEBUG) {
             LogUtil.logOnDestroy(TAG);
         }
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (BuildConfig.DEBUG) {
+            LogUtil.logMethod(TAG, "onClick");
+        }
+
+        switch (v.getId()) {
+            case R.id.fragment_theme_dialog_button_current:
+                MaterialThemeDialogFragment dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
+                        R.string.home_current_theme,
+                        R.string.home_current_theme);
+
+                DialogUtils.showDialogFragment(getChildFragmentManager(), dialogFragment);
+                break;
+
+            case R.id.fragment_theme_dialog_button_green:
+                 dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
+                        R.string.home_green_theme,
+                        R.string.home_green_theme);
+
+                DialogUtils.showDialogFragment(getChildFragmentManager(), dialogFragment);
+                break;
+
+            case R.id.fragment_theme_dialog_button_blue:
+                 dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
+                        R.string.home_blue_theme,
+                        R.string.home_blue_theme);
+
+                DialogUtils.showDialogFragment(getChildFragmentManager(), dialogFragment);
+                break;
+
+            default:
+                LogUtil.logMessage(LogLevel.WARN, TAG, "onClick", "unknown view clicked");
+                break;
+        }
+
     }
 
     public enum ThemingMethod {

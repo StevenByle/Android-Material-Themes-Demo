@@ -1,6 +1,6 @@
 <resources>>
     <!-- Base Theme -->
-    <style name="AppTheme" parent="BaseTheme">
+    <style name="AppTheme" parent="BaseTheme.Light">
         <!-- API specific attributes 21+ -->
         <item name="selectableDrawableColorDefault">?colorControlHighlight</item>
         <item name="selectableDrawableColorInverse">@color/selector_white_pressed</item>

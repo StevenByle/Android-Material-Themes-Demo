@@ -6,7 +6,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 /**
- * Created by sbyle on 10/27/15.
+ * @author Steven Byle
  */
 public class LogUtil {
 
@@ -14,7 +14,11 @@ public class LogUtil {
         return c.getSimpleName();
     }
 
-    public static int logMessage(LogLevel logLevel, String tag, String methodName) {
+    public static int logMethod(String tag, String methodName) {
+        return logMessage(LogLevel.DEBUG, tag, methodName, null);
+    }
+
+    public static int logMethod(LogLevel logLevel, String tag, String methodName) {
         return logMessage(logLevel, tag, methodName, null);
     }
 
@@ -31,11 +35,15 @@ public class LogUtil {
     }
 
     public static int logOnAttach(String tag) {
-        return logMessage(LogLevel.VERBOSE, tag, "onAttach");
+        return logMethod(LogLevel.VERBOSE, tag, "onAttach");
     }
 
     public static int logOnCreate(String tag, Bundle savedInstanceState) {
         return logMessage(LogLevel.VERBOSE, tag, "onCreate", getSavedInstanceStateNullMessage(savedInstanceState));
+    }
+
+    public static int logOnCreateDialog(String tag, Bundle savedInstanceState) {
+        return logMessage(LogLevel.VERBOSE, tag, "onCreateDialog", getSavedInstanceStateNullMessage(savedInstanceState));
     }
 
     public static int logOnCreateView(String tag, Bundle savedInstanceState) {
@@ -55,31 +63,31 @@ public class LogUtil {
     }
 
     public static int logOnStart(String tag) {
-        return logMessage(LogLevel.VERBOSE, tag, "onStart");
+        return logMethod(LogLevel.VERBOSE, tag, "onStart");
     }
 
     public static int logOnResume(String tag) {
-        return logMessage(LogLevel.VERBOSE, tag, "onResume");
+        return logMethod(LogLevel.VERBOSE, tag, "onResume");
     }
 
     public static int logOnPause(String tag) {
-        return logMessage(LogLevel.VERBOSE, tag, "onPause");
+        return logMethod(LogLevel.VERBOSE, tag, "onPause");
     }
 
     public static int logOnSaveInstanceState(String tag) {
-        return logMessage(LogLevel.VERBOSE, tag, "onSaveInstanceState");
+        return logMethod(LogLevel.VERBOSE, tag, "onSaveInstanceState");
     }
 
     public static int logOnStop(String tag) {
-        return logMessage(LogLevel.VERBOSE, tag, "onStop");
+        return logMethod(LogLevel.VERBOSE, tag, "onStop");
     }
 
     public static int logOnDestroyView(String tag) {
-        return logMessage(LogLevel.VERBOSE, tag, "onDestroyView");
+        return logMethod(LogLevel.VERBOSE, tag, "onDestroyView");
     }
 
     public static int logOnDestroy(String tag) {
-        return logMessage(LogLevel.VERBOSE, tag, "onDestroy");
+        return logMethod(LogLevel.VERBOSE, tag, "onDestroy");
     }
 
     private static String getSavedInstanceStateNullMessage(Bundle savedInstanceState) {

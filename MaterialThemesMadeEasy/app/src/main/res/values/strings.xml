@@ -5,11 +5,14 @@
     <!-- Menu actions -->
     <string name="action_settings">Settings</string>
 
-    <!-- Home page -->
+    <!-- Home -->
     <string name="home_tab_xml">XML</string>
     <string name="home_tab_code">Code</string>
 
-    <!-- Theme page -->
+    <string name="home_current_theme">Current Theme</string>
+    <string name="home_green_theme">Green Theme</string>
+    <string name="home_blue_theme">Blue Theme</string>
+
     <string-array name="android_version_names_array">
         <item>Cupcake</item>
         <item>Donut</item>
@@ -23,4 +26,9 @@
         <item>Lollipop</item>
         <item>Marshmallow</item>
     </string-array>
+
+    <!-- Dialogs -->
+    <string name="dialog_button_positive">Positive</string>
+    <string name="dialog_button_negative">Negative</string>
+
 </resources>
