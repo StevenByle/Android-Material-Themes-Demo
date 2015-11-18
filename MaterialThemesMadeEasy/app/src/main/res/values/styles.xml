@@ -204,13 +204,24 @@
     <style name="ProgressBarStyle" parent="Widget.AppCompat.ProgressBar">
     </style>
 
+    <!-- Image Styles -->
+    <style name="ImageStyle">
+    </style>
+
+    <style name="ImageStyle.Colored">
+        <item name="android:tint">?colorAccent</item>
+    </style>
+
     <style name="ProgressBarStyle.Horizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
     </style>
 
     <!-- Card Styles -->
-    <style name="CardViewStyle" parent="CardView.Light">
+    <style name="CardStyle" parent="CardView.Light">
         <item name="cardCornerRadius">@dimen/card_corner_radius</item>
         <item name="cardElevation">@dimen/card_elevation</item>
+    </style>
+
+    <style name="CardStyle.Home">
         <item name="contentPaddingBottom">@dimen/content_vertical_spacing</item>
         <item name="contentPaddingLeft">@dimen/content_horizontal_spacing</item>
         <item name="contentPaddingRight">@dimen/content_horizontal_spacing</item>
