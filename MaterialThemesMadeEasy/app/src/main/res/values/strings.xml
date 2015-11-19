@@ -9,7 +9,15 @@
     <string name="home_tab_xml">XML</string>
     <string name="home_tab_code">Code</string>
 
-    <!-- Material Theme -->
+    <!-- Change Theme Dialog -->
+    <string name="set_theme_dialog_title">Set Theme</string>
+    <string name="set_theme_dialog_button_positive">Set Theme</string>
+    <string name="set_theme_dialog_button_negative">Cancel</string>
+    <string name="set_theme_dialog_option_orange">Orange</string>
+    <string name="set_theme_dialog_option_green">Green</string>
+    <string name="set_theme_dialog_option_blue">Blue</string>
+
+    <!-- Material Theme Elements -->
     <string name="material_theme_current_theme">Current Theme</string>
     <string name="material_theme_green_theme">Green Theme</string>
     <string name="material_theme_blue_theme">Blue Theme</string>
@@ -17,10 +25,8 @@
     <string name="material_theme_default">Default</string>
     <string name="material_theme_colored">Colored</string>
     <string name="material_theme_buttons_no_raise">Buttons: No Raise</string>
-
-    <!-- Dialogs -->
-    <string name="dialog_button_positive">Positive</string>
-    <string name="dialog_button_negative">Negative</string>
+    <string name="material_theme_dialog_button_positive">Positive</string>
+    <string name="material_theme_dialog_button_negative">Negative</string>
 
     <!-- Spinners -->
     <string-array name="spinner_theme_options_array">

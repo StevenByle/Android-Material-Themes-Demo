@@ -3,10 +3,9 @@ package com.stevenbyle.android.materialthemes.controller.home;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.StyleRes;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,27 +15,23 @@ import android.view.View;
 
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
+import com.stevenbyle.android.materialthemes.controller.global.DialogUtils;
+import com.stevenbyle.android.materialthemes.controller.global.ThemeUtils;
+import com.stevenbyle.android.materialthemes.controller.home.material.MaterialTheme;
 import com.stevenbyle.android.materialthemes.global.LogUtils;
 
 public class HomeActivity extends AppCompatActivity {
     private static final String TAG = LogUtils.generateTag(HomeActivity.class);
 
-    private static final String KEY_ARG_THEME_RES_ID = "KEY_ARG_THEME_RES_ID";
+    private static final String KEY_ARG_CURRENT_THEME = "KEY_ARG_CURRENT_THEME";
 
-    private static final int[] sAppThemeResIdList = {
-            R.style.AppTheme_Orange,
-            R.style.AppTheme_Green,
-            R.style.AppTheme_Blue
-    };
-
-    @StyleRes
-    private int mThemeResId;
+    private MaterialTheme mCurrentTheme;
     private Toolbar mToolbar;
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private HomePagerAdapter mViewPagerAdapter;
 
-    public static Intent newInstanceIntent(Context context, @StyleRes int themeResId) {
+    public static Intent newInstanceIntent(Context context, MaterialTheme currentTheme) {
         if (BuildConfig.DEBUG) {
             LogUtils.logMethod(TAG, "newInstanceIntent");
         }
@@ -51,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         // Add parameters to the argument bundle
-        args.putInt(KEY_ARG_THEME_RES_ID, themeResId);
+        args.putSerializable(KEY_ARG_CURRENT_THEME, currentTheme);
         intent.putExtras(args);
 
         return intent;
@@ -64,15 +59,15 @@ public class HomeActivity extends AppCompatActivity {
 
         // If no parameters were passed in, default them
         if (args == null) {
-            mThemeResId = sAppThemeResIdList[0];
+            mCurrentTheme = ThemeUtils.getThemeList().get(0);
         }
         // Otherwise, set incoming parameters
         else {
-            mThemeResId = args.getInt(KEY_ARG_THEME_RES_ID, sAppThemeResIdList[0]);
+            mCurrentTheme = (MaterialTheme) args.getSerializable(KEY_ARG_CURRENT_THEME);
         }
 
         // Set the theme before calling super or setContentView
-        setTheme(mThemeResId);
+        setTheme(mCurrentTheme.getThemeResId());
         super.onCreate(savedInstanceState);
 
         if (BuildConfig.DEBUG) {
@@ -104,8 +99,8 @@ public class HomeActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                DialogFragment dialogFragment = SetThemeDialogFragment.newInstance(mCurrentTheme);
+                DialogUtils.showDialogFragment(getSupportFragmentManager(), dialogFragment);
             }
         });
     }

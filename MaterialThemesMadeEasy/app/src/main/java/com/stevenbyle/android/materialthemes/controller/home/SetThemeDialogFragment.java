@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.StringRes;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -14,37 +14,37 @@ import android.view.ViewGroup;
 
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
+import com.stevenbyle.android.materialthemes.controller.global.ThemeUtils;
+import com.stevenbyle.android.materialthemes.controller.home.material.MaterialTheme;
 import com.stevenbyle.android.materialthemes.global.LogUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Steven Byle
  */
-public class MaterialThemeDialogFragment extends DialogFragment implements DialogInterface.OnClickListener {
-    private static final String TAG = LogUtils.generateTag(MaterialThemeInXmlFragment.class);
+public class SetThemeDialogFragment extends DialogFragment implements DialogInterface.OnClickListener {
+    private static final String TAG = LogUtils.generateTag(SetThemeDialogFragment.class);
 
-    private static final String KEY_ARG_TITLE = "KEY_ARG_TITLE";
-    private static final String KEY_ARG_MESSAGE = "KEY_ARG_MESSAGE";
+    private static final String KEY_ARG_CURRENT_THEME = "KEY_ARG_CURRENT_THEME";
 
-    private String mTitle, mMessage;
+    private MaterialTheme mCurrentTheme;
+    private int mCurrentSelectedThemeIndex;
+    private SingleChoiceOnClickListener mSingleChoiceOnClickListener;
 
-    public static MaterialThemeDialogFragment newInstance(Context context, @StringRes int titleResId, @StringRes int messageResId) {
-        MaterialThemeDialogFragment fragment = newInstance(context.getString(titleResId), context.getString(messageResId));
-        return fragment;
-    }
-
-    public static MaterialThemeDialogFragment newInstance(String title, String message) {
+    public static SetThemeDialogFragment newInstance(MaterialTheme currentTheme) {
         if (BuildConfig.DEBUG) {
             LogUtils.logMethod(TAG, "newInstance");
         }
 
-        MaterialThemeDialogFragment fragment = new MaterialThemeDialogFragment();
+        SetThemeDialogFragment fragment = new SetThemeDialogFragment();
         Bundle args = fragment.getArguments();
         if (args == null) {
             args = new Bundle();
         }
 
-        args.putString(KEY_ARG_TITLE, title);
-        args.putString(KEY_ARG_MESSAGE, message);
+        args.putSerializable(KEY_ARG_CURRENT_THEME, currentTheme);
         fragment.setArguments(args);
 
         return fragment;
@@ -72,13 +72,11 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
 
         // If no parameters were passed in, default them
         if (args == null) {
-            mTitle = null;
-            mMessage = null;
+            mCurrentTheme = null;
         }
         // Otherwise, set incoming parameters
         else {
-            mTitle = args.getString(KEY_ARG_TITLE);
-            mMessage = args.getString(KEY_ARG_MESSAGE);
+            mCurrentTheme = (MaterialTheme) args.getSerializable(KEY_ARG_CURRENT_THEME);
         }
 
         // If this is the first creation, default state variables
@@ -88,6 +86,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         else {
         }
 
+        mSingleChoiceOnClickListener = new SingleChoiceOnClickListener();
     }
 
     @Override
@@ -96,12 +95,19 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
             LogUtils.logOnCreateDialog(TAG, savedInstanceState);
         }
 
+        List<String> themeNameList = new ArrayList<String>();
+        for (MaterialTheme materialTheme : ThemeUtils.getThemeList()) {
+            themeNameList.add(getString(materialTheme.getNameResId()));
+        }
+
+        mCurrentSelectedThemeIndex = ThemeUtils.getThemeList().indexOf(mCurrentTheme);
+        String[] themeNameArray = themeNameList.toArray(new String[themeNameList.size()]);
+
         Activity parentActivity = getActivity();
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(parentActivity)
-                .setTitle(mTitle)
-                .setMessage(mMessage)
-                .setPositiveButton(R.string.dialog_button_positive, this)
-                .setNegativeButton(R.string.dialog_button_negative, this);
+                .setTitle(R.string.set_theme_dialog_title)
+                .setNegativeButton(R.string.set_theme_dialog_button_negative, this)
+                .setSingleChoiceItems(themeNameArray, mCurrentSelectedThemeIndex, mSingleChoiceOnClickListener);
 
         Dialog dialog = alertDialogBuilder.create();
         dialog.setCanceledOnTouchOutside(true);
@@ -210,17 +216,49 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
     @Override
     public void onDismiss(DialogInterface dialog) {
         super.onDismiss(dialog);
+
+        if (BuildConfig.DEBUG) {
+            LogUtils.logMethod(TAG, "onDismiss");
+        }
     }
 
     @Override
     public void onCancel(DialogInterface dialog) {
         super.onCancel(dialog);
+
+        if (BuildConfig.DEBUG) {
+            LogUtils.logMethod(TAG, "onCancel");
+        }
     }
 
     @Override
     public void onClick(DialogInterface dialog, int which) {
-        // TODO
+        if (BuildConfig.DEBUG) {
+            LogUtils.logMethod(TAG, "onClick");
+        }
 
+        switch (which) {
+            case DialogInterface.BUTTON_NEGATIVE:
+                // Just let the dialog dismiss
+                break;
+        }
+    }
+
+    private class SingleChoiceOnClickListener implements DialogInterface.OnClickListener {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            // Upon selection, figure out which theme was selected
+            mCurrentSelectedThemeIndex = which;
+            MaterialTheme newTheme = ThemeUtils.getThemeList().get(mCurrentSelectedThemeIndex);
+
+            // If the theme is new, set it and start a new activity
+            if (!mCurrentTheme.equals(newTheme)) {
+                Activity parentActivity = getActivity();
+                Intent intent = HomeActivity.newInstanceIntent(parentActivity, newTheme);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                parentActivity.startActivity(intent);
+            }
+        }
     }
 
 }

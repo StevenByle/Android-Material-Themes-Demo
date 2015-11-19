@@ -1,4 +1,4 @@
-package com.stevenbyle.android.materialthemes.controller.home;
+package com.stevenbyle.android.materialthemes.controller.home.material;
 
 import android.content.Context;
 import android.os.Bundle;

@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.stevenbyle.android.materialthemes.R;
+import com.stevenbyle.android.materialthemes.controller.home.material.MaterialThemeInCodeFragment;
+import com.stevenbyle.android.materialthemes.controller.home.material.MaterialThemeInXmlFragment;
 
 import java.lang.ref.WeakReference;
 
