@@ -14,158 +14,9 @@
         android:orientation="vertical"
         android:paddingTop="@dimen/material_element_spacing_small">
 
-        <android.support.v7.widget.CardView
-            style="@style/CardStyle.Home"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <include layout="@layout/fragment_material_theme_in_xml_buttons_raised"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Buttons: Raised (Default)"
-                    android:textAppearance="@style/TextStyle.Title"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="Default"
-                    android:textAppearance="@style/TextStyle.Body2"/>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_current_theme"/>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_green_theme"
-                    android:theme="@style/AppTheme.Green"/>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_blue_theme"
-                    android:theme="@style/AppTheme.Blue"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="Colored"
-                    android:textAppearance="@style/TextStyle.Body2"/>
-
-                <Button
-                    style="@style/ButtonStyle.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_current_theme"/>
-
-                <Button
-                    style="@style/ButtonStyle.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_green_theme"
-                    android:theme="@style/AppTheme.Green"/>
-
-                <Button
-                    style="@style/ButtonStyle.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_blue_theme"
-                    android:theme="@style/AppTheme.Blue"/>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            style="@style/CardStyle.Home"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Buttons: No Raise"
-                    android:textAppearance="@style/TextStyle.Title"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="Default"
-                    android:textAppearance="@style/TextStyle.Body2"/>
-
-                <Button
-                    style="@style/ButtonStyle.NoRaise"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_current_theme"/>
-
-                <Button
-                    style="@style/ButtonStyle.NoRaise"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_green_theme"
-                    android:theme="@style/AppTheme.Green"/>
-
-                <Button
-                    style="@style/ButtonStyle.NoRaise"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_blue_theme"
-                    android:theme="@style/AppTheme.Blue"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="Colored"
-                    android:textAppearance="@style/TextStyle.Body2"/>
-
-                <Button
-                    style="@style/ButtonStyle.Colored.NoRaise"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_current_theme"/>
-
-                <Button
-                    style="@style/ButtonStyle.Colored.NoRaise"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_green_theme"
-                    android:theme="@style/AppTheme.Green"/>
-
-                <Button
-                    style="@style/ButtonStyle.Colored.NoRaise"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_blue_theme"
-                    android:theme="@style/AppTheme.Blue"/>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
+        <include layout="@layout/fragment_material_theme_in_xml_buttons_no_raise"/>
 
         <android.support.v7.widget.CardView
             style="@style/CardStyle.Home"
@@ -195,14 +46,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_current_theme"/>
+                    android:text="@string/material_theme_current_theme"/>
 
                 <Button
                     style="@style/ButtonStyle.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_green_theme"
+                    android:text="@string/material_theme_green_theme"
                     android:theme="@style/AppTheme.Green"/>
 
                 <Button
@@ -210,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_blue_theme"
+                    android:text="@string/material_theme_blue_theme"
                     android:theme="@style/AppTheme.Blue"/>
 
                 <TextView
@@ -225,14 +76,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_current_theme"/>
+                    android:text="@string/material_theme_current_theme"/>
 
                 <Button
                     style="@style/ButtonStyle.Borderless.ColoredText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_green_theme"
+                    android:text="@string/material_theme_green_theme"
                     android:theme="@style/AppTheme.Green"/>
 
                 <Button
@@ -240,7 +91,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_blue_theme"
+                    android:text="@string/material_theme_blue_theme"
                     android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -287,7 +138,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_current_theme"
+                        android:text="@string/material_theme_current_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -310,7 +161,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_green_theme"
+                        android:text="@string/material_theme_green_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -333,7 +184,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_blue_theme"
+                        android:text="@string/material_theme_blue_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -363,7 +214,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_current_theme"
+                        android:text="@string/material_theme_current_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -386,7 +237,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_green_theme"
+                        android:text="@string/material_theme_green_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -409,7 +260,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_blue_theme"
+                        android:text="@string/material_theme_blue_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
             </LinearLayout>
@@ -457,7 +308,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_current_theme"
+                        android:text="@string/material_theme_current_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -480,7 +331,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_green_theme"
+                        android:text="@string/material_theme_green_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -503,7 +354,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_blue_theme"
+                        android:text="@string/material_theme_blue_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -533,7 +384,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_current_theme"
+                        android:text="@string/material_theme_current_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -556,7 +407,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_green_theme"
+                        android:text="@string/material_theme_green_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -579,7 +430,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_blue_theme"
+                        android:text="@string/material_theme_blue_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
             </LinearLayout>
@@ -605,20 +456,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:hint="@string/home_current_theme"/>
+                    android:hint="@string/material_theme_current_theme"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:hint="@string/home_green_theme"
+                    android:hint="@string/material_theme_green_theme"
                     android:theme="@style/AppTheme.Green"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:hint="@string/home_blue_theme"
+                    android:hint="@string/material_theme_blue_theme"
                     android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -648,20 +499,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/material_element_spacing_medium"
-                        android:text="@string/home_current_theme"/>
+                        android:text="@string/material_theme_current_theme"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/material_element_spacing_medium"
-                        android:text="@string/home_green_theme"
+                        android:text="@string/material_theme_green_theme"
                         android:theme="@style/AppTheme.Green"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/material_element_spacing_medium"
-                        android:text="@string/home_blue_theme"
+                        android:text="@string/material_theme_blue_theme"
                         android:theme="@style/AppTheme.Blue"/>
                 </RadioGroup>
             </LinearLayout>
@@ -687,20 +538,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_current_theme"/>
+                    android:text="@string/material_theme_current_theme"/>
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_green_theme"
+                    android:text="@string/material_theme_green_theme"
                     android:theme="@style/AppTheme.Green"/>
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_blue_theme"
+                    android:text="@string/material_theme_blue_theme"
                     android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -726,14 +577,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
                     android:switchPadding="@dimen/material_element_spacing_extra_small"
-                    android:text="@string/home_current_theme"/>
+                    android:text="@string/material_theme_current_theme"/>
 
                 <Switch
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
                     android:switchPadding="@dimen/material_element_spacing_extra_small"
-                    android:text="@string/home_green_theme"
+                    android:text="@string/material_theme_green_theme"
                     android:theme="@style/AppTheme.Green"/>
 
                 <Switch
@@ -741,7 +592,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
                     android:switchPadding="@dimen/material_element_spacing_extra_small"
-                    android:text="@string/home_blue_theme"
+                    android:text="@string/material_theme_blue_theme"
                     android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -766,11 +617,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_current_theme"
+                    android:text="@string/material_theme_current_theme"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <Spinner
-                    android:id="@+id/fragment_theme_by_xml_spinner_current_theme"
+                    android:id="@+id/fragment_material_theme_spinner_current_theme"
                     style="@style/SpinnerStyle.Underlined"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -781,11 +632,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_green_theme"
+                    android:text="@string/material_theme_green_theme"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <Spinner
-                    android:id="@+id/fragment_theme_by_xml_spinner_green_theme"
+                    android:id="@+id/fragment_material_theme_spinner_green_theme"
                     style="@style/SpinnerStyle.Underlined"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -797,11 +648,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_blue_theme"
+                    android:text="@string/material_theme_blue_theme"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <Spinner
-                    android:id="@+id/fragment_theme_by_xml_spinner_blue_theme"
+                    android:id="@+id/fragment_material_theme_spinner_blue_theme"
                     style="@style/SpinnerStyle.Underlined"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -831,7 +682,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_current_theme"
+                    android:text="@string/material_theme_current_theme"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <SeekBar
@@ -843,7 +694,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_green_theme"
+                    android:text="@string/material_theme_green_theme"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <SeekBar
@@ -856,7 +707,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_blue_theme"
+                    android:text="@string/material_theme_blue_theme"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <SeekBar
@@ -887,7 +738,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_current_theme"
+                    android:text="@string/material_theme_current_theme"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <LinearLayout
@@ -914,7 +765,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_green_theme"
+                    android:text="@string/material_theme_green_theme"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <LinearLayout
@@ -942,7 +793,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_blue_theme"
+                    android:text="@string/material_theme_blue_theme"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <LinearLayout
@@ -1011,7 +862,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_current_theme"
+                        android:text="@string/material_theme_current_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -1043,7 +894,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_green_theme"
+                        android:text="@string/material_theme_green_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
 
@@ -1075,7 +926,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/home_blue_theme"
+                        android:text="@string/material_theme_blue_theme"
                         android:textAppearance="@style/TextStyle.Body1"/>
                 </LinearLayout>
             </LinearLayout>
@@ -1098,29 +949,29 @@
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <Button
-                    android:id="@+id/fragment_theme_snackbar_button_current"
+                    android:id="@+id/fragment_material_theme_button_snackbar_current_theme"
                     style="@style/ButtonStyle.Borderless.ColoredText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_current_theme"/>
+                    android:text="@string/material_theme_current_theme"/>
 
                 <Button
-                    android:id="@+id/fragment_theme_snackbar_button_green"
+                    android:id="@+id/fragment_material_theme_button_snackbar_green_theme"
                     style="@style/ButtonStyle.Borderless.ColoredText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_green_theme"
+                    android:text="@string/material_theme_green_theme"
                     android:theme="@style/AppTheme.Green"/>
 
                 <Button
-                    android:id="@+id/fragment_theme_snackbar_button_blue"
+                    android:id="@+id/fragment_material_theme_button_snackbar_blue_theme"
                     style="@style/ButtonStyle.Borderless.ColoredText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_blue_theme"
+                    android:text="@string/material_theme_blue_theme"
                     android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -1142,29 +993,29 @@
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <Button
-                    android:id="@+id/fragment_theme_dialog_button_current"
+                    android:id="@+id/fragment_material_theme_button_dialog_current_theme"
                     style="@style/ButtonStyle.Borderless.ColoredText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="@string/home_current_theme"/>
+                    android:text="@string/material_theme_current_theme"/>
 
                 <Button
-                    android:id="@+id/fragment_theme_dialog_button_green"
+                    android:id="@+id/fragment_material_theme_button_dialog_green_theme"
                     style="@style/ButtonStyle.Borderless.ColoredText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_green_theme"
+                    android:text="@string/material_theme_green_theme"
                     android:theme="@style/AppTheme.Green"/>
 
                 <Button
-                    android:id="@+id/fragment_theme_dialog_button_blue"
+                    android:id="@+id/fragment_material_theme_button_dialog_blue_theme"
                     style="@style/ButtonStyle.Borderless.ColoredText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/home_blue_theme"
+                    android:text="@string/material_theme_blue_theme"
                     android:theme="@style/AppTheme.Blue"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>

@@ -11,8 +11,8 @@ import com.stevenbyle.android.materialthemes.controller.home.MaterialThemeFragme
 import java.lang.ref.WeakReference;
 
 /**
- * A {@link FragmentPagerAdapter} that returns a fragment corresponding to one of the
- * sections/tabs/pages.
+ *
+ * @author Steven Byle
  */
 public class HomePagerAdapter extends FragmentPagerAdapter {
 
@@ -24,28 +24,47 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
     }
 
     @Override
-    public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-        return MaterialThemeFragment.newInstance(ThemingMethod.XML);
+    public int getCount() {
+        return HomePage.values().length;
     }
 
     @Override
-    public int getCount() {
-        return 2;
+    public Fragment getItem(int position) {
+        HomePage homePage = getWhichHomePage(position);
+
+        switch (homePage) {
+            case THEME_IN_XML:
+                return MaterialThemeFragment.newInstance(ThemingMethod.XML);
+            case THEME_IN_CODE:
+                return MaterialThemeFragment.newInstance(ThemingMethod.CODE);
+        }
+
+        return null;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
+        HomePage homePage = getWhichHomePage(position);
+
         Context context = mContextRef.get();
         if (context != null) {
-            switch (position) {
-                case 0:
+            switch (homePage) {
+                case THEME_IN_XML:
                     return context.getString(R.string.home_tab_xml);
-                case 1:
+                case THEME_IN_CODE:
                     return context.getString(R.string.home_tab_code);
             }
         }
+
         return null;
+    }
+
+    private HomePage getWhichHomePage(int position) {
+        return HomePage.values()[position];
+    }
+
+    private enum HomePage {
+        THEME_IN_XML,
+        THEME_IN_CODE
     }
 }

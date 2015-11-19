@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            tools:context=".controller.home.MaterialByXmlFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_gray_200"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/material_element_spacing_small">
+
+        <include layout="@layout/fragment_material_theme_in_code_buttons_raised"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+
+            <include
+                layout="@layout/activity_home_fab"/>
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>

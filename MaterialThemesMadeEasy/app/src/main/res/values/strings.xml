@@ -1,34 +1,34 @@
 <resources>
-    <!-- Global app -->
+    <!-- Global App -->
     <string name="app_name">Material Themes Made Easy</string>
 
-    <!-- Menu actions -->
+    <!-- Menu Actions -->
     <string name="action_settings">Settings</string>
 
     <!-- Home -->
     <string name="home_tab_xml">XML</string>
     <string name="home_tab_code">Code</string>
 
-    <string name="home_current_theme">Current Theme</string>
-    <string name="home_green_theme">Green Theme</string>
-    <string name="home_blue_theme">Blue Theme</string>
-
-    <string-array name="android_version_names_array">
-        <item>Cupcake</item>
-        <item>Donut</item>
-        <item>Eclair</item>
-        <item>Froyo</item>
-        <item>Gingerbread</item>
-        <item>Honeycomb</item>
-        <item>Ice Cream Sandwich</item>
-        <item>Jellybean</item>
-        <item>Kit Kat</item>
-        <item>Lollipop</item>
-        <item>Marshmallow</item>
-    </string-array>
+    <!-- Material Theme -->
+    <string name="material_theme_current_theme">Current Theme</string>
+    <string name="material_theme_green_theme">Green Theme</string>
+    <string name="material_theme_blue_theme">Blue Theme</string>
+    <string name="material_theme_buttons_raised">Buttons: Raised (Default)</string>
+    <string name="material_theme_default">Default</string>
+    <string name="material_theme_colored">Colored</string>
+    <string name="material_theme_buttons_no_raise">Buttons: No Raise</string>
 
     <!-- Dialogs -->
     <string name="dialog_button_positive">Positive</string>
     <string name="dialog_button_negative">Negative</string>
 
+    <!-- Spinners -->
+    <string-array name="spinner_theme_options_array">
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Black</item>
+        <item>White</item>
+    </string-array>
 </resources>
