@@ -18,7 +18,7 @@ public class LogUtils {
         return logMessage(LogLevel.DEBUG, tag, methodName, null);
     }
 
-    public static int logMethod(LogLevel logLevel, String tag, String methodName) {
+    private static int logMethod(LogLevel logLevel, String tag, String methodName) {
         return logMessage(logLevel, tag, methodName, null);
     }
 

@@ -1,50 +1,39 @@
 package com.stevenbyle.android.materialthemes.controller.home;
 
-import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.StringRes;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AlertDialog;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
 import com.stevenbyle.android.materialthemes.global.LogUtils;
+import com.stevenbyle.android.materialthemes.global.LogUtils.LogLevel;
 
 /**
- * @author Steven Byle
+ * TODO
  */
-public class MaterialThemeDialogFragment extends DialogFragment implements DialogInterface.OnClickListener {
-    private static final String TAG = LogUtils.generateTag(MaterialThemeInXmlFragment.class);
+public class MaterialThemeInCodeFragment extends Fragment implements OnClickListener {
+    private static final String TAG = LogUtils.generateTag(MaterialThemeInCodeFragment.class);
 
-    private static final String KEY_ARG_TITLE = "KEY_ARG_TITLE";
-    private static final String KEY_ARG_MESSAGE = "KEY_ARG_MESSAGE";
-
-    private String mTitle, mMessage;
-
-    public static MaterialThemeDialogFragment newInstance(Context context, @StringRes int titleResId, @StringRes int messageResId) {
-        MaterialThemeDialogFragment fragment = newInstance(context.getString(titleResId), context.getString(messageResId));
-        return fragment;
-    }
-
-    public static MaterialThemeDialogFragment newInstance(String title, String message) {
+    public static MaterialThemeInCodeFragment newInstance() {
         if (BuildConfig.DEBUG) {
             LogUtils.logMethod(TAG, "newInstance");
         }
 
-        MaterialThemeDialogFragment fragment = new MaterialThemeDialogFragment();
+        // Create a new fragment instance
+        MaterialThemeInCodeFragment fragment = new MaterialThemeInCodeFragment();
+
+        // Get arguments passed in, if any
         Bundle args = fragment.getArguments();
         if (args == null) {
             args = new Bundle();
         }
 
-        args.putString(KEY_ARG_TITLE, title);
-        args.putString(KEY_ARG_MESSAGE, message);
+        // Add parameters to the argument bundle
         fragment.setArguments(args);
 
         return fragment;
@@ -72,40 +61,17 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
 
         // If no parameters were passed in, default them
         if (args == null) {
-            mTitle = null;
-            mMessage = null;
         }
         // Otherwise, set incoming parameters
         else {
-            mTitle = args.getString(KEY_ARG_TITLE);
-            mMessage = args.getString(KEY_ARG_MESSAGE);
         }
 
         // If this is the first creation, default state variables
         if (savedInstanceState == null) {
         }
-        // Otherwise, restore state
+        // Otherwise, restore state variables
         else {
         }
-
-    }
-
-    @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnCreateDialog(TAG, savedInstanceState);
-        }
-
-        Activity parentActivity = getActivity();
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(parentActivity)
-                .setTitle(mTitle)
-                .setMessage(mMessage)
-                .setPositiveButton(R.string.dialog_button_positive, this)
-                .setNegativeButton(R.string.dialog_button_negative, this);
-
-        Dialog dialog = alertDialogBuilder.create();
-        dialog.setCanceledOnTouchOutside(true);
-        return dialog;
     }
 
     @Override
@@ -114,7 +80,15 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
             LogUtils.logOnCreateView(TAG, savedInstanceState);
         }
 
-        return super.onCreateView(inflater, container, savedInstanceState);
+        // Inflate the fragment layout into the container
+        View fragmentView = inflater.inflate(R.layout.fragment_material_theme_in_code, container, false);
+
+        // Reference views
+
+        // Set and bind data to views
+
+
+        return fragmentView;
     }
 
     @Override
@@ -208,19 +182,20 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
     }
 
     @Override
-    public void onDismiss(DialogInterface dialog) {
-        super.onDismiss(dialog);
+    public void onClick(View v) {
+        if (BuildConfig.DEBUG) {
+            LogUtils.logMethod(TAG, "onClick");
+        }
+
+        switch (v.getId()) {
+
+
+            default:
+                if (BuildConfig.DEBUG) {
+                    LogUtils.logMessage(LogLevel.WARN, TAG, "onClick", "unknown view clicked");
+                }
+                break;
+        }
+
     }
-
-    @Override
-    public void onCancel(DialogInterface dialog) {
-        super.onCancel(dialog);
-    }
-
-    @Override
-    public void onClick(DialogInterface dialog, int which) {
-        // TODO
-
-    }
-
 }

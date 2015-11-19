@@ -4,10 +4,12 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.internal.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
@@ -20,23 +22,20 @@ import com.stevenbyle.android.materialthemes.global.LogUtils.LogLevel;
 /**
  * TODO
  */
-public class MaterialThemeFragment extends Fragment implements OnClickListener {
-    private static final String TAG = LogUtils.generateTag(MaterialThemeFragment.class);
+public class MaterialThemeInXmlFragment extends Fragment implements OnClickListener {
+    private static final String TAG = LogUtils.generateTag(MaterialThemeInXmlFragment.class);
 
-    private static final String KEY_ARG_THEMING_METHOD = "KEY_ARG_THEMING_METHOD";
-
-    private ThemingMethod mThemingMethod;
     private Button mCurrentThemeDialogButton, mGreenThemeDialogButton, mBlueThemeDialogButton;
     private Button mCurrentThemeSnackbarButton, mGreenThemeSnackbarButton, mBlueThemeSnackbarButton;
     private Spinner mCurrentThemeSpinner, mGreenThemeSpinner, mBlueThemeSpinner;
 
-    public static MaterialThemeFragment newInstance(ThemingMethod themingMethod) {
+    public static MaterialThemeInXmlFragment newInstance() {
         if (BuildConfig.DEBUG) {
             LogUtils.logMethod(TAG, "newInstance");
         }
 
         // Create a new fragment instance
-        MaterialThemeFragment fragment = new MaterialThemeFragment();
+        MaterialThemeInXmlFragment fragment = new MaterialThemeInXmlFragment();
 
         // Get arguments passed in, if any
         Bundle args = fragment.getArguments();
@@ -45,7 +44,6 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         }
 
         // Add parameters to the argument bundle
-        args.putSerializable(KEY_ARG_THEMING_METHOD, themingMethod);
         fragment.setArguments(args);
 
         return fragment;
@@ -73,11 +71,9 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
 
         // If no parameters were passed in, default them
         if (args == null) {
-            mThemingMethod = null;
         }
         // Otherwise, set incoming parameters
         else {
-            mThemingMethod = (ThemingMethod) args.getSerializable(KEY_ARG_THEMING_METHOD);
         }
 
         // If this is the first creation, default state variables
@@ -94,19 +90,10 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
             LogUtils.logOnCreateView(TAG, savedInstanceState);
         }
 
-        // Inflate the proper fragment layout into the container
-        int layoutResId = -1;
-        if (mThemingMethod == ThemingMethod.XML) {
-            layoutResId = R.layout.fragment_material_theme_in_xml;
-        }
-        else if (mThemingMethod == ThemingMethod.CODE) {
-            layoutResId = R.layout.fragment_material_theme_in_code;
-        }
-        View fragmentView = inflater.inflate(layoutResId, container, false);
+        // Inflate the fragment layout into the container
+        View fragmentView = inflater.inflate(R.layout.fragment_material_theme_in_xml, container, false);
 
-        // Reference views used by both theming methods
-
-        /*
+        // Reference views
         mCurrentThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_material_theme_spinner_current_theme);
         mGreenThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_material_theme_spinner_green_theme);
         mBlueThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_material_theme_spinner_blue_theme);
@@ -116,16 +103,8 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         mCurrentThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_snackbar_current_theme);
         mGreenThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_snackbar_green_theme);
         mBlueThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_snackbar_blue_theme);
-        */
-
-        // Reference views used when theming by code
-        if (mThemingMethod == ThemingMethod.CODE) {
-
-        }
 
         // Set and bind data to views
-
-        /*
         ArrayAdapter<CharSequence> spinnerArrayAdapter = ArrayAdapter.createFromResource(
                 container.getContext(),
                 R.array.spinner_theme_options_array,
@@ -142,7 +121,6 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
         mCurrentThemeSnackbarButton.setOnClickListener(this);
         mGreenThemeSnackbarButton.setOnClickListener(this);
         mBlueThemeSnackbarButton.setOnClickListener(this);
-        */
 
         return fragmentView;
     }
@@ -270,17 +248,22 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
 
             case R.id.fragment_material_theme_button_snackbar_current_theme:
                 Snackbar.make(v, R.string.material_theme_current_theme, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.material_theme_current_theme, this).show();
+                        .setAction(R.string.material_theme_current_theme, this)
+                        .show();
                 break;
 
             case R.id.fragment_material_theme_button_snackbar_green_theme:
-                Snackbar.make(v, R.string.material_theme_green_theme, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.material_theme_green_theme, this).show();
+                //FIXME
+                View v2 = new View(new ContextThemeWrapper(v.getContext(), R.style.AppTheme_Green), null, 0);
+                Snackbar.make(v2, R.string.material_theme_green_theme, Snackbar.LENGTH_LONG)
+                        .setAction(R.string.material_theme_green_theme, this)
+                        .show();
                 break;
 
             case R.id.fragment_material_theme_button_snackbar_blue_theme:
                 Snackbar.make(v, R.string.material_theme_blue_theme, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.material_theme_blue_theme, this).show();
+                        .setAction(R.string.material_theme_blue_theme, this)
+                        .show();
                 break;
 
             default:
@@ -290,9 +273,5 @@ public class MaterialThemeFragment extends Fragment implements OnClickListener {
                 break;
         }
 
-    }
-
-    public enum ThemingMethod {
-        XML, CODE
     }
 }

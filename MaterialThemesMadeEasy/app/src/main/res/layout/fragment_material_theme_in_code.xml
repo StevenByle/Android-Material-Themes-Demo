@@ -14,8 +14,6 @@
         android:orientation="vertical"
         android:paddingTop="@dimen/material_element_spacing_small">
 
-        <include layout="@layout/fragment_material_theme_in_code_buttons_raised"/>
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

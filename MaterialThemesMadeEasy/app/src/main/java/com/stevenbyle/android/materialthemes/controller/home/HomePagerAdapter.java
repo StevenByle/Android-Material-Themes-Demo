@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.stevenbyle.android.materialthemes.R;
-import com.stevenbyle.android.materialthemes.controller.home.MaterialThemeFragment.ThemingMethod;
 
 import java.lang.ref.WeakReference;
 
@@ -34,9 +33,9 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
 
         switch (homePage) {
             case THEME_IN_XML:
-                return MaterialThemeFragment.newInstance(ThemingMethod.XML);
+                return MaterialThemeInXmlFragment.newInstance();
             case THEME_IN_CODE:
-                return MaterialThemeFragment.newInstance(ThemingMethod.CODE);
+                return MaterialThemeInCodeFragment.newInstance();
         }
 
         return null;
