@@ -107,7 +107,7 @@ public class MaterialThemeInXmlFragment extends Fragment implements OnClickListe
         // Set and bind data to views
         ArrayAdapter<CharSequence> spinnerArrayAdapter = ArrayAdapter.createFromResource(
                 container.getContext(),
-                R.array.spinner_theme_options_array,
+                R.array.spinner_items_array,
                 android.R.layout.simple_spinner_item);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 

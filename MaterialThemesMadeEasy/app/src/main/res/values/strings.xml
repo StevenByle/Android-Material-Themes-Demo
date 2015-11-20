@@ -40,13 +40,18 @@
     <string name="material_theme_dialog_button_positive">Positive</string>
     <string name="material_theme_dialog_button_negative">Negative</string>
 
-    <!-- Spinners TODO -->
-    <string-array name="spinner_theme_options_array">
-        <item>Red</item>
-        <item>Orange</item>
-        <item>Green</item>
-        <item>Blue</item>
-        <item>Black</item>
-        <item>White</item>
+    <!-- Spinners -->
+    <string name="spinner_item_1">One</string>
+    <string name="spinner_item_2">Two</string>
+    <string name="spinner_item_3">Three</string>
+    <string name="spinner_item_4">Four</string>
+    <string name="spinner_item_5">Five</string>
+
+    <string-array name="spinner_items_array">
+        <item>@string/spinner_item_1</item>
+        <item>@string/spinner_item_2</item>
+        <item>@string/spinner_item_3</item>
+        <item>@string/spinner_item_4</item>
+        <item>@string/spinner_item_5</item>
     </string-array>
 </resources>
