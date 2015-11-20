@@ -15,10 +15,10 @@ import android.view.View;
 
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
-import com.stevenbyle.android.materialthemes.controller.global.DialogUtils;
-import com.stevenbyle.android.materialthemes.controller.global.ThemeUtils;
-import com.stevenbyle.android.materialthemes.controller.home.material.MaterialTheme;
-import com.stevenbyle.android.materialthemes.global.LogUtils;
+import com.stevenbyle.android.materialthemes.controller.dialog.DialogUtils;
+import com.stevenbyle.android.materialthemes.controller.theme.MaterialThemeUtils;
+import com.stevenbyle.android.materialthemes.controller.theme.MaterialTheme;
+import com.stevenbyle.android.materialthemes.log.LogUtils;
 
 public class HomeActivity extends AppCompatActivity {
     private static final String TAG = LogUtils.generateTag(HomeActivity.class);
@@ -59,7 +59,7 @@ public class HomeActivity extends AppCompatActivity {
 
         // If no parameters were passed in, default them
         if (args == null) {
-            mCurrentTheme = ThemeUtils.getThemeList().get(0);
+            mCurrentTheme = MaterialThemeUtils.getThemeList().get(0);
         }
         // Otherwise, set incoming parameters
         else {

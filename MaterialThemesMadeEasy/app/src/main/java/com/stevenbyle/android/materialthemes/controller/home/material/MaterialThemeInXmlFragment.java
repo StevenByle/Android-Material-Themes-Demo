@@ -12,8 +12,8 @@ import android.widget.Spinner;
 
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
-import com.stevenbyle.android.materialthemes.global.LogUtils;
-import com.stevenbyle.android.materialthemes.global.LogUtils.LogLevel;
+import com.stevenbyle.android.materialthemes.log.LogUtils;
+import com.stevenbyle.android.materialthemes.log.LogUtils.LogLevel;
 
 /**
  * TODO

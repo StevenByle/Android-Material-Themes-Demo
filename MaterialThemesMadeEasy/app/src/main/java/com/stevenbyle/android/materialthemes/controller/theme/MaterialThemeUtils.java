@@ -1,7 +1,6 @@
-package com.stevenbyle.android.materialthemes.controller.global;
+package com.stevenbyle.android.materialthemes.controller.theme;
 
 import com.stevenbyle.android.materialthemes.R;
-import com.stevenbyle.android.materialthemes.controller.home.material.MaterialTheme;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +8,7 @@ import java.util.List;
 /**
  * @author Steven Byle
  */
-public class ThemeUtils {
+public class MaterialThemeUtils {
     // App themes
     public static final MaterialTheme THEME_ORANGE =
             new MaterialTheme(R.string.material_theme_orange, R.style.AppTheme_Orange);

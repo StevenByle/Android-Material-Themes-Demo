@@ -13,10 +13,10 @@ import android.widget.Button;
 
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
-import com.stevenbyle.android.materialthemes.controller.global.DialogUtils;
-import com.stevenbyle.android.materialthemes.controller.global.ThemeUtils;
-import com.stevenbyle.android.materialthemes.global.LogUtils;
-import com.stevenbyle.android.materialthemes.global.LogUtils.LogLevel;
+import com.stevenbyle.android.materialthemes.controller.dialog.DialogUtils;
+import com.stevenbyle.android.materialthemes.controller.theme.MaterialThemeUtils;
+import com.stevenbyle.android.materialthemes.log.LogUtils;
+import com.stevenbyle.android.materialthemes.log.LogUtils.LogLevel;
 
 /**
  * TODO
@@ -220,7 +220,7 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
                 dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
                         R.string.material_theme_green_theme,
                         R.string.material_theme_green_theme,
-                        ThemeUtils.THEME_ALERT_DIALOG_GREEN);
+                        MaterialThemeUtils.THEME_ALERT_DIALOG_GREEN);
 
                 DialogUtils.showDialogFragment(getChildFragmentManager(), dialogFragment);
                 break;
@@ -229,7 +229,7 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
                 dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
                         R.string.material_theme_blue_theme,
                         R.string.material_theme_blue_theme,
-                        ThemeUtils.THEME_ALERT_DIALOG_BLUE);
+                        MaterialThemeUtils.THEME_ALERT_DIALOG_BLUE);
 
                 DialogUtils.showDialogFragment(getChildFragmentManager(), dialogFragment);
                 break;

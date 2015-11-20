@@ -1,4 +1,4 @@
-package com.stevenbyle.android.materialthemes.global;
+package com.stevenbyle.android.materialthemes.log;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

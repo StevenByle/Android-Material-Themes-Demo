@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
@@ -14,7 +15,8 @@ import android.view.ViewGroup;
 
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
-import com.stevenbyle.android.materialthemes.global.LogUtils;
+import com.stevenbyle.android.materialthemes.controller.theme.MaterialTheme;
+import com.stevenbyle.android.materialthemes.log.LogUtils;
 
 /**
  * @author Steven Byle
@@ -30,7 +32,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
     private MaterialTheme mAlertDialogTheme;
 
     public static MaterialThemeDialogFragment newInstance(Context context, @StringRes int titleResId,
-            @StringRes int messageResId, MaterialTheme alertDialogTheme) {
+            @StringRes int messageResId, @Nullable MaterialTheme alertDialogTheme) {
 
         MaterialThemeDialogFragment fragment = newInstance(
                 context.getString(titleResId),
@@ -39,7 +41,9 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         return fragment;
     }
 
-    public static MaterialThemeDialogFragment newInstance(String title, String message, MaterialTheme alertDialogTheme) {
+    public static MaterialThemeDialogFragment newInstance(String title, String message,
+            @Nullable MaterialTheme alertDialogTheme) {
+
         if (BuildConfig.DEBUG) {
             LogUtils.logMethod(TAG, "newInstance");
         }

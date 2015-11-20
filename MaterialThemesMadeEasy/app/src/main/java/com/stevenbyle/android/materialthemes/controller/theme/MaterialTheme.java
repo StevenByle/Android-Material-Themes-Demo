@@ -1,4 +1,4 @@
-package com.stevenbyle.android.materialthemes.controller.home.material;
+package com.stevenbyle.android.materialthemes.controller.theme;
 
 import android.support.annotation.StringRes;
 import android.support.annotation.StyleRes;

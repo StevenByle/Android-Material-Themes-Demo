@@ -14,9 +14,9 @@ import android.view.ViewGroup;
 
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
-import com.stevenbyle.android.materialthemes.controller.global.ThemeUtils;
-import com.stevenbyle.android.materialthemes.controller.home.material.MaterialTheme;
-import com.stevenbyle.android.materialthemes.global.LogUtils;
+import com.stevenbyle.android.materialthemes.controller.theme.MaterialThemeUtils;
+import com.stevenbyle.android.materialthemes.controller.theme.MaterialTheme;
+import com.stevenbyle.android.materialthemes.log.LogUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -96,11 +96,11 @@ public class SetThemeDialogFragment extends DialogFragment implements DialogInte
         }
 
         List<String> themeNameList = new ArrayList<String>();
-        for (MaterialTheme materialTheme : ThemeUtils.getThemeList()) {
+        for (MaterialTheme materialTheme : MaterialThemeUtils.getThemeList()) {
             themeNameList.add(getString(materialTheme.getNameResId()));
         }
 
-        mCurrentSelectedThemeIndex = ThemeUtils.getThemeList().indexOf(mCurrentTheme);
+        mCurrentSelectedThemeIndex = MaterialThemeUtils.getThemeList().indexOf(mCurrentTheme);
         String[] themeNameArray = themeNameList.toArray(new String[themeNameList.size()]);
 
         Activity parentActivity = getActivity();
@@ -249,7 +249,7 @@ public class SetThemeDialogFragment extends DialogFragment implements DialogInte
         public void onClick(DialogInterface dialog, int which) {
             // Upon selection, figure out which theme was selected
             mCurrentSelectedThemeIndex = which;
-            MaterialTheme newTheme = ThemeUtils.getThemeList().get(mCurrentSelectedThemeIndex);
+            MaterialTheme newTheme = MaterialThemeUtils.getThemeList().get(mCurrentSelectedThemeIndex);
 
             // If the theme is new, set it and start a new activity
             if (!mCurrentTheme.equals(newTheme)) {
