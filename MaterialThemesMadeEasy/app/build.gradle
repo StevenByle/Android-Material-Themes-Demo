@@ -24,9 +24,9 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     // Google Support Libraries
-    compile 'com.android.support:support-v13:23.1.0'
-    compile 'com.android.support:design:23.1.0'
-    compile 'com.android.support:appcompat-v7:23.1.0'
-    compile 'com.android.support:cardview-v7:23.1.0'
+    compile 'com.android.support:support-v13:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:cardview-v7:23.1.1'
 
 }

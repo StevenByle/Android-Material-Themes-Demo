@@ -25,10 +25,22 @@
     <string name="material_theme_default">Default</string>
     <string name="material_theme_colored">Colored</string>
     <string name="material_theme_buttons_no_raise">Buttons: No Raise</string>
+    <string name="material_theme_selectable_items_rect">Selectable Items: Rectangle</string>
+    <string name="material_theme_selectable_items_rounded_rect">Selectable Items: Rounded Rectangle</string>
+    <string name="material_theme_text_fields">Text Fields</string>
+    <string name="material_theme_radio_buttons">Radio Buttons</string>
+    <string name="material_theme_checkboxes">Checkboxes</string>
+    <string name="material_theme_switches">Switches</string>
+    <string name="material_theme_spinners">Spinners</string>
+    <string name="material_theme_sliders">Sliders</string>
+    <string name="material_theme_progress_indicators">Progress Indicators</string>
+    <string name="material_theme_progress_icons">Icons</string>
+    <string name="material_theme_progress_snackbars">Snackbars</string>
+    <string name="material_theme_progress_dialogs">Dialogs</string>
     <string name="material_theme_dialog_button_positive">Positive</string>
     <string name="material_theme_dialog_button_negative">Negative</string>
 
-    <!-- Spinners -->
+    <!-- Spinners TODO -->
     <string-array name="spinner_theme_options_array">
         <item>Red</item>
         <item>Orange</item>

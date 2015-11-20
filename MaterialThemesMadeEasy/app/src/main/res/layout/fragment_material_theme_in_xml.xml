@@ -18,83 +18,9 @@
 
         <include layout="@layout/fragment_material_theme_in_xml_buttons_no_raise"/>
 
-        <android.support.v7.widget.CardView
-            style="@style/CardStyle.Home"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <include layout="@layout/fragment_material_theme_in_xml_buttons_flat"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Buttons: Flat"
-                    android:textAppearance="@style/TextStyle.Title"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="Default"
-                    android:textAppearance="@style/TextStyle.Body2"/>
-
-                <Button
-                    style="@style/ButtonStyle.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/material_theme_current_theme"/>
-
-                <Button
-                    style="@style/ButtonStyle.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/material_theme_green_theme"
-                    android:theme="@style/AppTheme.Green"/>
-
-                <Button
-                    style="@style/ButtonStyle.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/material_theme_blue_theme"
-                    android:theme="@style/AppTheme.Blue"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_medium"
-                    android:text="Colored Text"
-                    android:textAppearance="@style/TextStyle.Body2"/>
-
-                <Button
-                    style="@style/ButtonStyle.Borderless.ColoredText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/material_theme_current_theme"/>
-
-                <Button
-                    style="@style/ButtonStyle.Borderless.ColoredText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/material_theme_green_theme"
-                    android:theme="@style/AppTheme.Green"/>
-
-                <Button
-                    style="@style/ButtonStyle.Borderless.ColoredText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="@string/material_theme_blue_theme"
-                    android:theme="@style/AppTheme.Blue"/>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
+        <include layout="@layout/fragment_material_theme_in_xml_selectable_items_rect"/>
 
         <android.support.v7.widget.CardView
             style="@style/CardStyle.Home"
@@ -109,184 +35,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Selectable Items: Rectangle"
+                    android:text="@string/material_theme_selectable_items_rounded_rect"
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Default"
-                    android:textAppearance="@style/TextStyle.Body2"/>
-
-                <LinearLayout
-                    style="@style/SelectableItemStyle.Rect"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:layout_margin="@dimen/material_element_spacing_small"
-                        android:adjustViewBounds="true"
-                        android:src="@mipmap/ic_launcher"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/material_theme_current_theme"
-                        android:textAppearance="@style/TextStyle.Body1"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/SelectableItemStyle.Rect"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:theme="@style/AppTheme.Green">
-
-                    <ImageView
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:layout_margin="@dimen/material_element_spacing_small"
-                        android:adjustViewBounds="true"
-                        android:src="@mipmap/ic_launcher"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/material_theme_green_theme"
-                        android:textAppearance="@style/TextStyle.Body1"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/SelectableItemStyle.Rect"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:theme="@style/AppTheme.Blue">
-
-                    <ImageView
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:layout_margin="@dimen/material_element_spacing_small"
-                        android:adjustViewBounds="true"
-                        android:src="@mipmap/ic_launcher"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/material_theme_blue_theme"
-                        android:textAppearance="@style/TextStyle.Body1"/>
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Colored"
-                    android:textAppearance="@style/TextStyle.Body2"/>
-
-                <LinearLayout
-                    style="@style/SelectableItemStyle.Rect.Colored"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:layout_margin="@dimen/material_element_spacing_small"
-                        android:adjustViewBounds="true"
-                        android:src="@mipmap/ic_launcher"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/material_theme_current_theme"
-                        android:textAppearance="@style/TextStyle.Body1"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/SelectableItemStyle.Rect.Colored"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:theme="@style/AppTheme.Green">
-
-                    <ImageView
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:layout_margin="@dimen/material_element_spacing_small"
-                        android:adjustViewBounds="true"
-                        android:src="@mipmap/ic_launcher"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/material_theme_green_theme"
-                        android:textAppearance="@style/TextStyle.Body1"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/SelectableItemStyle.Rect.Colored"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:theme="@style/AppTheme.Blue">
-
-                    <ImageView
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:layout_margin="@dimen/material_element_spacing_small"
-                        android:adjustViewBounds="true"
-                        android:src="@mipmap/ic_launcher"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/material_element_spacing_small"
-                        android:text="@string/material_theme_blue_theme"
-                        android:textAppearance="@style/TextStyle.Body1"/>
-                </LinearLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            style="@style/CardStyle.Home"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Selectable Items: Rounded Rectangle"
-                    android:textAppearance="@style/TextStyle.Title"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Default"
+                    android:text="@string/material_theme_default"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <LinearLayout
@@ -362,7 +118,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/material_element_spacing_small"
-                    android:text="Colored"
+                    android:text="@string/material_theme_colored"
                     android:textAppearance="@style/TextStyle.Body2"/>
 
                 <LinearLayout
@@ -449,7 +205,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Text Fields"
+                    android:text="@string/material_theme_text_fields"
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <EditText
@@ -487,7 +243,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Radio Buttons"
+                    android:text="@string/material_theme_radio_buttons"
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <RadioGroup
@@ -531,7 +287,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Checkboxes"
+                    android:text="@string/material_theme_checkboxes"
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <CheckBox
@@ -569,7 +325,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Switches"
+                    android:text="@string/material_theme_switches"
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <Switch
@@ -610,7 +366,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Spinners"
+                    android:text="@string/material_theme_spinners"
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <TextView
@@ -675,7 +431,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sliders"
+                    android:text="@string/material_theme_sliders"
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <TextView
@@ -731,7 +487,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Progress Indicators"
+                    android:text="@string/material_theme_progress_indicators"
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <TextView
@@ -832,7 +588,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Icons"
+                    android:text="@string/material_theme_progress_icons"
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <LinearLayout
@@ -945,7 +701,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Snackbars"
+                    android:text="@string/material_theme_progress_snackbars"
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <Button
@@ -989,7 +745,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dialogs"
+                    android:text="@string/material_theme_progress_dialogs"
                     android:textAppearance="@style/TextStyle.Title"/>
 
                 <Button

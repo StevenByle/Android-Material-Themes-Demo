@@ -2,47 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="511e9e6f-c1de-403a-bc2e-9dd08ac9b638" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/.gitignore" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/.idea/.name" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/.idea/.name" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/.idea/compiler.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/.idea/compiler.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/.idea/copyright/profiles_settings.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/.idea/gradle.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/.idea/gradle.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/.idea/misc.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/.idea/misc.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/.idea/modules.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/.idea/modules.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/.idea/runConfigurations.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/.idea/runConfigurations.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/.idea/vcs.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/MaterialDesignMadeEasy.iml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/MaterialThemesMadeEasy.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/.gitignore" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/app.iml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/app.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/build.gradle" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/build.gradle" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/proguard-rules.pro" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/proguard-rules.pro" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/AndroidManifest.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/java/com/stevenbyle/androidmaterialdesign/controller/home/HomeActivity.java" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/java/com/stevenbyle/androidmaterialdesign/controller/home/HomeActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/java/com/stevenbyle/androidmaterialdesign/controller/home/HomePagerAdapter.java" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/java/com/stevenbyle/androidmaterialdesign/controller/home/HomePagerAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/java/com/stevenbyle/androidmaterialdesign/controller/home/MaterialByXmlFragment.java" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/java/com/stevenbyle/androidmaterialdesign/controller/home/MaterialByXmlFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/java/com/stevenbyle/androidmaterialdesign/global/LogUtil.java" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/java/com/stevenbyle/androidmaterialdesign/global/LogUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/layout/activity_home.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/layout/activity_home.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/layout/fragment_material_by_xml.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/layout/fragment_material_by_xml.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/menu/menu_home.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/menu/menu_home.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/values-v21/styles.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/values-v21/styles.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/values-w820dp/dimens.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/values-w820dp/dimens.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/values/colors.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/values/dimens.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/values/strings.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/main/res/values/styles.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/app/src/test/java/com/stevenbyle/androidmaterialdesign/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/app/src/test/java/com/stevenbyle/androidmaterialdesign/ExampleUnitTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/build.gradle" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/build.gradle" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/gradle.properties" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/gradle.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/gradle/wrapper/gradle-wrapper.jar" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/gradle/wrapper/gradle-wrapper.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/gradlew" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/gradlew" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/gradlew.bat" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/gradlew.bat" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MaterialDesignMadeEasy/settings.gradle" afterPath="$PROJECT_DIR$/MaterialThemesMadeEasy/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android-Material-Themes-Made-Easy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,14 +45,14 @@
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -418,7 +378,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="AndroidView" proportions="" version="1">
       <flattenPackages />
       <showMembers AndroidView="true" />
       <showModules />
@@ -480,6 +440,250 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="MaterialThemesMadeEasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-Material-Themes-Made-Easy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-Material-Themes-Made-Easy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaterialThemesMadeEasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stevenbyle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="androidmaterialdesign" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-Material-Themes-Made-Easy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-Material-Themes-Made-Easy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaterialThemesMadeEasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-Material-Themes-Made-Easy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-Material-Themes-Made-Easy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaterialThemesMadeEasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stevenbyle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="materialthemes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-Material-Themes-Made-Easy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-Material-Themes-Made-Easy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaterialThemesMadeEasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stevenbyle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="materialthemes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-Material-Themes-Made-Easy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-Material-Themes-Made-Easy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaterialThemesMadeEasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stevenbyle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="materialthemes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-Material-Themes-Made-Easy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-Material-Themes-Made-Easy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -521,9 +725,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="Scratches">
-        <subPane />
       </pane>
       <pane id="Scope">
         <subPane subId="Default" />
@@ -584,6 +785,9 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="Scratches">
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -790,7 +994,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="23" width="1846" height="1177" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -807,7 +1011,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20641948" sideWeight="0.39585298" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294702" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24057649" sideWeight="0.60320455" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24057649" sideWeight="0.60320455" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Documentation" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20253862" sideWeight="0.28652215" order="6" side_tool="true" content_ui="tabs" x="743" y="463" width="367" height="297" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893497" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1143,14 +1347,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MaterialThemesMadeEasy/app/app.iml">
