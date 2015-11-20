@@ -40,10 +40,6 @@
 
         <include layout="@layout/fragment_material_theme_in_xml_icons"/>
 
-        <include layout="@layout/fragment_material_theme_in_code_snackbars"/>
-
-        <include layout="@layout/fragment_material_theme_in_code_dialogs"/>
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

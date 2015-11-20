@@ -10,7 +10,7 @@
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.stevenbyle.android.materialthemes.controller.home.HomeActivity"
+            android:name=".controller.home.HomeActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
             <intent-filter>

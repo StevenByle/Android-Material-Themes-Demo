@@ -13,11 +13,11 @@
     <string name="set_theme_dialog_title">Set Theme</string>
     <string name="set_theme_dialog_button_positive">Set Theme</string>
     <string name="set_theme_dialog_button_negative">Cancel</string>
-    <string name="set_theme_dialog_option_orange">Orange</string>
-    <string name="set_theme_dialog_option_green">Green</string>
-    <string name="set_theme_dialog_option_blue">Blue</string>
 
     <!-- Material Theme Elements -->
+    <string name="material_theme_orange">Orange</string>
+    <string name="material_theme_green">Green</string>
+    <string name="material_theme_blue">Blue</string>
     <string name="material_theme_current_theme">Current Theme</string>
     <string name="material_theme_green_theme">Green Theme</string>
     <string name="material_theme_blue_theme">Blue Theme</string>

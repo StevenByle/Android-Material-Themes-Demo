@@ -29,7 +29,6 @@
         <item name="colorPrimary">@color/material_orange_500</item>
         <item name="colorPrimaryDark">@color/material_orange_700</item>
         <item name="colorAccent">@color/material_orange_a200</item>
-
         <item name="dialogTheme">@style/DialogTheme.Orange</item>
         <item name="alertDialogTheme">@style/AlertDialogTheme.Orange</item>
 
@@ -53,6 +52,8 @@
         <item name="colorPrimary">@color/material_green_500</item>
         <item name="colorPrimaryDark">@color/material_green_700</item>
         <item name="colorAccent">@color/material_green_a200</item>
+        <item name="dialogTheme">@style/DialogTheme.Green</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme.Green</item>
     </style>
 
     <style name="AppTheme.Green" parent="BaseTheme.Green">
@@ -66,6 +67,8 @@
         <item name="colorPrimary">@color/material_blue_500</item>
         <item name="colorPrimaryDark">@color/material_blue_700</item>
         <item name="colorAccent">@color/material_blue_a200</item>
+        <item name="dialogTheme">@style/DialogTheme.Blue</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme.Blue</item>
     </style>
 
     <style name="AppTheme.Blue" parent="BaseTheme.Blue">

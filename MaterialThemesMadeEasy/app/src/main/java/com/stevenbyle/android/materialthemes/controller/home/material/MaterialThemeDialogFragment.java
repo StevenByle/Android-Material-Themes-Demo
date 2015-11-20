@@ -24,15 +24,22 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
 
     private static final String KEY_ARG_TITLE = "KEY_ARG_TITLE";
     private static final String KEY_ARG_MESSAGE = "KEY_ARG_MESSAGE";
+    private static final String KEY_ARG_ALERT_DIALOG_THEME = "KEY_ARG_ALERT_DIALOG_THEME";
 
     private String mTitle, mMessage;
+    private MaterialTheme mAlertDialogTheme;
 
-    public static MaterialThemeDialogFragment newInstance(Context context, @StringRes int titleResId, @StringRes int messageResId) {
-        MaterialThemeDialogFragment fragment = newInstance(context.getString(titleResId), context.getString(messageResId));
+    public static MaterialThemeDialogFragment newInstance(Context context, @StringRes int titleResId,
+            @StringRes int messageResId, MaterialTheme alertDialogTheme) {
+
+        MaterialThemeDialogFragment fragment = newInstance(
+                context.getString(titleResId),
+                context.getString(messageResId),
+                alertDialogTheme);
         return fragment;
     }
 
-    public static MaterialThemeDialogFragment newInstance(String title, String message) {
+    public static MaterialThemeDialogFragment newInstance(String title, String message, MaterialTheme alertDialogTheme) {
         if (BuildConfig.DEBUG) {
             LogUtils.logMethod(TAG, "newInstance");
         }
@@ -45,6 +52,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
 
         args.putString(KEY_ARG_TITLE, title);
         args.putString(KEY_ARG_MESSAGE, message);
+        args.putSerializable(KEY_ARG_ALERT_DIALOG_THEME, alertDialogTheme);
         fragment.setArguments(args);
 
         return fragment;
@@ -74,11 +82,13 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         if (args == null) {
             mTitle = null;
             mMessage = null;
+            mAlertDialogTheme = null;
         }
         // Otherwise, set incoming parameters
         else {
             mTitle = args.getString(KEY_ARG_TITLE);
             mMessage = args.getString(KEY_ARG_MESSAGE);
+            mAlertDialogTheme = (MaterialTheme) args.getSerializable(KEY_ARG_ALERT_DIALOG_THEME);
         }
 
         // If this is the first creation, default state variables
@@ -96,9 +106,17 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
             LogUtils.logOnCreateDialog(TAG, savedInstanceState);
         }
 
+        // Create the alert dialog using the proper theme
         Activity parentActivity = getActivity();
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(parentActivity)
-                .setTitle(mTitle)
+        AlertDialog.Builder alertDialogBuilder;
+        if (mAlertDialogTheme != null) {
+            alertDialogBuilder = new AlertDialog.Builder(parentActivity, mAlertDialogTheme.getThemeResId());
+        }
+        else {
+            alertDialogBuilder = new AlertDialog.Builder(parentActivity);
+        }
+
+        alertDialogBuilder.setTitle(mTitle)
                 .setMessage(mMessage)
                 .setPositiveButton(R.string.material_theme_dialog_button_positive, this)
                 .setNegativeButton(R.string.material_theme_dialog_button_negative, this);

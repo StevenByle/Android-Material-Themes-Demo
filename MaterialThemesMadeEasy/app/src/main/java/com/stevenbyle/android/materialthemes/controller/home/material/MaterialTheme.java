@@ -9,6 +9,7 @@ import java.io.Serializable;
  * @author Steven Byle
  */
 public class MaterialTheme implements Serializable {
+
     @StringRes
     private int nameResId;
     @StyleRes

@@ -2,20 +2,16 @@ package com.stevenbyle.android.materialthemes.controller.home.material;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v7.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
-import com.stevenbyle.android.materialthemes.controller.global.DialogUtils;
 import com.stevenbyle.android.materialthemes.global.LogUtils;
 import com.stevenbyle.android.materialthemes.global.LogUtils.LogLevel;
 
@@ -25,8 +21,6 @@ import com.stevenbyle.android.materialthemes.global.LogUtils.LogLevel;
 public class MaterialThemeInXmlFragment extends Fragment implements OnClickListener {
     private static final String TAG = LogUtils.generateTag(MaterialThemeInXmlFragment.class);
 
-    private Button mCurrentThemeDialogButton, mGreenThemeDialogButton, mBlueThemeDialogButton;
-    private Button mCurrentThemeSnackbarButton, mGreenThemeSnackbarButton, mBlueThemeSnackbarButton;
     private Spinner mCurrentThemeSpinner, mGreenThemeSpinner, mBlueThemeSpinner;
 
     public static MaterialThemeInXmlFragment newInstance() {
@@ -97,12 +91,6 @@ public class MaterialThemeInXmlFragment extends Fragment implements OnClickListe
         mCurrentThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_material_theme_spinner_current_theme);
         mGreenThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_material_theme_spinner_green_theme);
         mBlueThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_material_theme_spinner_blue_theme);
-        mCurrentThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_dialog_current_theme);
-        mGreenThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_dialog_green_theme);
-        mBlueThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_dialog_blue_theme);
-        mCurrentThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_snackbar_current_theme);
-        mGreenThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_snackbar_green_theme);
-        mBlueThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_snackbar_blue_theme);
 
         // Set and bind data to views
         ArrayAdapter<CharSequence> spinnerArrayAdapter = ArrayAdapter.createFromResource(
@@ -114,13 +102,6 @@ public class MaterialThemeInXmlFragment extends Fragment implements OnClickListe
         mCurrentThemeSpinner.setAdapter(spinnerArrayAdapter);
         mGreenThemeSpinner.setAdapter(spinnerArrayAdapter);
         mBlueThemeSpinner.setAdapter(spinnerArrayAdapter);
-
-        mCurrentThemeDialogButton.setOnClickListener(this);
-        mGreenThemeDialogButton.setOnClickListener(this);
-        mBlueThemeDialogButton.setOnClickListener(this);
-        mCurrentThemeSnackbarButton.setOnClickListener(this);
-        mGreenThemeSnackbarButton.setOnClickListener(this);
-        mBlueThemeSnackbarButton.setOnClickListener(this);
 
         return fragmentView;
     }
@@ -222,49 +203,6 @@ public class MaterialThemeInXmlFragment extends Fragment implements OnClickListe
         }
 
         switch (v.getId()) {
-            case R.id.fragment_material_theme_button_dialog_current_theme:
-                MaterialThemeDialogFragment dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
-                        R.string.material_theme_current_theme,
-                        R.string.material_theme_current_theme);
-
-                DialogUtils.showDialogFragment(getChildFragmentManager(), dialogFragment);
-                break;
-
-            case R.id.fragment_material_theme_button_dialog_green_theme:
-                dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
-                        R.string.material_theme_green_theme,
-                        R.string.material_theme_green_theme);
-
-                DialogUtils.showDialogFragment(getChildFragmentManager(), dialogFragment);
-                break;
-
-            case R.id.fragment_material_theme_button_dialog_blue_theme:
-                dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
-                        R.string.material_theme_blue_theme,
-                        R.string.material_theme_blue_theme);
-
-                DialogUtils.showDialogFragment(getChildFragmentManager(), dialogFragment);
-                break;
-
-            case R.id.fragment_material_theme_button_snackbar_current_theme:
-                Snackbar.make(v, R.string.material_theme_current_theme, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.material_theme_current_theme, this)
-                        .show();
-                break;
-
-            case R.id.fragment_material_theme_button_snackbar_green_theme:
-                //FIXME
-                View v2 = new View(new ContextThemeWrapper(v.getContext(), R.style.AppTheme_Green), null, 0);
-                Snackbar.make(v2, R.string.material_theme_green_theme, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.material_theme_green_theme, this)
-                        .show();
-                break;
-
-            case R.id.fragment_material_theme_button_snackbar_blue_theme:
-                Snackbar.make(v, R.string.material_theme_blue_theme, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.material_theme_blue_theme, this)
-                        .show();
-                break;
 
             default:
                 if (BuildConfig.DEBUG) {

@@ -4,6 +4,8 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
+import com.stevenbyle.android.materialthemes.R;
+
 /**
  * @author Steven Byle
  */
@@ -29,6 +31,7 @@ public class DialogUtils {
         // If only showing non duplicates dialogs, make sure the fragment isn't already in the manager
         boolean doesFragmentExist = fragmentManager.findFragmentByTag(fragmentTag) != null;
         if (!(onlyIfNotDuplicate && doesFragmentExist)) {
+            dialogFragment.setStyle(DialogFragment.STYLE_NORMAL, R.style.AppTheme_Blue);
             dialogFragment.show(fragmentManager, fragmentTag);
         }
 
