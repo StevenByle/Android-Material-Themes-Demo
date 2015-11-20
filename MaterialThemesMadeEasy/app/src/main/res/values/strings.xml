@@ -34,9 +34,9 @@
     <string name="material_theme_spinners">Spinners</string>
     <string name="material_theme_sliders">Sliders</string>
     <string name="material_theme_progress_indicators">Progress Indicators</string>
-    <string name="material_theme_progress_icons">Icons</string>
-    <string name="material_theme_progress_snackbars">Snackbars</string>
-    <string name="material_theme_progress_dialogs">Dialogs</string>
+    <string name="material_theme_icons">Icons</string>
+    <string name="material_theme_snackbars">Snackbars</string>
+    <string name="material_theme_dialogs">Dialogs</string>
     <string name="material_theme_dialog_button_positive">Positive</string>
     <string name="material_theme_dialog_button_negative">Negative</string>
 

@@ -14,64 +14,45 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/material_theme_buttons_raised"
+            android:text="@string/material_theme_sliders"
             android:textAppearance="@style/TextStyle.Title"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/material_element_spacing_medium"
-            android:text="@string/material_theme_default"
+            android:text="@string/material_theme_current_theme"
             android:textAppearance="@style/TextStyle.Body2"/>
 
-        <Button
-            android:layout_width="wrap_content"
+        <SeekBar
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
-            android:text="@string/material_theme_current_theme"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
-            android:text="@string/material_theme_green_theme"
-            android:theme="@style/AppTheme.Green"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
-            android:text="@string/material_theme_blue_theme"
-            android:theme="@style/AppTheme.Blue"/>
+            android:layout_marginTop="@dimen/material_element_spacing_small"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/material_element_spacing_medium"
-            android:text="@string/material_theme_colored"
+            android:text="@string/material_theme_green_theme"
             android:textAppearance="@style/TextStyle.Body2"/>
 
-        <Button
-            style="@style/ButtonStyle.Colored"
-            android:layout_width="wrap_content"
+        <SeekBar
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/material_element_spacing_small"
-            android:text="@string/material_theme_current_theme"/>
-
-        <Button
-            style="@style/ButtonStyle.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
-            android:text="@string/material_theme_green_theme"
             android:theme="@style/AppTheme.Green"/>
 
-        <Button
-            style="@style/ButtonStyle.Colored"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/material_element_spacing_medium"
             android:text="@string/material_theme_blue_theme"
+            android:textAppearance="@style/TextStyle.Body2"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/material_element_spacing_small"
             android:theme="@style/AppTheme.Blue"/>
     </LinearLayout>
 </android.support.v7.widget.CardView>
