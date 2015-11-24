@@ -26,7 +26,7 @@
 
         <LinearLayout
             style="@style/SelectableItemStyle.RoundedRect"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/material_element_spacing_small"
             android:gravity="center_vertical"
@@ -49,7 +49,7 @@
 
         <LinearLayout
             style="@style/SelectableItemStyle.RoundedRect"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -72,7 +72,7 @@
 
         <LinearLayout
             style="@style/SelectableItemStyle.RoundedRect"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -102,7 +102,7 @@
 
         <LinearLayout
             style="@style/SelectableItemStyle.RoundedRect.Colored"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/material_element_spacing_small"
             android:gravity="center_vertical"
@@ -125,7 +125,7 @@
 
         <LinearLayout
             style="@style/SelectableItemStyle.RoundedRect.Colored"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -148,7 +148,7 @@
 
         <LinearLayout
             style="@style/SelectableItemStyle.RoundedRect.Colored"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
