@@ -2,9 +2,6 @@
     <!-- Global App -->
     <string name="app_name">Material Themes Made Easy</string>
 
-    <!-- Menu Actions -->
-    <string name="action_settings">Settings</string>
-
     <!-- Home -->
     <string name="home_tab_xml">XML</string>
     <string name="home_tab_code">Code</string>

@@ -203,7 +203,6 @@ public class MaterialThemeInXmlFragment extends Fragment implements OnClickListe
         }
 
         switch (v.getId()) {
-
             default:
                 if (BuildConfig.DEBUG) {
                     LogUtils.logMessage(LogLevel.WARN, TAG, "onClick", "unknown view clicked");

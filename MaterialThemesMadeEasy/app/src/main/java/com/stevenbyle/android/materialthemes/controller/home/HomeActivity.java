@@ -9,18 +9,18 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
 import com.stevenbyle.android.materialthemes.controller.dialog.DialogUtils;
-import com.stevenbyle.android.materialthemes.controller.theme.MaterialThemeUtils;
 import com.stevenbyle.android.materialthemes.controller.theme.MaterialTheme;
+import com.stevenbyle.android.materialthemes.controller.theme.MaterialThemeUtils;
 import com.stevenbyle.android.materialthemes.log.LogUtils;
+import com.stevenbyle.android.materialthemes.log.LogUtils.LogLevel;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements OnClickListener{
     private static final String TAG = LogUtils.generateTag(HomeActivity.class);
 
     private static final String KEY_ARG_CURRENT_THEME = "KEY_ARG_CURRENT_THEME";
@@ -59,26 +59,28 @@ public class HomeActivity extends AppCompatActivity {
 
         // If no parameters were passed in, default them
         if (args == null) {
-            mCurrentTheme = MaterialThemeUtils.getThemeList().get(0);
+            // Default to the orange theme
+            mCurrentTheme = MaterialThemeUtils.THEME_ORANGE;
         }
         // Otherwise, set incoming parameters
         else {
             mCurrentTheme = (MaterialTheme) args.getSerializable(KEY_ARG_CURRENT_THEME);
         }
 
-        // Set the theme before calling super or setContentView
+        // Theme must be set before calling super or setContentView
         setTheme(mCurrentTheme.getThemeResId());
-        super.onCreate(savedInstanceState);
 
+        // Handle super calls after setting the theme
+        super.onCreate(savedInstanceState);
         if (BuildConfig.DEBUG) {
             LogUtils.logOnCreate(TAG, savedInstanceState);
         }
 
         // Set the content view to a layout and reference views
         setContentView(R.layout.activity_home);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mViewPager = (ViewPager) findViewById(R.id.container);
-        mTabLayout = (TabLayout) findViewById(R.id.tabs);
+        mToolbar = (Toolbar) findViewById(R.id.activity_home_toolbar);
+        mViewPager = (ViewPager) findViewById(R.id.activity_home_pager);
+        mTabLayout = (TabLayout) findViewById(R.id.activity_home_tab_layout);
 
         // If this is the first creation, default state variables
         if (savedInstanceState == null) {
@@ -94,15 +96,8 @@ public class HomeActivity extends AppCompatActivity {
         mViewPager.setAdapter(mViewPagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
 
-        // TODO
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DialogFragment dialogFragment = SetThemeDialogFragment.newInstance(mCurrentTheme);
-                DialogUtils.showDialogFragment(getSupportFragmentManager(), dialogFragment);
-            }
-        });
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.activity_home_fab);
+        fab.setOnClickListener(this);
     }
 
     @Override
@@ -154,25 +149,24 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public void onClick(View v) {
         if (BuildConfig.DEBUG) {
-            LogUtils.logMethod(TAG, "onCreateOptionsMenu");
+            LogUtils.logMethod(TAG, "onClick");
         }
 
-        // Inflate the menu items to the toolbar
-        getMenuInflater().inflate(R.menu.menu_home, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logMethod(TAG, "onOptionsItemSelected");
+        switch (v.getId()) {
+            case R.id.activity_home_fab:
+                DialogFragment dialogFragment = SetThemeDialogFragment.newInstance(mCurrentTheme);
+                DialogUtils.showDialogFragment(getSupportFragmentManager(), dialogFragment);
+                break;
+            default:
+                if (BuildConfig.DEBUG) {
+                    LogUtils.logMessage(LogLevel.WARN, TAG, "onClick", "unknown view clicked");
+                }
+                break;
         }
 
-        // TODO
 
-        return super.onOptionsItemSelected(item);
     }
 
 }
