@@ -165,8 +165,6 @@ public class HomeActivity extends AppCompatActivity implements OnClickListener{
                 }
                 break;
         }
-
-
     }
 
 }

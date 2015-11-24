@@ -1,10 +1,12 @@
 package com.stevenbyle.android.materialthemes.controller.home.material;
 
 import android.content.Context;
+import android.content.res.Resources.Theme;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v7.view.ContextThemeWrapper;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -241,16 +243,26 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
                 break;
 
             case R.id.fragment_material_theme_button_snackbar_green_theme:
-                //FIXME
-                View v2 = new View(new ContextThemeWrapper(v.getContext(), R.style.AppTheme_Green), null, 0);
-                Snackbar.make(v2, R.string.material_theme_green_theme, Snackbar.LENGTH_LONG)
+                Theme greenTheme = new ContextThemeWrapper(v.getContext(), R.style.AppTheme_Green).getTheme();
+                TypedArray a = greenTheme.obtainStyledAttributes(new int[]{R.attr.colorAccent});
+                int accentColor = a.getColor(0, 0);
+                a.recycle();
+
+                Snackbar.make(v, R.string.material_theme_green_theme, Snackbar.LENGTH_LONG)
                         .setAction(R.string.material_theme_green_theme, this)
+                        .setActionTextColor(accentColor)
                         .show();
                 break;
 
             case R.id.fragment_material_theme_button_snackbar_blue_theme:
+                Theme blueTheme = new ContextThemeWrapper(v.getContext(), R.style.AppTheme_Blue).getTheme();
+                a = blueTheme.obtainStyledAttributes(new int[]{R.attr.colorAccent});
+                accentColor = a.getColor(0, 0);
+                a.recycle();
+
                 Snackbar.make(v, R.string.material_theme_blue_theme, Snackbar.LENGTH_LONG)
                         .setAction(R.string.material_theme_blue_theme, this)
+                        .setActionTextColor(accentColor)
                         .show();
                 break;
 
