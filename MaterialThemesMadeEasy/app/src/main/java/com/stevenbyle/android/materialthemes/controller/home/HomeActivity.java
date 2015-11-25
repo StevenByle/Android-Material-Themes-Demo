@@ -59,8 +59,8 @@ public class HomeActivity extends AppCompatActivity implements OnClickListener{
 
         // If no parameters were passed in, default them
         if (args == null) {
-            // Default to the orange theme
-            mCurrentTheme = MaterialThemeUtils.THEME_ORANGE;
+            // Default the theme
+            mCurrentTheme = MaterialThemeUtils.THEME_TEAL;
         }
         // Otherwise, set incoming parameters
         else {

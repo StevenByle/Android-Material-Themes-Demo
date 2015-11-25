@@ -4,21 +4,21 @@
     <!-- Pressed state -->
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <solid android:color="@color/selector_yellow_pressed"/>
+            <solid android:color="@color/selector_lime_pressed"/>
         </shape>
     </item>
 
     <!-- Selected state -->
     <item android:state_selected="true">
         <shape android:shape="rectangle">
-            <solid android:color="@color/selector_yellow_focused"/>
+            <solid android:color="@color/selector_lime_focused"/>
         </shape>
     </item>
 
     <!-- Focused state -->
     <item android:state_focused="true">
         <shape android:shape="rectangle">
-            <solid android:color="@color/selector_yellow_focused"/>
+            <solid android:color="@color/selector_lime_focused"/>
         </shape>
     </item>
 

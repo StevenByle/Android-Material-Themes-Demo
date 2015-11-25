@@ -23,9 +23,9 @@
         <item name="selectableDrawableColor">@color/selector_orange_pressed</item>
     </style>
 
-    <style name="AppTheme.Yellow" parent="BaseTheme.Yellow">
+    <style name="AppTheme.Lime" parent="BaseTheme.Lime">
         <!-- API specific attributes 21+ -->
-        <item name="selectableDrawableColor">@color/selector_yellow_pressed</item>
+        <item name="selectableDrawableColor">@color/selector_lime_pressed</item>
     </style>
 
     <style name="AppTheme.Green" parent="BaseTheme.Green">

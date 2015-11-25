@@ -15,7 +15,7 @@ public class MaterialThemeUtils {
     public static final MaterialTheme THEME_ORANGE =
             new MaterialTheme(R.string.material_theme_orange, R.style.AppTheme_Orange);
     public static final MaterialTheme THEME_YELLOW =
-            new MaterialTheme(R.string.material_theme_yellow, R.style.AppTheme_Yellow);
+            new MaterialTheme(R.string.material_theme_lime, R.style.AppTheme_Lime);
     public static final MaterialTheme THEME_GREEN =
             new MaterialTheme(R.string.material_theme_green, R.style.AppTheme_Green);
     public static final MaterialTheme THEME_TEAL =
@@ -31,7 +31,7 @@ public class MaterialThemeUtils {
     public static final MaterialTheme THEME_DIALOG_ORANGE =
             new MaterialTheme(R.string.material_theme_orange, R.style.DialogTheme_Orange);
     public static final MaterialTheme THEME_DIALOG_YELLOW =
-            new MaterialTheme(R.string.material_theme_yellow, R.style.DialogTheme_Yellow);
+            new MaterialTheme(R.string.material_theme_lime, R.style.DialogTheme_Lime);
     public static final MaterialTheme THEME_DIALOG_GREEN =
             new MaterialTheme(R.string.material_theme_green, R.style.DialogTheme_Green);
     public static final MaterialTheme THEME_DIALOG_TEAL =
@@ -47,7 +47,7 @@ public class MaterialThemeUtils {
     public static final MaterialTheme THEME_ALERT_DIALOG_ORANGE =
             new MaterialTheme(R.string.material_theme_orange, R.style.AlertDialogTheme_Orange);
     public static final MaterialTheme THEME_ALERT_DIALOG_YELLOW =
-            new MaterialTheme(R.string.material_theme_yellow, R.style.AlertDialogTheme_Yellow);
+            new MaterialTheme(R.string.material_theme_lime, R.style.AlertDialogTheme_Lime);
     public static final MaterialTheme THEME_ALERT_DIALOG_GREEN =
             new MaterialTheme(R.string.material_theme_green, R.style.AlertDialogTheme_Green);
     public static final MaterialTheme THEME_ALERT_DIALOG_TEAL =
