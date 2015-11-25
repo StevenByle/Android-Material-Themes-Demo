@@ -13,9 +13,19 @@
         <item name="selectableRoundedRectDrawableColored">@drawable/ripple_selectable_rounded_rect_colored</item>
     </style>
 
+    <style name="AppTheme.Red" parent="BaseTheme.Red">
+        <!-- API specific attributes 21+ -->
+        <item name="selectableDrawableColor">@color/selector_red_pressed</item>
+    </style>
+
     <style name="AppTheme.Orange" parent="BaseTheme.Orange">
         <!-- API specific attributes 21+ -->
         <item name="selectableDrawableColor">@color/selector_orange_pressed</item>
+    </style>
+
+    <style name="AppTheme.Yellow" parent="BaseTheme.Yellow">
+        <!-- API specific attributes 21+ -->
+        <item name="selectableDrawableColor">@color/selector_yellow_pressed</item>
     </style>
 
     <style name="AppTheme.Green" parent="BaseTheme.Green">
@@ -23,9 +33,19 @@
         <item name="selectableDrawableColor">@color/selector_green_pressed</item>
     </style>
 
+    <style name="AppTheme.Teal" parent="BaseTheme.Teal">
+        <!-- API specific attributes 21+ -->
+        <item name="selectableDrawableColor">@color/selector_teal_pressed</item>
+    </style>
+
     <style name="AppTheme.Blue" parent="BaseTheme.Blue">
         <!-- API specific attributes 21+ -->
         <item name="selectableDrawableColor">@color/selector_blue_pressed</item>
+    </style>
+
+    <style name="AppTheme.Purple" parent="BaseTheme.Purple">
+        <!-- API specific attributes 21+ -->
+        <item name="selectableDrawableColor">@color/selector_purple_pressed</item>
     </style>
 
     <!-- Button Styles -->

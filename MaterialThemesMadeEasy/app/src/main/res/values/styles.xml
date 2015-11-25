@@ -22,13 +22,28 @@
     </style>
 
 
-    <!-- App Theme Variants TODO -->
+    <!-- App Theme Variants -->
+
+    <!-- Red App Theme -->
+    <style name="BaseTheme.Red" parent="AppTheme">
+        <item name="colorPrimary">@color/material_red_500</item>
+        <item name="colorPrimaryDark">@color/material_red_700</item>
+        <item name="colorAccent">@color/material_red_a700</item>
+        <item name="dialogTheme">@style/DialogTheme.Red</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme.Red</item>
+    </style>
+
+    <style name="AppTheme.Red" parent="BaseTheme.Red">
+        <!-- API specific attributes 14+ -->
+        <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_red</item>
+        <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_red</item>
+    </style>
 
     <!-- Orange App Theme -->
     <style name="BaseTheme.Orange" parent="AppTheme">
         <item name="colorPrimary">@color/material_orange_500</item>
         <item name="colorPrimaryDark">@color/material_orange_700</item>
-        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorAccent">@color/material_orange_a700</item>
         <item name="dialogTheme">@style/DialogTheme.Orange</item>
         <item name="alertDialogTheme">@style/AlertDialogTheme.Orange</item>
 
@@ -47,11 +62,26 @@
         <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_orange</item>
     </style>
 
+    <!-- Yellow App Theme -->
+    <style name="BaseTheme.Yellow" parent="AppTheme">
+        <item name="colorPrimary">@color/material_yellow_500</item>
+        <item name="colorPrimaryDark">@color/material_yellow_700</item>
+        <item name="colorAccent">@color/material_yellow_a700</item>
+        <item name="dialogTheme">@style/DialogTheme.Yellow</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme.Yellow</item>
+    </style>
+
+    <style name="AppTheme.Yellow" parent="BaseTheme.Yellow">
+        <!-- API specific attributes 14+ -->
+        <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_yellow</item>
+        <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_yellow</item>
+    </style>
+
     <!-- Green App Theme -->
     <style name="BaseTheme.Green" parent="AppTheme">
         <item name="colorPrimary">@color/material_green_500</item>
         <item name="colorPrimaryDark">@color/material_green_700</item>
-        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorAccent">@color/material_green_a700</item>
         <item name="dialogTheme">@style/DialogTheme.Green</item>
         <item name="alertDialogTheme">@style/AlertDialogTheme.Green</item>
     </style>
@@ -62,11 +92,26 @@
         <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_green</item>
     </style>
 
+    <!-- Teal App Theme -->
+    <style name="BaseTheme.Teal" parent="AppTheme">
+        <item name="colorPrimary">@color/material_teal_500</item>
+        <item name="colorPrimaryDark">@color/material_teal_700</item>
+        <item name="colorAccent">@color/material_teal_a700</item>
+        <item name="dialogTheme">@style/DialogTheme.Teal</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme.Teal</item>
+    </style>
+
+    <style name="AppTheme.Teal" parent="BaseTheme.Teal">
+        <!-- API specific attributes 14+ -->
+        <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_teal</item>
+        <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_teal</item>
+    </style>
+
     <!-- Blue App Theme -->
     <style name="BaseTheme.Blue" parent="AppTheme">
         <item name="colorPrimary">@color/material_blue_500</item>
         <item name="colorPrimaryDark">@color/material_blue_700</item>
-        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorAccent">@color/material_blue_a700</item>
         <item name="dialogTheme">@style/DialogTheme.Blue</item>
         <item name="alertDialogTheme">@style/AlertDialogTheme.Blue</item>
     </style>
@@ -75,6 +120,21 @@
         <!-- API specific attributes 14+ -->
         <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_blue</item>
         <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_blue</item>
+    </style>
+
+    <!-- Purple App Theme -->
+    <style name="BaseTheme.Purple" parent="AppTheme">
+        <item name="colorPrimary">@color/material_purple_500</item>
+        <item name="colorPrimaryDark">@color/material_purple_700</item>
+        <item name="colorAccent">@color/material_purple_a700</item>
+        <item name="dialogTheme">@style/DialogTheme.Purple</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme.Purple</item>
+    </style>
+
+    <style name="AppTheme.Purple" parent="BaseTheme.Purple">
+        <!-- API specific attributes 14+ -->
+        <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_purple</item>
+        <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_purple</item>
     </style>
 
 
@@ -90,9 +150,21 @@
     <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
     </style>
 
+    <style name="DialogTheme.Red">
+        <item name="colorPrimary">@color/material_red_500</item>
+        <item name="colorPrimaryDark">@color/material_red_700</item>
+        <item name="colorAccent">?colorPrimary</item>
+    </style>
+
     <style name="DialogTheme.Orange">
         <item name="colorPrimary">@color/material_orange_500</item>
         <item name="colorPrimaryDark">@color/material_orange_700</item>
+        <item name="colorAccent">?colorPrimary</item>
+    </style>
+
+    <style name="DialogTheme.Yellow">
+        <item name="colorPrimary">@color/material_yellow_500</item>
+        <item name="colorPrimaryDark">@color/material_yellow_700</item>
         <item name="colorAccent">?colorPrimary</item>
     </style>
 
@@ -102,9 +174,21 @@
         <item name="colorAccent">?colorPrimary</item>
     </style>
 
+    <style name="DialogTheme.Teal">
+        <item name="colorPrimary">@color/material_teal_500</item>
+        <item name="colorPrimaryDark">@color/material_teal_700</item>
+        <item name="colorAccent">?colorPrimary</item>
+    </style>
+
     <style name="DialogTheme.Blue">
         <item name="colorPrimary">@color/material_blue_500</item>
         <item name="colorPrimaryDark">@color/material_blue_700</item>
+        <item name="colorAccent">?colorPrimary</item>
+    </style>
+
+    <style name="DialogTheme.Purple">
+        <item name="colorPrimary">@color/material_purple_500</item>
+        <item name="colorPrimaryDark">@color/material_purple_700</item>
         <item name="colorAccent">?colorPrimary</item>
     </style>
 
@@ -113,9 +197,21 @@
     <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
     </style>
 
+    <style name="AlertDialogTheme.Red">
+        <item name="colorPrimary">@color/material_red_500</item>
+        <item name="colorPrimaryDark">@color/material_red_700</item>
+        <item name="colorAccent">?colorPrimary</item>
+    </style>
+
     <style name="AlertDialogTheme.Orange">
         <item name="colorPrimary">@color/material_orange_500</item>
         <item name="colorPrimaryDark">@color/material_orange_700</item>
+        <item name="colorAccent">?colorPrimary</item>
+    </style>
+
+    <style name="AlertDialogTheme.Yellow">
+        <item name="colorPrimary">@color/material_yellow_500</item>
+        <item name="colorPrimaryDark">@color/material_yellow_700</item>
         <item name="colorAccent">?colorPrimary</item>
     </style>
 
@@ -125,9 +221,21 @@
         <item name="colorAccent">?colorPrimary</item>
     </style>
 
+    <style name="AlertDialogTheme.Teal">
+        <item name="colorPrimary">@color/material_teal_500</item>
+        <item name="colorPrimaryDark">@color/material_teal_700</item>
+        <item name="colorAccent">?colorPrimary</item>
+    </style>
+
     <style name="AlertDialogTheme.Blue">
         <item name="colorPrimary">@color/material_blue_500</item>
         <item name="colorPrimaryDark">@color/material_blue_700</item>
+        <item name="colorAccent">?colorPrimary</item>
+    </style>
+
+    <style name="AlertDialogTheme.Purple">
+        <item name="colorPrimary">@color/material_purple_500</item>
+        <item name="colorPrimaryDark">@color/material_purple_700</item>
         <item name="colorAccent">?colorPrimary</item>
     </style>
 

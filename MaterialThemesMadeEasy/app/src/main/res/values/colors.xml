@@ -43,6 +43,21 @@
     <color name="material_orange_a400">#FF9100</color>
     <color name="material_orange_a700">#FF6D00</color>
 
+    <color name="material_yellow_050">#FFFDE7</color>
+    <color name="material_yellow_100">#FFF9C4</color>
+    <color name="material_yellow_200">#FFF59D</color>
+    <color name="material_yellow_300">#FFF176</color>
+    <color name="material_yellow_400">#FFEE58</color>
+    <color name="material_yellow_500">#FFEB3B</color>
+    <color name="material_yellow_600">#FDD835</color>
+    <color name="material_yellow_700">#FBC02D</color>
+    <color name="material_yellow_800">#F9A825</color>
+    <color name="material_yellow_900">#F57F17</color>
+    <color name="material_yellow_a100">#FFFF8D</color>
+    <color name="material_yellow_a200">#FFFF00</color>
+    <color name="material_yellow_a400">#FFEA00</color>
+    <color name="material_yellow_a700">#FFD600</color>
+
     <color name="material_green_050">#E8F5E9</color>
     <color name="material_green_100">#C8E6C9</color>
     <color name="material_green_200">#A5D6A7</color>
@@ -57,6 +72,21 @@
     <color name="material_green_a200">#69F0AE</color>
     <color name="material_green_a400">#00E676</color>
     <color name="material_green_a700">#00C853</color>
+
+    <color name="material_teal_050">#E0F2F1</color>
+    <color name="material_teal_100">#B2DFDB</color>
+    <color name="material_teal_200">#80CBC4</color>
+    <color name="material_teal_300">#4DB6AC</color>
+    <color name="material_teal_400">#26A69A</color>
+    <color name="material_teal_500">#009688</color>
+    <color name="material_teal_600">#00897B</color>
+    <color name="material_teal_700">#00796B</color>
+    <color name="material_teal_800">#00695C</color>
+    <color name="material_teal_900">#004D40</color>
+    <color name="material_teal_a100">#A7FFEB</color>
+    <color name="material_teal_a200">#64FFDA</color>
+    <color name="material_teal_a400">#1DE9B6</color>
+    <color name="material_teal_a700">#00BFA5</color>
 
     <color name="material_blue_050">#E3F2FD</color>
     <color name="material_blue_100">#BBDEFB</color>
@@ -73,16 +103,39 @@
     <color name="material_blue_a400">#2979FF</color>
     <color name="material_blue_a700">#2962FF</color>
 
+    <color name="material_purple_050">#F3E5F5</color>
+    <color name="material_purple_100">#E1BEE7</color>
+    <color name="material_purple_200">#CE93D8</color>
+    <color name="material_purple_300">#BA68C8</color>
+    <color name="material_purple_400">#AB47BC</color>
+    <color name="material_purple_500">#9C27B0</color>
+    <color name="material_purple_600">#8E24AA</color>
+    <color name="material_purple_700">#7B1FA2</color>
+    <color name="material_purple_800">#6A1B9A</color>
+    <color name="material_purple_900">#4A148C</color>
+    <color name="material_purple_a100">#EA80FC</color>
+    <color name="material_purple_a200">#E040FB</color>
+    <color name="material_purple_a400">#D500F9</color>
+    <color name="material_purple_a700">#AA00FF</color>
+
     <!-- Selectors -->
     <color name="selector_normal">@android:color/transparent</color>
-    <color name="selector_white_pressed">#33FFFFFF</color>
     <color name="selector_white_focused">#22FFFFFF</color>
+    <color name="selector_white_pressed">#33FFFFFF</color>
     <color name="selector_black_focused">#12000000</color>
     <color name="selector_black_pressed">#1F000000</color>
-    <color name="selector_orange_pressed">#44FF9800</color>
+    <color name="selector_red_focused">#22F44336</color>
+    <color name="selector_red_pressed">#44F44336</color>
     <color name="selector_orange_focused">#22FF9800</color>
-    <color name="selector_green_pressed">#444CAF50</color>
+    <color name="selector_orange_pressed">#44FF9800</color>
+    <color name="selector_yellow_focused">#22FFEB3B</color>
+    <color name="selector_yellow_pressed">#44FFEB3B</color>
     <color name="selector_green_focused">#224CAF50</color>
-    <color name="selector_blue_pressed">#442196F3</color>
+    <color name="selector_green_pressed">#444CAF50</color>
+    <color name="selector_teal_focused">#22009688</color>
+    <color name="selector_teal_pressed">#44009688</color>
     <color name="selector_blue_focused">#222196F3</color>
+    <color name="selector_blue_pressed">#442196F3</color>
+    <color name="selector_purple_focused">#229C27B0</color>
+    <color name="selector_purple_pressed">#449C27B0</color>
 </resources>
