@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/appbar_spacing_top"
-        android:theme="@style/AppBarOverlayTheme"
+        android:theme="@style/AppTheme.Overlay.AppBar"
         app:layout_scrollFlags="scroll|enterAlways">
 
         <android.support.v7.widget.Toolbar
@@ -23,7 +23,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             android:fitsSystemWindows="true"
-            app:popupTheme="@style/PopupOverlayTheme">
+            app:popupTheme="@style/AppTheme.Overlay.Popup">
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout

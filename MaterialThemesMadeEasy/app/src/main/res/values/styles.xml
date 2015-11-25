@@ -6,12 +6,12 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="colorControlHighlight">@color/selector_black_pressed</item>
-        <item name="dialogTheme">@style/DialogTheme</item>
-        <item name="alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog</item>
+        <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert</item>
     </style>
 
     <!-- App Theme -->
-    <style name="AppTheme" parent="BaseTheme.Light">
+    <style name="AppTheme.Light" parent="BaseTheme.Light">
         <!-- API specific attributes 14+ -->
         <item name="selectableRectDrawable">@drawable/state_list_selectable_rect_black</item>
         <item name="selectableRectDrawableInverse">@drawable/state_list_selectable_rect_white</item>
@@ -25,12 +25,12 @@
     <!-- App Theme Variants -->
 
     <!-- Red App Theme -->
-    <style name="BaseTheme.Red" parent="AppTheme">
+    <style name="BaseTheme.Red" parent="AppTheme.Light">
         <item name="colorPrimary">@color/material_red_500</item>
         <item name="colorPrimaryDark">@color/material_red_700</item>
         <item name="colorAccent">@color/material_red_a700</item>
-        <item name="dialogTheme">@style/DialogTheme.Red</item>
-        <item name="alertDialogTheme">@style/AlertDialogTheme.Red</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog.Red</item>
+        <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert.Red</item>
     </style>
 
     <style name="AppTheme.Red" parent="BaseTheme.Red">
@@ -40,12 +40,12 @@
     </style>
 
     <!-- Orange App Theme -->
-    <style name="BaseTheme.Orange" parent="AppTheme">
+    <style name="BaseTheme.Orange" parent="AppTheme.Light">
         <item name="colorPrimary">@color/material_orange_500</item>
         <item name="colorPrimaryDark">@color/material_orange_700</item>
         <item name="colorAccent">@color/material_orange_a700</item>
-        <item name="dialogTheme">@style/DialogTheme.Orange</item>
-        <item name="alertDialogTheme">@style/AlertDialogTheme.Orange</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog.Orange</item>
+        <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert.Orange</item>
 
         <!-- TODO
         <item name="colorButtonNormal">@color/material_orange_500</item>
@@ -63,12 +63,12 @@
     </style>
 
     <!-- Lime App Theme -->
-    <style name="BaseTheme.Lime" parent="AppTheme">
+    <style name="BaseTheme.Lime" parent="AppTheme.Light">
         <item name="colorPrimary">@color/material_lime_500</item>
         <item name="colorPrimaryDark">@color/material_lime_700</item>
         <item name="colorAccent">@color/material_lime_a700</item>
-        <item name="dialogTheme">@style/DialogTheme.Lime</item>
-        <item name="alertDialogTheme">@style/AlertDialogTheme.Lime</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog.Lime</item>
+        <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert.Lime</item>
     </style>
 
     <style name="AppTheme.Lime" parent="BaseTheme.Lime">
@@ -78,12 +78,12 @@
     </style>
 
     <!-- Green App Theme -->
-    <style name="BaseTheme.Green" parent="AppTheme">
+    <style name="BaseTheme.Green" parent="AppTheme.Light">
         <item name="colorPrimary">@color/material_green_500</item>
         <item name="colorPrimaryDark">@color/material_green_700</item>
         <item name="colorAccent">@color/material_green_a700</item>
-        <item name="dialogTheme">@style/DialogTheme.Green</item>
-        <item name="alertDialogTheme">@style/AlertDialogTheme.Green</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog.Green</item>
+        <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert.Green</item>
     </style>
 
     <style name="AppTheme.Green" parent="BaseTheme.Green">
@@ -93,12 +93,12 @@
     </style>
 
     <!-- Teal App Theme -->
-    <style name="BaseTheme.Teal" parent="AppTheme">
+    <style name="BaseTheme.Teal" parent="AppTheme.Light">
         <item name="colorPrimary">@color/material_teal_500</item>
         <item name="colorPrimaryDark">@color/material_teal_700</item>
         <item name="colorAccent">@color/material_teal_a700</item>
-        <item name="dialogTheme">@style/DialogTheme.Teal</item>
-        <item name="alertDialogTheme">@style/AlertDialogTheme.Teal</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog.Teal</item>
+        <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert.Teal</item>
     </style>
 
     <style name="AppTheme.Teal" parent="BaseTheme.Teal">
@@ -108,12 +108,12 @@
     </style>
 
     <!-- Blue App Theme -->
-    <style name="BaseTheme.Blue" parent="AppTheme">
+    <style name="BaseTheme.Blue" parent="AppTheme.Light">
         <item name="colorPrimary">@color/material_blue_500</item>
         <item name="colorPrimaryDark">@color/material_blue_700</item>
         <item name="colorAccent">@color/material_blue_a700</item>
-        <item name="dialogTheme">@style/DialogTheme.Blue</item>
-        <item name="alertDialogTheme">@style/AlertDialogTheme.Blue</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog.Blue</item>
+        <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert.Blue</item>
     </style>
 
     <style name="AppTheme.Blue" parent="BaseTheme.Blue">
@@ -123,12 +123,12 @@
     </style>
 
     <!-- Purple App Theme -->
-    <style name="BaseTheme.Purple" parent="AppTheme">
+    <style name="BaseTheme.Purple" parent="AppTheme.Light">
         <item name="colorPrimary">@color/material_purple_500</item>
         <item name="colorPrimaryDark">@color/material_purple_700</item>
         <item name="colorAccent">@color/material_purple_a700</item>
-        <item name="dialogTheme">@style/DialogTheme.Purple</item>
-        <item name="alertDialogTheme">@style/AlertDialogTheme.Purple</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog.Purple</item>
+        <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert.Purple</item>
     </style>
 
     <style name="AppTheme.Purple" parent="BaseTheme.Purple">
@@ -138,55 +138,47 @@
     </style>
 
 
-    <!-- App Bar Overlay Themes -->
-    <style name="AppBarOverlayTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-
-
-    <!-- Popup Overlay Themes -->
-    <style name="PopupOverlayTheme" parent="ThemeOverlay.AppCompat.Light"/>
-
-
     <!-- Dialog Themes -->
-    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+    <style name="AppTheme.Dialog" parent="Theme.AppCompat.Light.Dialog">
     </style>
 
-    <style name="DialogTheme.Red">
+    <style name="AppTheme.Dialog.Red">
         <item name="colorPrimary">@color/material_red_500</item>
         <item name="colorPrimaryDark">@color/material_red_700</item>
         <item name="colorAccent">@color/material_red_a700</item>
     </style>
 
-    <style name="DialogTheme.Orange">
+    <style name="AppTheme.Dialog.Orange">
         <item name="colorPrimary">@color/material_orange_500</item>
         <item name="colorPrimaryDark">@color/material_orange_700</item>
         <item name="colorAccent">@color/material_orange_a700</item>
     </style>
 
-    <style name="DialogTheme.Lime">
+    <style name="AppTheme.Dialog.Lime">
         <item name="colorPrimary">@color/material_lime_500</item>
         <item name="colorPrimaryDark">@color/material_lime_700</item>
         <item name="colorAccent">@color/material_lime_a700</item>
     </style>
 
-    <style name="DialogTheme.Green">
+    <style name="AppTheme.Dialog.Green">
         <item name="colorPrimary">@color/material_green_500</item>
         <item name="colorPrimaryDark">@color/material_green_700</item>
         <item name="colorAccent">@color/material_green_a700</item>
     </style>
 
-    <style name="DialogTheme.Teal">
+    <style name="AppTheme.Dialog.Teal">
         <item name="colorPrimary">@color/material_teal_500</item>
         <item name="colorPrimaryDark">@color/material_teal_700</item>
         <item name="colorAccent">@color/material_teal_a700</item>
     </style>
 
-    <style name="DialogTheme.Blue">
+    <style name="AppTheme.Dialog.Blue">
         <item name="colorPrimary">@color/material_blue_500</item>
         <item name="colorPrimaryDark">@color/material_blue_700</item>
         <item name="colorAccent">@color/material_blue_a700</item>
     </style>
 
-    <style name="DialogTheme.Purple">
+    <style name="AppTheme.Dialog.Purple">
         <item name="colorPrimary">@color/material_purple_500</item>
         <item name="colorPrimaryDark">@color/material_purple_700</item>
         <item name="colorAccent">@color/material_purple_a700</item>
@@ -194,50 +186,58 @@
 
 
     <!-- AlertDialog Themes -->
-    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <style name="AppTheme.Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert">
     </style>
 
-    <style name="AlertDialogTheme.Red">
+    <style name="AppTheme.Dialog.Alert.Red">
         <item name="colorPrimary">@color/material_red_500</item>
         <item name="colorPrimaryDark">@color/material_red_700</item>
         <item name="colorAccent">@color/material_red_a700</item>
     </style>
 
-    <style name="AlertDialogTheme.Orange">
+    <style name="AppTheme.Dialog.Alert.Orange">
         <item name="colorPrimary">@color/material_orange_500</item>
         <item name="colorPrimaryDark">@color/material_orange_700</item>
         <item name="colorAccent">@color/material_orange_a700</item>
     </style>
 
-    <style name="AlertDialogTheme.Lime">
+    <style name="AppTheme.Dialog.Alert.Lime">
         <item name="colorPrimary">@color/material_lime_500</item>
         <item name="colorPrimaryDark">@color/material_lime_700</item>
         <item name="colorAccent">@color/material_lime_a700</item>
     </style>
 
-    <style name="AlertDialogTheme.Green">
+    <style name="AppTheme.Dialog.Alert.Green">
         <item name="colorPrimary">@color/material_green_500</item>
         <item name="colorPrimaryDark">@color/material_green_700</item>
         <item name="colorAccent">@color/material_green_a700</item>
     </style>
 
-    <style name="AlertDialogTheme.Teal">
+    <style name="AppTheme.Dialog.Alert.Teal">
         <item name="colorPrimary">@color/material_teal_500</item>
         <item name="colorPrimaryDark">@color/material_teal_700</item>
         <item name="colorAccent">@color/material_teal_a700</item>
     </style>
 
-    <style name="AlertDialogTheme.Blue">
+    <style name="AppTheme.Dialog.Alert.Blue">
         <item name="colorPrimary">@color/material_blue_500</item>
         <item name="colorPrimaryDark">@color/material_blue_700</item>
         <item name="colorAccent">@color/material_blue_a700</item>
     </style>
 
-    <style name="AlertDialogTheme.Purple">
+    <style name="AppTheme.Dialog.Alert.Purple">
         <item name="colorPrimary">@color/material_purple_500</item>
         <item name="colorPrimaryDark">@color/material_purple_700</item>
         <item name="colorAccent">@color/material_purple_a700</item>
     </style>
+
+
+    <!-- App Bar Overlay Themes -->
+    <style name="AppTheme.Overlay.AppBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+
+    <!-- Popup Overlay Themes -->
+    <style name="AppTheme.Overlay.Popup" parent="ThemeOverlay.AppCompat.Light"/>
 
 
     <!-- Button Styles -->
