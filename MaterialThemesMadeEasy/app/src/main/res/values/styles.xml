@@ -39,6 +39,7 @@
         <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_red</item>
     </style>
 
+
     <!-- Orange App Theme -->
     <style name="BaseTheme.Orange" parent="AppTheme.Light">
         <item name="colorPrimary">@color/material_orange_500</item>
@@ -46,14 +47,6 @@
         <item name="colorAccent">@color/material_orange_a700</item>
         <item name="dialogTheme">@style/AppTheme.Dialog.Orange</item>
         <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert.Orange</item>
-
-        <!-- TODO
-        <item name="colorButtonNormal">@color/material_orange_500</item>
-        <item name="colorControlNormal">@color/material_orange_500</item>
-        <item name="colorSwitchThumbNormal">@color/material_green_500</item>
-        <item name="colorControlActivated">@color/material_green_500</item>
-        <item name="colorControlHighlight">@color/material_green_700</item>
-        -->
     </style>
 
     <style name="AppTheme.Orange" parent="BaseTheme.Orange">
@@ -61,6 +54,7 @@
         <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_orange</item>
         <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_orange</item>
     </style>
+
 
     <!-- Lime App Theme -->
     <style name="BaseTheme.Lime" parent="AppTheme.Light">
@@ -77,6 +71,7 @@
         <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_lime</item>
     </style>
 
+
     <!-- Green App Theme -->
     <style name="BaseTheme.Green" parent="AppTheme.Light">
         <item name="colorPrimary">@color/material_green_500</item>
@@ -92,11 +87,17 @@
         <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_green</item>
     </style>
 
+
     <!-- Teal App Theme -->
     <style name="BaseTheme.Teal" parent="AppTheme.Light">
         <item name="colorPrimary">@color/material_teal_500</item>
         <item name="colorPrimaryDark">@color/material_teal_700</item>
         <item name="colorAccent">@color/material_teal_a700</item>
+        <!-- Uncomment to completely color control elements
+        <item name="colorControlNormal">@color/material_teal_500</item>
+        <item name="colorControlActivated">@color/material_teal_500</item>
+        <item name="colorControlHighlight">@color/selector_teal_pressed</item>
+        -->
         <item name="dialogTheme">@style/AppTheme.Dialog.Teal</item>
         <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert.Teal</item>
     </style>
@@ -106,6 +107,7 @@
         <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_teal</item>
         <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_teal</item>
     </style>
+
 
     <!-- Blue App Theme -->
     <style name="BaseTheme.Blue" parent="AppTheme.Light">
@@ -121,6 +123,7 @@
         <item name="selectableRectDrawableColored">@drawable/state_list_selectable_rect_blue</item>
         <item name="selectableRoundedRectDrawableColored">@drawable/state_list_selectable_rounded_rect_blue</item>
     </style>
+
 
     <!-- Purple App Theme -->
     <style name="BaseTheme.Purple" parent="AppTheme.Light">

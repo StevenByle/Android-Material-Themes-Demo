@@ -21,7 +21,7 @@ import com.stevenbyle.android.materialthemes.log.LogUtils;
 import com.stevenbyle.android.materialthemes.log.LogUtils.LogLevel;
 
 /**
- * TODO
+ * Fragment showing user interface elements that can be themed using code at runtime.
  */
 public class MaterialThemeInCodeFragment extends Fragment implements OnClickListener {
     private static final String TAG = LogUtils.generateTag(MaterialThemeInCodeFragment.class);
