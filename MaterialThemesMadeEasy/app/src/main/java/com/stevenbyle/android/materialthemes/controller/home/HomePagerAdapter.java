@@ -12,6 +12,7 @@ import com.stevenbyle.android.materialthemes.controller.home.material.MaterialTh
 import java.lang.ref.WeakReference;
 
 /**
+ * View pager adapter used on home page to show themed fragments.
  *
  * @author Steven Byle
  */

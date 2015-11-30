@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -13,15 +12,14 @@ import android.widget.Spinner;
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
 import com.stevenbyle.android.materialthemes.log.LogUtils;
-import com.stevenbyle.android.materialthemes.log.LogUtils.LogLevel;
 
 /**
  * Fragment showing user interface elements that can be themed using XML in layout files.
+ *
+ * @author Steven Byle
  */
-public class MaterialThemeInXmlFragment extends Fragment implements OnClickListener {
+public class MaterialThemeInXmlFragment extends Fragment {
     private static final String TAG = LogUtils.generateTag(MaterialThemeInXmlFragment.class);
-
-    private Spinner mCurrentThemeSpinner, mGreenThemeSpinner, mBlueThemeSpinner;
 
     public static MaterialThemeInXmlFragment newInstance() {
         if (BuildConfig.DEBUG) {
@@ -88,9 +86,9 @@ public class MaterialThemeInXmlFragment extends Fragment implements OnClickListe
         View fragmentView = inflater.inflate(R.layout.fragment_material_theme_in_xml, container, false);
 
         // Reference views
-        mCurrentThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_material_theme_spinner_current_theme);
-        mGreenThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_material_theme_spinner_green_theme);
-        mBlueThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_material_theme_spinner_blue_theme);
+        Spinner currentThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_material_theme_spinner_current_theme);
+        Spinner greenThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_material_theme_spinner_green_theme);
+        Spinner blueThemeSpinner = (Spinner) fragmentView.findViewById(R.id.fragment_material_theme_spinner_blue_theme);
 
         // Set and bind data to views
         ArrayAdapter<CharSequence> spinnerArrayAdapter = ArrayAdapter.createFromResource(
@@ -99,9 +97,9 @@ public class MaterialThemeInXmlFragment extends Fragment implements OnClickListe
                 android.R.layout.simple_spinner_item);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        mCurrentThemeSpinner.setAdapter(spinnerArrayAdapter);
-        mGreenThemeSpinner.setAdapter(spinnerArrayAdapter);
-        mBlueThemeSpinner.setAdapter(spinnerArrayAdapter);
+        currentThemeSpinner.setAdapter(spinnerArrayAdapter);
+        greenThemeSpinner.setAdapter(spinnerArrayAdapter);
+        blueThemeSpinner.setAdapter(spinnerArrayAdapter);
 
         return fragmentView;
     }
@@ -196,19 +194,4 @@ public class MaterialThemeInXmlFragment extends Fragment implements OnClickListe
         }
     }
 
-    @Override
-    public void onClick(View v) {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logMethod(TAG, "onClick");
-        }
-
-        switch (v.getId()) {
-            default:
-                if (BuildConfig.DEBUG) {
-                    LogUtils.logMessage(LogLevel.WARN, TAG, "onClick", "unknown view clicked");
-                }
-                break;
-        }
-
-    }
 }

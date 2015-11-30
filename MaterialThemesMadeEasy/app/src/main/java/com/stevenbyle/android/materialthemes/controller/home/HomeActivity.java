@@ -16,20 +16,21 @@ import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
 import com.stevenbyle.android.materialthemes.controller.dialog.DialogUtils;
 import com.stevenbyle.android.materialthemes.controller.theme.MaterialTheme;
-import com.stevenbyle.android.materialthemes.controller.theme.MaterialThemeUtils;
 import com.stevenbyle.android.materialthemes.log.LogUtils;
 import com.stevenbyle.android.materialthemes.log.LogUtils.LogLevel;
 
-public class HomeActivity extends AppCompatActivity implements OnClickListener{
+/**
+ * Home activity which holds the app bar (toolbar + tab layout) and a view pager with the themed
+ * fragments.
+ *
+ * @author Steven Byle
+ */
+public class HomeActivity extends AppCompatActivity implements OnClickListener {
     private static final String TAG = LogUtils.generateTag(HomeActivity.class);
 
     private static final String KEY_ARG_CURRENT_THEME = "KEY_ARG_CURRENT_THEME";
 
     private MaterialTheme mCurrentTheme;
-    private Toolbar mToolbar;
-    private TabLayout mTabLayout;
-    private ViewPager mViewPager;
-    private HomePagerAdapter mViewPagerAdapter;
 
     public static Intent newInstanceIntent(Context context, MaterialTheme currentTheme) {
         if (BuildConfig.DEBUG) {
@@ -60,7 +61,7 @@ public class HomeActivity extends AppCompatActivity implements OnClickListener{
         // If no parameters were passed in, default them
         if (args == null) {
             // Default the theme
-            mCurrentTheme = MaterialThemeUtils.THEME_TEAL;
+            mCurrentTheme = MaterialTheme.THEME_TEAL;
         }
         // Otherwise, set incoming parameters
         else {
@@ -78,9 +79,9 @@ public class HomeActivity extends AppCompatActivity implements OnClickListener{
 
         // Set the content view to a layout and reference views
         setContentView(R.layout.activity_home);
-        mToolbar = (Toolbar) findViewById(R.id.activity_home_toolbar);
-        mViewPager = (ViewPager) findViewById(R.id.activity_home_pager);
-        mTabLayout = (TabLayout) findViewById(R.id.activity_home_tab_layout);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.activity_home_toolbar);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.activity_home_pager);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.activity_home_tab_layout);
 
         // If this is the first creation, default state variables
         if (savedInstanceState == null) {
@@ -90,11 +91,11 @@ public class HomeActivity extends AppCompatActivity implements OnClickListener{
         }
 
         // Set and bind data to views
-        setSupportActionBar(mToolbar);
+        setSupportActionBar(toolbar);
 
-        mViewPagerAdapter = new HomePagerAdapter(this, getSupportFragmentManager());
-        mViewPager.setAdapter(mViewPagerAdapter);
-        mTabLayout.setupWithViewPager(mViewPager);
+        HomePagerAdapter viewPagerAdapter = new HomePagerAdapter(this, getSupportFragmentManager());
+        viewPager.setAdapter(viewPagerAdapter);
+        tabLayout.setupWithViewPager(viewPager);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.activity_home_fab);
         fab.setOnClickListener(this);

@@ -16,18 +16,17 @@ import android.widget.Button;
 import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
 import com.stevenbyle.android.materialthemes.controller.dialog.DialogUtils;
-import com.stevenbyle.android.materialthemes.controller.theme.MaterialThemeUtils;
+import com.stevenbyle.android.materialthemes.controller.theme.MaterialTheme;
 import com.stevenbyle.android.materialthemes.log.LogUtils;
 import com.stevenbyle.android.materialthemes.log.LogUtils.LogLevel;
 
 /**
  * Fragment showing user interface elements that can be themed using code at runtime.
+ *
+ * @author Steven Byle
  */
 public class MaterialThemeInCodeFragment extends Fragment implements OnClickListener {
     private static final String TAG = LogUtils.generateTag(MaterialThemeInCodeFragment.class);
-
-    private Button mCurrentThemeDialogButton, mGreenThemeDialogButton, mBlueThemeDialogButton;
-    private Button mCurrentThemeSnackbarButton, mGreenThemeSnackbarButton, mBlueThemeSnackbarButton;
 
     public static MaterialThemeInCodeFragment newInstance() {
         if (BuildConfig.DEBUG) {
@@ -94,20 +93,20 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
         View fragmentView = inflater.inflate(R.layout.fragment_material_theme_in_code, container, false);
 
         // Reference views
-        mCurrentThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_dialog_current_theme);
-        mGreenThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_dialog_green_theme);
-        mBlueThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_dialog_blue_theme);
-        mCurrentThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_snackbar_current_theme);
-        mGreenThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_snackbar_green_theme);
-        mBlueThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_snackbar_blue_theme);
+        Button currentThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_dialog_current_theme);
+        Button greenThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_dialog_green_theme);
+        Button blueThemeDialogButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_dialog_blue_theme);
+        Button currentThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_snackbar_current_theme);
+        Button greenThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_snackbar_green_theme);
+        Button blueThemeSnackbarButton = (Button) fragmentView.findViewById(R.id.fragment_material_theme_button_snackbar_blue_theme);
 
         // Set and bind data to views
-        mCurrentThemeDialogButton.setOnClickListener(this);
-        mGreenThemeDialogButton.setOnClickListener(this);
-        mBlueThemeDialogButton.setOnClickListener(this);
-        mCurrentThemeSnackbarButton.setOnClickListener(this);
-        mGreenThemeSnackbarButton.setOnClickListener(this);
-        mBlueThemeSnackbarButton.setOnClickListener(this);
+        currentThemeDialogButton.setOnClickListener(this);
+        greenThemeDialogButton.setOnClickListener(this);
+        blueThemeDialogButton.setOnClickListener(this);
+        currentThemeSnackbarButton.setOnClickListener(this);
+        greenThemeSnackbarButton.setOnClickListener(this);
+        blueThemeSnackbarButton.setOnClickListener(this);
 
         return fragmentView;
     }
@@ -210,7 +209,7 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
 
         switch (v.getId()) {
             case R.id.fragment_material_theme_button_dialog_current_theme:
-                MaterialThemeDialogFragment dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
+                MaterialThemeAlertDialogFragment dialogFragment = MaterialThemeAlertDialogFragment.newInstance(v.getContext(),
                         R.string.material_theme_current_theme,
                         R.string.material_theme_current_theme,
                         null);
@@ -219,19 +218,19 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
                 break;
 
             case R.id.fragment_material_theme_button_dialog_green_theme:
-                dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
+                dialogFragment = MaterialThemeAlertDialogFragment.newInstance(v.getContext(),
                         R.string.material_theme_green_theme,
                         R.string.material_theme_green_theme,
-                        MaterialThemeUtils.THEME_ALERT_DIALOG_GREEN);
+                        MaterialTheme.THEME_ALERT_DIALOG_GREEN);
 
                 DialogUtils.showDialogFragment(getChildFragmentManager(), dialogFragment);
                 break;
 
             case R.id.fragment_material_theme_button_dialog_blue_theme:
-                dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
+                dialogFragment = MaterialThemeAlertDialogFragment.newInstance(v.getContext(),
                         R.string.material_theme_blue_theme,
                         R.string.material_theme_blue_theme,
-                        MaterialThemeUtils.THEME_ALERT_DIALOG_BLUE);
+                        MaterialTheme.THEME_ALERT_DIALOG_BLUE);
 
                 DialogUtils.showDialogFragment(getChildFragmentManager(), dialogFragment);
                 break;

@@ -6,6 +6,8 @@ import android.text.TextUtils;
 import android.util.Log;
 
 /**
+ * Simple logging wrapper to log methods and messages to track app state.
+ *
  * @author Steven Byle
  */
 public class LogUtils {

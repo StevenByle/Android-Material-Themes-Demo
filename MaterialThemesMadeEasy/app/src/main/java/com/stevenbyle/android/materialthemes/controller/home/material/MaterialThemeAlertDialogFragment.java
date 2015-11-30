@@ -19,9 +19,11 @@ import com.stevenbyle.android.materialthemes.controller.theme.MaterialTheme;
 import com.stevenbyle.android.materialthemes.log.LogUtils;
 
 /**
+ * Simple dialog fragment that creates an alert dialog that can be themed.
+ *
  * @author Steven Byle
  */
-public class MaterialThemeDialogFragment extends DialogFragment implements DialogInterface.OnClickListener {
+public class MaterialThemeAlertDialogFragment extends DialogFragment implements DialogInterface.OnClickListener {
     private static final String TAG = LogUtils.generateTag(MaterialThemeInXmlFragment.class);
 
     private static final String KEY_ARG_TITLE = "KEY_ARG_TITLE";
@@ -31,24 +33,24 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
     private String mTitle, mMessage;
     private MaterialTheme mAlertDialogTheme;
 
-    public static MaterialThemeDialogFragment newInstance(Context context, @StringRes int titleResId,
+    public static MaterialThemeAlertDialogFragment newInstance(Context context, @StringRes int titleResId,
             @StringRes int messageResId, @Nullable MaterialTheme alertDialogTheme) {
 
-        MaterialThemeDialogFragment fragment = newInstance(
+        MaterialThemeAlertDialogFragment fragment = newInstance(
                 context.getString(titleResId),
                 context.getString(messageResId),
                 alertDialogTheme);
         return fragment;
     }
 
-    public static MaterialThemeDialogFragment newInstance(String title, String message,
+    public static MaterialThemeAlertDialogFragment newInstance(String title, String message,
             @Nullable MaterialTheme alertDialogTheme) {
 
         if (BuildConfig.DEBUG) {
             LogUtils.logMethod(TAG, "newInstance");
         }
 
-        MaterialThemeDialogFragment fragment = new MaterialThemeDialogFragment();
+        MaterialThemeAlertDialogFragment fragment = new MaterialThemeAlertDialogFragment();
         Bundle args = fragment.getArguments();
         if (args == null) {
             args = new Bundle();
