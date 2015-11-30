@@ -23,9 +23,11 @@
     <string name="material_theme_green_theme">Green Theme</string>
     <string name="material_theme_blue_theme">Blue Theme</string>
     <string name="material_theme_buttons_raised">Buttons: Raised (Default)</string>
+    <string name="material_theme_buttons_no_raise">Buttons: No Raise</string>
+    <string name="material_theme_buttons_flat">Buttons: Flat</string>
     <string name="material_theme_default">Default</string>
     <string name="material_theme_colored">Colored</string>
-    <string name="material_theme_buttons_no_raise">Buttons: No Raise</string>
+    <string name="material_theme_colored_text">Colored Text</string>
     <string name="material_theme_selectable_items_rect">Selectable Items: Rectangle</string>
     <string name="material_theme_selectable_items_rounded_rect">Selectable Items: Rounded Rectangle</string>
     <string name="material_theme_text_fields">Text Fields</string>

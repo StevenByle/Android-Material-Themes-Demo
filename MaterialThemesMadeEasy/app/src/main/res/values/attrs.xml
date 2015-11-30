@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- App Theme attributes -->
+    <!-- API specific theme attributes 14+ -->
     <declare-styleable name="AppThemeAttributes">
         <attr name="selectableRectDrawable" format="reference"/>
         <attr name="selectableRectDrawableInverse" format="reference"/>

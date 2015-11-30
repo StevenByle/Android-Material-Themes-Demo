@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- App Theme attributes -->
+    <!-- API specific theme attributes 21+ -->
     <declare-styleable name="AppThemeAttributes">
         <attr name="selectableDrawableColorDefault" format="reference|color"/>
         <attr name="selectableDrawableColorInverse" format="reference|color"/>
