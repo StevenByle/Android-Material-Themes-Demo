@@ -1,1 +1,1 @@
-# Android-Material-Themes-Made-Easy
+# Android Material Themes Made Easy
