@@ -127,9 +127,9 @@ public class MaterialThemeAlertDialogFragment extends DialogFragment implements 
                 .setPositiveButton(R.string.material_theme_dialog_button_positive, this)
                 .setNegativeButton(R.string.material_theme_dialog_button_negative, this);
 
-        Dialog dialog = alertDialogBuilder.create();
-        dialog.setCanceledOnTouchOutside(true);
-        return dialog;
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.setCanceledOnTouchOutside(true);
+        return alertDialog;
     }
 
     @Override

@@ -72,7 +72,7 @@ public class MaterialTheme implements Serializable {
     @StyleRes
     private int themeResId;
 
-    public MaterialTheme(int nameResId, int themeResId) {
+    public MaterialTheme(@StringRes int nameResId, @StyleRes int themeResId) {
         this.nameResId = nameResId;
         this.themeResId = themeResId;
     }
