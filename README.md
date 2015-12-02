@@ -1,6 +1,5 @@
 #Android Material Themes Made Easy
 
-
 ###Styles And Themes
 Android was built with the concept that almost every user interface element should be customizable, and apps should be able to adjust their look and feel to express their brand, while keeping common behaviors that users understand. To support this, Android has [styles](http://developer.android.com/guide/topics/resources/style-resource.html), which are a collection of [attributes](http://developer.android.com/training/custom-views/create-view.html#customattr) that can be applied to a [`View`](http://developer.android.com/reference/android/view/View.html), which adjusts colors, dimensions, spacing, fonts, and any other attributes that the `View` supports. Now here's where it starts getting convoluted, Android also has themes, which are actually just styles, that are applied to an [`Activity`](http://developer.android.com/reference/android/app/Activity.html) or an entire [`Application`](http://developer.android.com/reference/android/app/Application.html). The difference is, when a style is used as a theme for an `Activity` or `Application`, it applies to all `Views` in that hierarchy. To sum it up, a style is applied at a local, individual component level, while themes are applied at a more global page or application level.
 
@@ -40,13 +39,43 @@ In XML, we would use a theme that sets `android:textColorPrimary` to a color, an
 </style>
 ```
 
-Now you should see the delineation between styles and themes starting to surface. Styles are great for applying explicit `View` attributes. Likewise, while a theme can also set explicit `View` attributes, *only* a theme can set theme attributes, which can then in turn be used by styles which reference those theme attributes. Putting this all together, themes can create a palette of theme attributes, which styles use to apply to explicit `View` attributes. This way, a theme sets the overall brand, while a style use that brand and uses it in particular variations for  `Views`. This allows themes to be swapped out, changing the entire look of an entire `Activity` or `Application` with minimal code changes.
+Now you should see the delineation between styles and themes starting to surface, and it's how they use attributes. Styles are great for applying explicit `View` attributes. Likewise, themes can also set explicit `View` attributes, but *only* themes can set theme attributes, which can then in turn be used by styles which reference those theme attributes. Putting this all together, themes can create a palette of theme attributes, which styles use to apply to explicit `View` attributes. This way, a theme sets the overall brand, while a style use that brand and uses it in particular variations for  `Views`. In theory, this allows themes and styles to be modular, making it possible to change the look of an entire `Activity` or `Application` with minimal code changes. 
 
+###The Not So Themeable 
+Before Android 5.0 (API 21), themes could set backgrounds, layout spacing and sizes, font sizes and colors, divider sizes and colors, and other basic elements of the user interface. However, there was no simple way to theme the key elements that makeup an app, which are the actual controls that the user interacts with (buttons, text boxes, switches, etc) and the content (images, icons, etc). Pre API 21, a separate version of each asset would be needed for each theme. This meant supporting something as simple as multiple colors of a button would require a set of assets for each button color. To support every button state (5) and screen density bucket (6) that Android has, this would require 30 assets for every button. That's just one color for one button, so you can see how this quickly became a tedious chore, making it difficult to update and maintain.
 
-###It's A Material World
-Google unveiled [Material Design](https://www.google.com/design/spec/material-design/introduction.html) back in Summer 2014 alongside [Android 5.0 (API 21)](http://developer.android.com/about/versions/lollipop.html), which was a strong divergence from the Holo theme that had been around since Fall 2011 with [Android 4.0 (API 14)](http://developer.android.com/about/versions/android-4.0-highlights.html). Material design added new animations, user interface controls, touch feedback, and a bright new color palette. Google, as expected, immediately began encouraging Android app developers to incorporate Material Design elements into their apps. Developers, as expected, immediately began asking Google how they could do this and keep compatibility with legacy devices, since a [majority of devices were (and still are) running pre Android 5.0](http://developer.android.com/about/dashboards/index.html). 
+###Theming In A Material World
+In Summer 2014, Google unveiled [Material Design](https://www.google.com/design/spec/material-design/introduction.html) alongside Android 5.0, which was a strong divergence from the Holo theme that had been around since Fall 2011 with Android 4.0 (API 14). Material design added new animations, user interface controls, touch feedback, and a bright new color palette. But more importantly, Android 5.0 added new features critical to theming Material user interfaces.
 
+1. [Color tinting](http://developer.android.com/training/material/drawables.html#DrawableTint)  support for `Drawables` and `Views`
+2. Theme attribute access in [Drawable Resources](http://developer.android.com/guide/topics/resources/drawable-resource.html)
+
+This finally opened the door to dynamically colorize user interface elements without having to make multiple versions. Color tinting allowed icons and images to be colored on the fly, while `Drawables` could reference color theme attributes to dynamically color user interface elements. But, there was still one big problem, how to implement Material Design and keep compatibility with legacy devices, since a majority of devices were (and still are) [running pre Android 5.0](http://developer.android.com/about/dashboards/index.html). Google's solution was the [v7 AppCompat Support Library](http://developer.android.com/tools/support-library/features.html#v7-appcompat), which included tint-aware Material Design user interface elements that supported back to Android 2.1 (API 7).
+
+###AppCompat 101
 TBD
 
-###Consolidating Your Assets 
-TBD
+
+###[TBD - REMOVE?] Raster Graphics And Asset Overload
+First, what's a [raster graphic](https://en.wikipedia.org/wiki/Raster_graphics)? Simply put, it's a rectangular matrix of dots, with each dot representing a color. Common examples are [`.jpg`](https://en.wikipedia.org/wiki/JPEG) and [`.png`](https://en.wikipedia.org/wiki/Portable_Network_Graphics). Raster graphics can be scaled down without much image degradation, but when scaling them up they become blurry and pixelated. Generally it is good practice to always create raster graphics at or above the maximum resolution that they will be used at, to ensure that they will only ever be scaled down. Android supports a wide array of [screen densities](https://www.captechconsulting.com/blogs/understanding-density-independence-in-android), and in order to do so, properly scaled versions of every raster graphic is needed for each support screen density. 
+
+Android includes a stock set of user interface elements, including buttons, text boxes, switches, tab bars, drop down menus, and more. These elements are replaceable, and the default style for each element can be set in the theme to use a custom version. So, what do we need to replace something as simple as a [`Button`](http://developer.android.com/reference/android/widget/Button.html)? First, you need stretchable [9-patch drawables](http://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch), one for each interactive state that `Button` supports. 
+
+1. Default
+2. Focused
+3. Pressed
+4. Disabled
+5. Disabled + Focused
+
+Only 5 assets, not so bad. But wait, there's more! Remember that if we are using raster graphics, Android needs scaled versions of *every* raster graphic to support those different screen densities.
+
+1. Low (`ldpi` / 120dpi) 
+2. Medium - (`mdpi` / 160dpi) 
+3. High - (`hdpi` / 240dpi) 
+4. Extra High - (`xhdpi` / 320dpi) 
+5. Extra Extra High - (`xxhdpi` / 480dpi) 
+6. Extra Extra Extra High - (`xxxhdpi` / 640dpi) 
+
+These days, `ldpi` devices are pretty much extinct, and `xxxhdpi` devices haven't become prominent enough to support just yet. So, if we create our 5 state images at the 4 common screen densities, we are now up to 20 assets, for a single `Button`. And we still aren't done yet, we need a [`StateListDrawable`](http://developer.android.com/guide/topics/resources/drawable-resource.html#StateList) to combine all of the state images into a single image asset that we can reference. At that point, then we can replace the default `Button` style with our custom image asset.
+
+Now, let's say we need another `Button` that is a slightly different color than the first button, but is otherwise identical. Sorry, you have to make 20 more assets just for that `Button`. What if you want to make the corners of the first `Button` a little smoother? You guessed it, you need to recreate all 20 assets and replace every one of them.
