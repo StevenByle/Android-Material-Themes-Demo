@@ -49,8 +49,9 @@ In Summer 2014, Google unveiled [Material Design](https://www.google.com/design/
 
 1. [Color tinting](http://developer.android.com/training/material/drawables.html#DrawableTint)  support for `Drawables` and `Views`
 2. Theme attribute access in [Drawable Resources](http://developer.android.com/guide/topics/resources/drawable-resource.html)
+3. Theming at the `View` level
 
-This finally opened the door to dynamically colorize user interface elements without having to make multiple versions. Color tinting allowed icons and images to be colored on the fly, while `Drawables` could reference color theme attributes to dynamically color user interface elements. But, there was still one big problem, how to implement Material Design and keep compatibility with legacy devices, since a majority of devices were (and still are) [running pre Android 5.0](http://developer.android.com/about/dashboards/index.html). Google's solution was the [v7 AppCompat Support Library](http://developer.android.com/tools/support-library/features.html#v7-appcompat), which included tint-aware Material Design user interface elements that supported back to Android 2.1 (API 7).
+This finally opened the door to dynamically colorize user interface elements without having to make multiple versions. Color tinting allowed icons and images to be colored on the fly, while `Drawables` could reference color theme attributes to dynamically color user interface elements. Lastly, being able to apply themes at the `View` level allowed `Views` in the same layout to use completely different themes. But, there was still one big problem, how to implement Material Design and keep compatibility with legacy devices, since a majority of devices were (and still are) [running pre Android 5.0](http://developer.android.com/about/dashboards/index.html). Google's solution was the [v7 AppCompat Support Library](http://developer.android.com/tools/support-library/features.html#v7-appcompat), which included tint-aware Material Design user interface elements that supported back to Android 2.1 (API 7).
 
 ###AppCompat 101
 TBD
