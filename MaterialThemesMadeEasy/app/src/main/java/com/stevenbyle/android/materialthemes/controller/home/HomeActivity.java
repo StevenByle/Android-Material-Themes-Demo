@@ -60,12 +60,16 @@ public class HomeActivity extends AppCompatActivity implements OnClickListener {
 
         // If no parameters were passed in, default them
         if (args == null) {
-            // Default the theme
-            mCurrentTheme = MaterialTheme.THEME_TEAL;
+            mCurrentTheme = null;
         }
         // Otherwise, set incoming parameters
         else {
             mCurrentTheme = (MaterialTheme) args.getSerializable(KEY_ARG_CURRENT_THEME);
+        }
+
+        // If not set, default the theme
+        if (mCurrentTheme == null) {
+            mCurrentTheme = MaterialTheme.THEME_TEAL;
         }
 
         // Theme must be set before calling super or setContentView
