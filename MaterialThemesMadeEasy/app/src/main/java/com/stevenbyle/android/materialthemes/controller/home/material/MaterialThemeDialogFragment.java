@@ -23,7 +23,7 @@ import com.stevenbyle.android.materialthemes.log.LogUtils;
  *
  * @author Steven Byle
  */
-public class MaterialThemeAlertDialogFragment extends DialogFragment implements DialogInterface.OnClickListener {
+public class MaterialThemeDialogFragment extends DialogFragment implements DialogInterface.OnClickListener {
     private static final String TAG = LogUtils.generateTag(MaterialThemeInXmlFragment.class);
 
     private static final String KEY_ARG_TITLE = "KEY_ARG_TITLE";
@@ -33,24 +33,24 @@ public class MaterialThemeAlertDialogFragment extends DialogFragment implements 
     private String mTitle, mMessage;
     private MaterialTheme mAlertDialogTheme;
 
-    public static MaterialThemeAlertDialogFragment newInstance(Context context, @StringRes int titleResId,
+    public static MaterialThemeDialogFragment newInstance(Context context, @StringRes int titleResId,
             @StringRes int messageResId, @Nullable MaterialTheme alertDialogTheme) {
 
-        MaterialThemeAlertDialogFragment fragment = newInstance(
+        MaterialThemeDialogFragment fragment = newInstance(
                 context.getString(titleResId),
                 context.getString(messageResId),
                 alertDialogTheme);
         return fragment;
     }
 
-    public static MaterialThemeAlertDialogFragment newInstance(String title, String message,
+    public static MaterialThemeDialogFragment newInstance(String title, String message,
             @Nullable MaterialTheme alertDialogTheme) {
 
         if (BuildConfig.DEBUG) {
             LogUtils.logMethod(TAG, "newInstance");
         }
 
-        MaterialThemeAlertDialogFragment fragment = new MaterialThemeAlertDialogFragment();
+        MaterialThemeDialogFragment fragment = new MaterialThemeDialogFragment();
         Bundle args = fragment.getArguments();
         if (args == null) {
             args = new Bundle();

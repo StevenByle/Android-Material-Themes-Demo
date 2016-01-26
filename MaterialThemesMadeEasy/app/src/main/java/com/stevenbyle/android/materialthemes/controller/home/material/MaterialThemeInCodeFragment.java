@@ -209,7 +209,7 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
 
         switch (v.getId()) {
             case R.id.fragment_material_theme_button_dialog_current_theme:
-                MaterialThemeAlertDialogFragment dialogFragment = MaterialThemeAlertDialogFragment.newInstance(v.getContext(),
+                MaterialThemeDialogFragment dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
                         R.string.material_theme_current_theme,
                         R.string.material_theme_current_theme,
                         null);
@@ -218,7 +218,7 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
                 break;
 
             case R.id.fragment_material_theme_button_dialog_green_theme:
-                dialogFragment = MaterialThemeAlertDialogFragment.newInstance(v.getContext(),
+                dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
                         R.string.material_theme_green_theme,
                         R.string.material_theme_green_theme,
                         MaterialTheme.THEME_ALERT_DIALOG_GREEN);
@@ -227,7 +227,7 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
                 break;
 
             case R.id.fragment_material_theme_button_dialog_blue_theme:
-                dialogFragment = MaterialThemeAlertDialogFragment.newInstance(v.getContext(),
+                dialogFragment = MaterialThemeDialogFragment.newInstance(v.getContext(),
                         R.string.material_theme_blue_theme,
                         R.string.material_theme_blue_theme,
                         MaterialTheme.THEME_ALERT_DIALOG_BLUE);

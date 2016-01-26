@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
 /**
- * Util class to manage showing dialog fragments.
+ * Util class to manage showing dialogs.
  *
  * @author Steven Byle
  */
