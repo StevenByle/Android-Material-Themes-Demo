@@ -124,10 +124,10 @@
     <color name="selector_white_pressed">#33FFFFFF</color>
     <color name="selector_black_focused">#12000000</color>
     <color name="selector_black_pressed">#1F000000</color>
-    <color name="selector_red_focused">#22FF6D00</color>
-    <color name="selector_red_pressed">#44FF6D00</color>
-    <color name="selector_orange_focused">#22FF9800</color>
-    <color name="selector_orange_pressed">#44FF9800</color>
+    <color name="selector_red_focused">#22D50000</color>
+    <color name="selector_red_pressed">#44D50000</color>
+    <color name="selector_orange_focused">#22FF6D00</color>
+    <color name="selector_orange_pressed">#44FF6D00</color>
     <color name="selector_lime_focused">#22AEEA00</color>
     <color name="selector_lime_pressed">#44AEEA00</color>
     <color name="selector_green_focused">#2200C853</color>

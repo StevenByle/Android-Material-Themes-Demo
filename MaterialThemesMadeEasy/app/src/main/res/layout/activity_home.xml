@@ -7,14 +7,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.stevenbyle.android.materialthemes.controller.home.HomeActivity">
+    tools:context=".controller.home.HomeActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/activity_home_appbar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/appbar_spacing_top"
-        android:theme="@style/AppTheme.Overlay.AppBar"
+        android:theme="@style/AppTheme.AppBar.Dark"
         app:layout_scrollFlags="scroll|enterAlways">
 
         <android.support.v7.widget.Toolbar
@@ -23,7 +23,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             android:fitsSystemWindows="true"
-            app:popupTheme="@style/AppTheme.Overlay.Popup">
+            app:popupTheme="@style/AppTheme.Overlay.Light">
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout

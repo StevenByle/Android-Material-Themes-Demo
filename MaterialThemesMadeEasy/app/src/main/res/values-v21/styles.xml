@@ -1,6 +1,6 @@
 <resources>>
-    <!-- Base Theme -->
-    <style name="AppTheme.Light" parent="BaseTheme.Light">
+    <!-- Default App Theme -->
+    <style name="AppTheme" parent="BaseTheme">
         <!-- API specific attributes 21+ -->
         <item name="selectableDrawableColorDefault">?colorControlHighlight</item>
         <item name="selectableDrawableColorInverse">@color/selector_white_pressed</item>
@@ -11,38 +11,49 @@
         <item name="selectableRoundedRectDrawable">@drawable/ripple_selectable_rounded_rect</item>
         <item name="selectableRoundedRectDrawableInverse">@drawable/ripple_selectable_rounded_rect_inverse</item>
         <item name="selectableRoundedRectDrawableColored">@drawable/ripple_selectable_rounded_rect_colored</item>
+
+        <item name="android:actionBarTheme">@style/AppTheme.AppBar.Dark</item>
+        <item name="android:actionBarPopupTheme">@style/AppTheme.Overlay.Light</item>
+        <item name="android:popupTheme">@style/AppTheme.Overlay.Light</item>
     </style>
 
+    <!-- Red App Theme -->
     <style name="AppTheme.Red" parent="BaseTheme.Red">
         <!-- API specific attributes 21+ -->
         <item name="selectableDrawableColor">@color/selector_red_pressed</item>
     </style>
 
+    <!-- Orange App Theme -->
     <style name="AppTheme.Orange" parent="BaseTheme.Orange">
         <!-- API specific attributes 21+ -->
         <item name="selectableDrawableColor">@color/selector_orange_pressed</item>
     </style>
 
+    <!-- Lime App Theme -->
     <style name="AppTheme.Lime" parent="BaseTheme.Lime">
         <!-- API specific attributes 21+ -->
         <item name="selectableDrawableColor">@color/selector_lime_pressed</item>
     </style>
 
+    <!-- Green App Theme -->
     <style name="AppTheme.Green" parent="BaseTheme.Green">
         <!-- API specific attributes 21+ -->
         <item name="selectableDrawableColor">@color/selector_green_pressed</item>
     </style>
 
+    <!-- Teal App Theme -->
     <style name="AppTheme.Teal" parent="BaseTheme.Teal">
         <!-- API specific attributes 21+ -->
         <item name="selectableDrawableColor">@color/selector_teal_pressed</item>
     </style>
 
+    <!-- Blue App Theme -->
     <style name="AppTheme.Blue" parent="BaseTheme.Blue">
         <!-- API specific attributes 21+ -->
         <item name="selectableDrawableColor">@color/selector_blue_pressed</item>
     </style>
 
+    <!-- Purple App Theme -->
     <style name="AppTheme.Purple" parent="BaseTheme.Purple">
         <!-- API specific attributes 21+ -->
         <item name="selectableDrawableColor">@color/selector_purple_pressed</item>
