@@ -1,7 +1,46 @@
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
+##### JAVA #####
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+*.log
+
+
+##### ANDROID #####
+
+# Built application files
+*.apk
+*.ap_
+
+# Files for the Dalvik VM
+*.dex
+
+# Keystore files
+*.jks
+*.keystore
+
+
+##### GRADLE #####
+
+# Gradle files
+.gradle/
+*build/
+
+
+##### ANDROID STUDIO #####
+
+# Android Studio files
+.idea/*
+!.idea/codeStyleSettings.xml
+*.iml
+captures/
+.navigation/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+
