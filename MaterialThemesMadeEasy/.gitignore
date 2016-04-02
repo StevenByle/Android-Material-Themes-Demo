@@ -28,7 +28,7 @@ out/
 
 # Gradle files
 .gradle/
-*/build/
+build/
 
 
 ##### ANDROID STUDIO #####
