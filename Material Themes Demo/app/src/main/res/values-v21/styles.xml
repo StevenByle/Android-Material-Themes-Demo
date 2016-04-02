@@ -1,3 +1,4 @@
+<!-- @formatter:off -->
 <resources>>
     <!-- Default App Theme -->
     <style name="AppTheme" parent="BaseTheme">

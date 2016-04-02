@@ -103,7 +103,6 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         // Otherwise, restore state
         else {
         }
-
     }
 
     @Override
@@ -117,8 +116,7 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
         AlertDialog.Builder alertDialogBuilder;
         if (mAlertDialogTheme != null) {
             alertDialogBuilder = new AlertDialog.Builder(parentActivity, mAlertDialogTheme.getThemeResId());
-        }
-        else {
+        } else {
             alertDialogBuilder = new AlertDialog.Builder(parentActivity);
         }
 
@@ -255,5 +253,4 @@ public class MaterialThemeDialogFragment extends DialogFragment implements Dialo
             LogUtils.logMethod(TAG, "onClick");
         }
     }
-
 }

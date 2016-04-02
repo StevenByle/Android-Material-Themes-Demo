@@ -104,36 +104,31 @@ public class LogUtils {
             case VERBOSE:
                 if (throwable != null) {
                     return Log.v(tag, message, throwable);
-                }
-                else {
+                } else {
                     return Log.v(tag, message);
                 }
             case DEBUG:
                 if (throwable != null) {
                     return Log.d(tag, message, throwable);
-                }
-                else {
+                } else {
                     return Log.d(tag, message);
                 }
             case INFO:
                 if (throwable != null) {
                     return Log.i(tag, message, throwable);
-                }
-                else {
+                } else {
                     return Log.i(tag, message);
                 }
             case WARN:
                 if (throwable != null) {
                     return Log.w(tag, message, throwable);
-                }
-                else {
+                } else {
                     return Log.w(tag, message);
                 }
             case ERROR:
                 if (throwable != null) {
                     return Log.e(tag, message, throwable);
-                }
-                else {
+                } else {
                     return Log.e(tag, message);
                 }
             default:

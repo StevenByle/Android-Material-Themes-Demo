@@ -262,5 +262,4 @@ public class SetThemeDialogFragment extends DialogFragment implements DialogInte
             }
         }
     }
-
 }

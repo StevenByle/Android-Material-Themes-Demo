@@ -243,7 +243,7 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
 
             case R.id.fragment_material_theme_button_snackbar_green_theme:
                 Theme greenTheme = new ContextThemeWrapper(v.getContext(), R.style.AppTheme_Green).getTheme();
-                TypedArray a = greenTheme.obtainStyledAttributes(new int[]{R.attr.colorAccent});
+                TypedArray a = greenTheme.obtainStyledAttributes(new int[] {R.attr.colorAccent});
                 int accentColor = a.getColor(0, 0);
                 a.recycle();
 
@@ -255,7 +255,7 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
 
             case R.id.fragment_material_theme_button_snackbar_blue_theme:
                 Theme blueTheme = new ContextThemeWrapper(v.getContext(), R.style.AppTheme_Blue).getTheme();
-                a = blueTheme.obtainStyledAttributes(new int[]{R.attr.colorAccent});
+                a = blueTheme.obtainStyledAttributes(new int[] {R.attr.colorAccent});
                 accentColor = a.getColor(0, 0);
                 a.recycle();
 

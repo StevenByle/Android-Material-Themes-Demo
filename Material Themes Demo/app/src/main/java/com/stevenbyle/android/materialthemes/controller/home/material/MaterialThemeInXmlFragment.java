@@ -193,5 +193,4 @@ public class MaterialThemeInXmlFragment extends Fragment {
             LogUtils.logOnDestroy(TAG);
         }
     }
-
 }

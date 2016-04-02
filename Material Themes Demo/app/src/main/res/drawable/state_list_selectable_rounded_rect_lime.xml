@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" android:exitFadeDuration="@android:integer/config_mediumAnimTime">
-
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+          android:exitFadeDuration="@android:integer/config_mediumAnimTime">
     <!-- Pressed state -->
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
@@ -8,7 +8,6 @@
             <corners android:radius="@dimen/selectable_rounded_rect_corner_radius"/>
         </shape>
     </item>
-
     <!-- Selected state -->
     <item android:state_selected="true">
         <shape android:shape="rectangle">
@@ -16,7 +15,6 @@
             <corners android:radius="@dimen/selectable_rounded_rect_corner_radius"/>
         </shape>
     </item>
-
     <!-- Focused state -->
     <item android:state_focused="true">
         <shape android:shape="rectangle">
@@ -24,7 +22,6 @@
             <corners android:radius="@dimen/selectable_rounded_rect_corner_radius"/>
         </shape>
     </item>
-
     <!-- Normal state -->
     <item android:drawable="@color/selector_normal"/>
 </selector>

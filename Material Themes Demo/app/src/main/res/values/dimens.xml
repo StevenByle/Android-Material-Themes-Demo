@@ -1,3 +1,4 @@
+<!-- @formatter:off -->
 <resources>
 
     <!-- Spacing -->
@@ -22,7 +23,5 @@
 
     <!-- Selectable Items -->
     <dimen name="selectable_rounded_rect_corner_radius">3dp</dimen>
-
-
 
 </resources>

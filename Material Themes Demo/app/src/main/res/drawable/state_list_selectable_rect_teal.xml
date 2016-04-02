@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" android:exitFadeDuration="@android:integer/config_mediumAnimTime">
-
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+          android:exitFadeDuration="@android:integer/config_mediumAnimTime">
     <!-- Pressed state -->
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
             <solid android:color="@color/selector_teal_pressed"/>
         </shape>
     </item>
-
     <!-- Selected state -->
     <item android:state_selected="true">
         <shape android:shape="rectangle">
             <solid android:color="@color/selector_teal_focused"/>
         </shape>
     </item>
-
     <!-- Focused state -->
     <item android:state_focused="true">
         <shape android:shape="rectangle">
             <solid android:color="@color/selector_teal_focused"/>
         </shape>
     </item>
-
     <!-- Normal state -->
     <item android:drawable="@color/selector_normal"/>
-
 </selector>

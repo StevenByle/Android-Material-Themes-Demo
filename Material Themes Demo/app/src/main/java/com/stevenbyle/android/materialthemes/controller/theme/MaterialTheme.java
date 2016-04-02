@@ -142,7 +142,6 @@ public class MaterialTheme implements Serializable {
             return false;
         }
         return themeResId == that.themeResId;
-
     }
 
     @Override
