@@ -43,13 +43,13 @@ In XML, we would use a theme that sets `android:textColorPrimary` to a color, an
 
 Now you should see the delineation between styles and themes starting to surface with how they use attributes. Styles are great for applying explicit `View` attributes, and directly applying them to `Views`. Likewise, themes can set global theme attributes, which can then in turn be used by styles and `Views`. Putting this all together, themes can create a palette of theme attributes, which styles use to apply to explicit `View` attributes. This way, themes set the overall brand for an app, while styles use that brand to create the look and feel in variations that are applied to  `Views`. When setup this way, an app can change its theme, without editing a single style or layout file, and have its entire look update.
 
-###Raster Graphics And Asset Overload
-Themes and styles are, in theory, a simple solution to make a completely dynamic user interface that can be updated and maintained with ease. However, in practice, this was much easier said than done. Before Android 5.0 (API 21), themes were useful for settings backgrounds, layout spacing and sizes, font sizes and colors, divider sizes and colors, and other basic elements of the user interface. However, the primary user interface elements (buttons, text boxes, switches, images, icons, etc) were much more difficult to stylize. This was because these elements were [raster graphics](https://en.wikipedia.org/wiki/Raster_graphics) (png, jpeg, etc), which have set dimensions and colors, and are not dynamic in any way. This meant a button could not just reference a theme color and colorize itself. Instead, a colored version of the button had to be created and included as a resource in the app. In order to handle every button state (5) and screen density bucket (6) that Android supports, 30 (5 states x 6 screen densities) assets would need to be generated for that single button. That's just one button, if a new color of the button was needed, another set of assets was needed. Even if the color of an existing button needed to be updated, the full set of assets would need to be updated and replaced. So you can see how this quickly became a very tedious chore, making it difficult to update and maintain themes and styles for control elements, since their assets had to be generated manually.
+###Holo Themes And Asset Overload
+Themes and styles are, in theory, a simple solution to make a completely dynamic user interface that can be updated and maintained with ease. However, in practice, this was much easier said than done. Before Android 5.0 (API 21), themes were useful for settings backgrounds, layout spacing and sizes, font sizes and colors, divider sizes and colors, and other basic elements of the user interface. However, the primary user interface elements (buttons, text boxes, switches, images, icons, etc) were much more difficult to stylize. This was because these elements were [raster graphics](https://en.wikipedia.org/wiki/Raster_graphics) (png, jpeg, etc), which have set dimensions and colors, and are not dynamic in any way. This meant a button could not just reference a theme color and colorize itself. Instead, a colored version of the button had to be created and included as a resource in the app. In order to handle every button state (5) and screen density bucket (6) that Android supports, 30 (5 states x 6 screen densities) assets would need to be [generated](http://romannurik.github.io/AndroidAssetStudio/) for that single button. That's just one button, if a new color of the button was needed, another set of assets was needed. Even if the color of an existing button needed to be updated, the full set of assets would need to be updated and replaced. So you can see how this quickly became a very tedious chore, making it difficult to update and maintain themes and styles for control elements, since their assets had to be generated manually.
 
 However, raster images were not the only option for user interface elements. Android does support [`ShapeDrawables`](http://developer.android.com/reference/android/graphics/drawable/ShapeDrawable.html), which are vector shape assets that can scale without losing fidelity, removing the need for multiple density versions for an asset. They can also reference color and dimension resources, and dynamically colorize themselves. So why not just reference theme attributes from `ShapeDrawables`? Unfortunately, before Android 5.0, referencing theme attributes in `ShapeDrawables` would compile, but throw an `Exception` at runtime. `ShapeDrawables` got closer to a more dynamic set of user interface elements, but ultimately had a similar limitation as raster images, where a separate asset for each color was needed. This allowed for slightly easier theming of controls, but still took a lot of work from the developer to create any non trivial user interface elements.
 
-###Theming In A Material World
-Google was aware of the painpoints of theming and styling apps, and in Summer 2014, they unveiled [Material Design](https://www.google.com/design/spec/material-design/introduction.html) alongside Android 5.0. The material theme was a strong divergence from the Holo theme that had been around since Fall 2011 with Android 4.0 (API 14). Material design added new animations, user interface controls, touch feedback, and a bright new color palette. But more importantly, Android 5.0 added new features critical to theming almost every aspect of Material user interfaces.
+###Dynamic Themes In A Material World
+Google was aware of the painpoints of theming and styling apps, and in Summer 2014, they unveiled [Material Design](https://www.google.com/design/spec/material-design/introduction.html) alongside Android 5.0. The material theme was a strong divergence from the Holo theme that had been around since Fall 2011 with Android 4.0 (API 14). Material design added new animations, user interface controls, touch feedback, and a bright new color palette. But more importantly, Android 5.0 added new features critical to theming almost every aspect of material user interfaces.
 
 1. [Color tinting](http://developer.android.com/training/material/drawables.html#DrawableTint)  support for `Drawables` and `Views`
 2. Theme attribute access in [Drawable Resources](http://developer.android.com/guide/topics/resources/drawable-resource.html)
@@ -57,9 +57,47 @@ Google was aware of the painpoints of theming and styling apps, and in Summer 20
 
 This finally opened the door to dynamically colorize user interface elements without having to make multiple versions for each color. Color tinting allowed icons and images to be colored on the fly, while `ShapeDrawables` could reference color theme attributes to dynamically color user interface elements. Lastly, being able to apply themes at the `View` level allowed `Views` in the same layout to use completely different themes. 
 
-This all sounded great, but what about legacy devices that didn't have the new features of Android 5.0? Google's solution was the [v7 AppCompat Support Library](http://developer.android.com/tools/support-library/features.html#v7-appcompat), which included "tint-aware" Material Design user interface elements that supported all the way back to Android 2.1 (API 7).
+This all sounded great, but what about legacy devices that didn't have the new features of Android 5.0? Google's solution was the [v7 AppCompat Support Library](http://developer.android.com/tools/support-library/features.html#v7-appcompat), which included "tint-aware" material design user interface elements that supported all the way back to Android 2.1 (API 7).
 
 ###AppCompat 101
-The AppCompat Support Library is very powerful, and full of useful features. However, it comes with less than sparse documentation, so figuring out how to effectively use it is another story.  ---
+The AppCompat Support Library is very useful, allowing apps to use the new material user interface elements with dynamic color tinting on any device running Android 2.1+. However, documentation on how to properly take advantage of these features is sparse. AppCompat relies on a few things in order to work as intended:
 
----In short, if you setup your themes and styles using the concepts discussed above, AppCompat will make using Material Design in your apps a breeze.
+1. Any `Activity` in use must extend from [`AppCompatActivity`](http://developer.android.com/reference/android/support/v7/app/AppCompatActivity.html?utm_campaign=ASL221-415&utm_source=dac&utm_medium=blog) or implement the methods in [`AppCompatDelegate`](http://developer.android.com/reference/android/support/v7/app/AppCompatDelegate.html?utm_campaign=ASL221-415&utm_source=dac&utm_medium=blog).
+2. Apply themes and styles that extend from AppCompat versions
+3. Set the custom theme attributes for AppCompat themes and styles
+
+So how does this all work? First, `AppCompatActivity` intercepts layouts on inflation, and replaces `Views` that it supports with [AppCompat versions](http://developer.android.com/reference/android/support/v7/widget/package-summary.html). These material style versions will then read the AppCompat theme attributes to dynamically colorize the `Views`, handling the backwards compatibility by using the proper support library methods automatically. 
+
+
+###Theme All The Things
+
+####Buttons
+
+#####Raised
+#####Bordless
+#####Floating Action
+
+####Text Fields
+
+####Radio Buttons
+
+####Checkboxes
+
+####Switches
+
+####Dropdown Spinners
+
+####Sliders
+
+####Progress Indicators
+
+####Icons
+
+####Dialogs
+
+####Snackbars
+
+
+###Build Your Own
+
+####Custom Selectable Items
