@@ -35,7 +35,7 @@
     <string name="material_theme_radio_buttons">Radio Buttons</string>
     <string name="material_theme_checkboxes">Checkboxes</string>
     <string name="material_theme_switches">Switches</string>
-    <string name="material_theme_spinners">Spinners</string>
+    <string name="material_theme_spinners">Dropdown Spinners</string>
     <string name="material_theme_sliders">Sliders</string>
     <string name="material_theme_progress_indicators">Progress Indicators</string>
     <string name="material_theme_icons">Icons</string>

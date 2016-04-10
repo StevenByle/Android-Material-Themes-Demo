@@ -1,5 +1,5 @@
 <!-- @formatter:off -->
-<resources>>
+<resources>
     <!-- Default App Theme -->
     <style name="AppTheme" parent="BaseTheme">
         <!-- API specific attributes 21+ -->
