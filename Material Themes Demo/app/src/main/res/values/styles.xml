@@ -294,6 +294,15 @@
     <style name="ButtonStyle.Borderless.ColoredText" parent="Widget.AppCompat.Button.Borderless.Colored">
     </style>
 
+    <style name="FloatingActionButtonStyle" parent="Widget.Design.FloatingActionButton">
+    </style>
+
+    <style name="RadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+    </style>
+
+    <style name="CheckBoxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+    </style>
+
     <!-- Selectable Item Styles -->
     <style name="SelectableItemStyle">
         <item name="android:clickable">true</item>
@@ -335,6 +344,13 @@
     </style>
 
     <style name="TextStyle.Body2" parent="TextAppearance.AppCompat.Body2">
+    </style>
+
+    <!-- Edit Text Styles -->
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.Design.TextInputLayout">
     </style>
 
     <!-- Spinner Styles -->

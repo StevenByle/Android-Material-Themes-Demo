@@ -16,24 +16,39 @@
             android:text="@string/material_theme_text_fields"
             android:textAppearance="@style/TextStyle.Title"/>
 
-        <EditText
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/material_element_spacing_small"
-            android:hint="@string/material_theme_current_theme"/>
+            android:hint="@string/material_theme_current_theme">
 
-        <EditText
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/material_element_spacing_small"
             android:hint="@string/material_theme_green_theme"
-            android:theme="@style/AppTheme.Green"/>
+            android:theme="@style/AppTheme.Green">
 
-        <EditText
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/material_element_spacing_small"
             android:hint="@string/material_theme_blue_theme"
-            android:theme="@style/AppTheme.Blue"/>
+            android:theme="@style/AppTheme.Blue">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </android.support.design.widget.TextInputLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>
