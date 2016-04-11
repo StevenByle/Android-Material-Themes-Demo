@@ -62,26 +62,159 @@ This all sounded great, but what about legacy devices that didn't have the new f
 ###AppCompat 101
 The AppCompat Support Library is very useful, allowing apps to use the new material user interface elements with dynamic color tinting on any device running Android 2.1+. However, documentation on how to properly take advantage of these features is sparse. AppCompat relies on a few things in order to work as intended:
 
-1. Any `Activity` in use must extend from [`AppCompatActivity`](http://developer.android.com/reference/android/support/v7/app/AppCompatActivity.html?utm_campaign=ASL221-415&utm_source=dac&utm_medium=blog) or implement the methods in [`AppCompatDelegate`](http://developer.android.com/reference/android/support/v7/app/AppCompatDelegate.html?utm_campaign=ASL221-415&utm_source=dac&utm_medium=blog).
+1. Any `Activity` in use must extend from [`AppCompatActivity`](http://developer.android.com/reference/android/support/v7/app/AppCompatActivity.html?utm_campaign=ASL221-415&utm_source=dac&utm_medium=blog) or implement the methods in [`AppCompatDelegate`](http://developer.android.com/reference/android/support/v7/app/AppCompatDelegate.html?utm_campaign=ASL221-415&utm_source=dac&utm_medium=blog)
 2. Apply themes and styles that extend from AppCompat versions
 3. Set the custom theme attributes for AppCompat themes and styles
 
-So how does this all work? First, `AppCompatActivity` intercepts layouts on inflation, and replaces `Views` that it supports with [AppCompat versions](http://developer.android.com/reference/android/support/v7/widget/package-summary.html). These material style versions will then read the AppCompat theme attributes to dynamically colorize the `Views`, handling the backwards compatibility by using the proper support library methods automatically. 
+So what is AppCompat actually doing with all of this? First, `AppCompatActivity` intercepts layouts on inflation, and wraps `Views` that it can support with [AppCompat versions](http://developer.android.com/reference/android/support/v7/widget/package-summary.html). These AppCompat versions will then read the custom AppCompat theme attributes and dynamically colorize the `Views`, handling backwards compatibility automatically. If any theming or tinting needs to happen at runtime, the `View` just needs to be casted to the proper AppCompat class.
 
 
 ###Theme All The Things
 
+Now that we know how AppCompat is designed to work, let's put it all together. Google has setup AppCompat to use a set of custom theme attributes, which set the color palette to be used by the AppCompat styles. With the ability to theme at the `View` level, different themes can be set on the same layouts to colorize them in different ways. To start, we need an app theme, a dialog theme, and an alert dialog theme.
+
+```xml
+<!-- Green App Theme -->
+<style name="AppTheme.Green" parent="Theme.AppCompat.Light.DarkActionBar">
+	<item name="windowActionBar">false</item>
+	<item name="windowNoTitle">true</item>
+    
+    <!-- AppCompat Attributes -->
+    <item name="colorPrimary">@color/material_green_500</item>
+    <item name="colorPrimaryDark">@color/material_green_700</item>
+    <item name="colorAccent">@color/material_green_a700</item>
+    
+    <!-- AppCompat Control Attributes -->
+    <!-- Not in use for this example
+    <item name="colorButtonNormal">@color/material_green_500</item>
+    <item name="colorControlNormal">@color/material_green_500</item>
+    <item name="colorControlActivated">@color/material_green_500</item>
+    <item name="colorControlHighlight">@color/selector_green_pressed</item>
+    -->
+
+	<!-- AppCompat Dialog Attributes -->
+    <item name="dialogTheme">@style/AppTheme.Dialog.Green</item>
+    <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert.Green</item>
+</style>
+
+<!-- Green Dialog Theme -->
+<style name="AppTheme.Dialog.Green" parent="Theme.AppCompat.Light.Dialog">
+    <item name="colorPrimary">@color/material_green_500</item>
+    <item name="colorPrimaryDark">@color/material_green_700</item>
+    <item name="colorAccent">@color/material_green_a700</item>
+</style>
+
+<!-- Green Alert Dialog Theme -->
+<style name="AppTheme.Dialog.Alert.Green" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <item name="colorPrimary">@color/material_green_500</item>
+    <item name="colorPrimaryDark">@color/material_green_700</item>
+    <item name="colorAccent">@color/material_green_a700</item>
+</style>
+```
+
+Now that we have our colored theme, we can set it for our entire `Application` or `Activity` and it will set our custom AppCompat attributes to be used by all AppCompat `Views`. However, we can also theme an individual `View` or `ViewGroup` using the `android:theme` attribute, which `AppCompatActivity` handles reading and setting properly when it intercepts layouts as they are inflated. Let's assume we have set our green theme at the `Application` level, and we don't need to set our theme on each element.
+
+```xml
+<View
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:theme="@style/AppTheme.Green"/>
+```
+
 ####Buttons
 
-#####Raised
-#####Bordless
-#####Floating Action
+Use `@style/Widget.AppCompat.Button` (default if not set), which sets the button color to `colorButtonNormal`, using `colorControlHighlight` as an overlay for focused and pressed states.
+
+```xml
+<Button
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Green Theme"/>
+```
+[TODO SCREENSHOT]
+
+To get a colored version, use `@style/Widget.AppCompat.Button.Colored`, which sets the button color to `colorAccent`, using `colorControlHighlight` as an overlay for focused and pressed states.
+
+```xml
+<Button
+	style="@style/Widget.AppCompat.Button.Colored"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Green Theme"/>
+```
+[TODO SCREENSHOT]
+
+####Borderless Buttons
+Use `@style/Widget.AppCompat.Button.Borderless`, which uses `colorControlHighlight` as an overlay for focused and pressed states.
+
+```xml
+<Button
+	style="@style/Widget.AppCompat.Button.Borderless"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Green Theme"/>
+```
+[TODO SCREENSHOT]
+
+To get a colored version, use `@style/Widget.AppCompat.Button.Borderless.Colored`, which sets the text color to `colorAccent`, using `colorControlHighlight` as an overlay for focused and pressed states.
+
+```xml
+<Button
+	style="@style/Widget.AppCompat.Button.Borderless.Colored"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Green Theme"/>
+```
+[TODO SCREENSHOT]
+
+
+####Floating Action Buttons
+Use the `FloatingActionButton` from the design support library with `@style/Widget.Design.FloatingActionButton` (default if not set), which sets the button color to `colorAccent`, using `colorControlHighlight` as an overlay for focused and pressed states.
+
+```xml
+<android.support.design.widget.FloatingActionButton
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:src="@drawable/ic_palette"/>
+```
+[TODO SCREENSHOT]
 
 ####Text Fields
+Use the `TextInputLayout` from the design support library with `@style/Widget.Design.TextInputLayout` (default if not set), which sets the label text color to `?colorAccent`. Wrap this around an `EditText` with `@style/Widget.AppCompat.EditText` (default if not set), which sets the control colors to `colorAccent`. [TODO VERIFY]
+
+```xml
+<android.support.design.widget.TextInputLayout
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:hint="Green Theme">
+	
+	<EditText
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/></android.support.design.widget.TextInputLayout>
+```
+[TODO SCREENSHOT]
 
 ####Radio Buttons
+Use `@style/Widget.AppCompat.CompoundButton.RadioButton` (default style if not set), which sets the radio button color to `colorAccent` when activated, using `colorControlHighlight` as an overlay for focused and pressed states.
+
+```xml
+<RadioButton
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Green Theme"/>
+```
+[TODO SCREENSHOT]
 
 ####Checkboxes
+Use `@style/Widget.AppCompat.CompoundButton.CheckBox` (default if not set), which sets the checkbox color to `colorAccent` when activated, using `colorControlHighlight` as an overlay for focused and pressed states.
+
+```xml
+<CheckBox
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Green Theme"/>
+```
+[TODO SCREENSHOT]
 
 ####Switches
 
