@@ -12,12 +12,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
 import com.stevenbyle.android.materialthemes.controller.dialog.DialogUtils;
 import com.stevenbyle.android.materialthemes.controller.theme.MaterialTheme;
 import com.stevenbyle.android.materialthemes.log.LogUtils;
-import com.stevenbyle.android.materialthemes.log.LogUtils.LogLevel;
+
+import timber.log.Timber;
 
 /**
  * Home activity which holds the app bar (toolbar + tab layout) and a view pager with the themed
@@ -26,16 +26,12 @@ import com.stevenbyle.android.materialthemes.log.LogUtils.LogLevel;
  * @author Steven Byle
  */
 public class HomeActivity extends AppCompatActivity implements OnClickListener {
-    private static final String TAG = LogUtils.generateTag(HomeActivity.class);
-
     private static final String KEY_ARG_CURRENT_THEME = "KEY_ARG_CURRENT_THEME";
 
     private MaterialTheme mCurrentTheme;
 
     public static Intent newInstanceIntent(Context context, MaterialTheme currentTheme) {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logMethod(TAG, "newInstanceIntent");
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
 
         // Create an intent that will start the activity
         Intent intent = new Intent(context, HomeActivity.class);
@@ -77,9 +73,7 @@ public class HomeActivity extends AppCompatActivity implements OnClickListener {
 
         // Handle super calls after setting the theme
         super.onCreate(savedInstanceState);
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnCreate(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
 
         // Set the content view to a layout and reference views
         setContentView(R.layout.activity_home);
@@ -108,56 +102,42 @@ public class HomeActivity extends AppCompatActivity implements OnClickListener {
     @Override
     public void onStart() {
         super.onStart();
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnStart(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnResume(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnPause(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnSaveInstanceState(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnStop(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnDestroy(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onClick(View v) {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logMethod(TAG, "onClick");
-        }
+        Timber.d(LogUtils.METHOD_ONLY);
 
         switch (v.getId()) {
             case R.id.activity_home_fab:
@@ -165,9 +145,7 @@ public class HomeActivity extends AppCompatActivity implements OnClickListener {
                 DialogUtils.showDialogFragment(getSupportFragmentManager(), dialogFragment);
                 break;
             default:
-                if (BuildConfig.DEBUG) {
-                    LogUtils.logMessage(LogLevel.WARN, TAG, "onClick", "unknown view clicked");
-                }
+                Timber.w("Unknown view clicked");
                 break;
         }
     }

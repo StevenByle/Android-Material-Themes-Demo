@@ -11,20 +11,6 @@ import android.support.v4.app.FragmentManager;
  */
 public class DialogUtils {
 
-    public static String showDialogFragment(FragmentManager fragmentManager, DialogFragment dialogFragment) {
-        return showDialogFragment(fragmentManager, dialogFragment, generateFragmentTag(dialogFragment));
-    }
-
-    public static String showDialogFragment(FragmentManager fragmentManager, DialogFragment dialogFragment,
-            String fragmentTag) {
-        return showDialogFragment(fragmentManager, dialogFragment, fragmentTag, true);
-    }
-
-    public static String showDialogFragment(FragmentManager fragmentManager, DialogFragment dialogFragment,
-            boolean onlyIfNotDuplicate) {
-        return showDialogFragment(fragmentManager, dialogFragment, generateFragmentTag(dialogFragment), onlyIfNotDuplicate);
-    }
-
     public static String showDialogFragment(FragmentManager fragmentManager, DialogFragment dialogFragment,
             String fragmentTag, boolean onlyIfNotDuplicate) {
 
@@ -35,6 +21,20 @@ public class DialogUtils {
         }
 
         return fragmentTag;
+    }
+
+    public static String showDialogFragment(FragmentManager fragmentManager, DialogFragment dialogFragment,
+            boolean onlyIfNotDuplicate) {
+        return showDialogFragment(fragmentManager, dialogFragment, generateFragmentTag(dialogFragment), onlyIfNotDuplicate);
+    }
+
+    public static String showDialogFragment(FragmentManager fragmentManager, DialogFragment dialogFragment,
+            String fragmentTag) {
+        return showDialogFragment(fragmentManager, dialogFragment, fragmentTag, true);
+    }
+
+    public static String showDialogFragment(FragmentManager fragmentManager, DialogFragment dialogFragment) {
+        return showDialogFragment(fragmentManager, dialogFragment, generateFragmentTag(dialogFragment));
     }
 
     private static String generateFragmentTag(Fragment fragment) {

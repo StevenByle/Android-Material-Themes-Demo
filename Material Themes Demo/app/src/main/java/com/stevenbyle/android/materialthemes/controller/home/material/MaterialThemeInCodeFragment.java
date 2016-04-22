@@ -13,12 +13,12 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
 import com.stevenbyle.android.materialthemes.controller.dialog.DialogUtils;
 import com.stevenbyle.android.materialthemes.controller.theme.MaterialTheme;
 import com.stevenbyle.android.materialthemes.log.LogUtils;
-import com.stevenbyle.android.materialthemes.log.LogUtils.LogLevel;
+
+import timber.log.Timber;
 
 /**
  * Fragment showing user interface elements that can be themed using code at runtime.
@@ -26,12 +26,9 @@ import com.stevenbyle.android.materialthemes.log.LogUtils.LogLevel;
  * @author Steven Byle
  */
 public class MaterialThemeInCodeFragment extends Fragment implements OnClickListener {
-    private static final String TAG = LogUtils.generateTag(MaterialThemeInCodeFragment.class);
 
     public static MaterialThemeInCodeFragment newInstance() {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logMethod(TAG, "newInstance");
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
 
         // Create a new fragment instance
         MaterialThemeInCodeFragment fragment = new MaterialThemeInCodeFragment();
@@ -51,19 +48,13 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnAttach(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnCreate(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
 
         // Get passed in parameters
         Bundle args = getArguments();
@@ -85,9 +76,7 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnCreateView(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
 
         // Inflate the fragment layout into the container
         View fragmentView = inflater.inflate(R.layout.fragment_material_theme_in_code, container, false);
@@ -114,98 +103,66 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnViewCreated(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnActivityCreated(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
     }
 
     @Override
     public void onViewStateRestored(Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnViewStateRestored(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
     }
 
     @Override
     public void onStart() {
         super.onStart();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnStart(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnResume(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onPause() {
         super.onPause();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnPause(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnSaveInstanceState(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnStop(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnDestroyView(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnDestroy(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onClick(View v) {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logMethod(TAG, "onClick");
-        }
+        Timber.d(LogUtils.METHOD_ONLY);
 
         switch (v.getId()) {
             case R.id.fragment_material_theme_button_dialog_current_theme:
@@ -266,9 +223,7 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
                 break;
 
             default:
-                if (BuildConfig.DEBUG) {
-                    LogUtils.logMessage(LogLevel.WARN, TAG, "onClick", "unknown view clicked");
-                }
+                Timber.w("Unknown view clicked");
                 break;
         }
     }

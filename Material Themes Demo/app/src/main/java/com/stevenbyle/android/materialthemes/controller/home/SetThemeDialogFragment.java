@@ -12,13 +12,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
 import com.stevenbyle.android.materialthemes.controller.theme.MaterialTheme;
 import com.stevenbyle.android.materialthemes.log.LogUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import timber.log.Timber;
 
 /**
  * Dialog fragment used to select a new theme. Upon selection, this starts a new home activity and
@@ -27,8 +28,6 @@ import java.util.List;
  * @author Steven Byle
  */
 public class SetThemeDialogFragment extends DialogFragment implements DialogInterface.OnClickListener {
-    private static final String TAG = LogUtils.generateTag(SetThemeDialogFragment.class);
-
     private static final String KEY_ARG_CURRENT_THEME = "KEY_ARG_CURRENT_THEME";
 
     private MaterialTheme mCurrentTheme;
@@ -36,9 +35,7 @@ public class SetThemeDialogFragment extends DialogFragment implements DialogInte
     private SingleChoiceOnClickListener mSingleChoiceOnClickListener;
 
     public static SetThemeDialogFragment newInstance(MaterialTheme currentTheme) {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logMethod(TAG, "newInstance");
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
 
         SetThemeDialogFragment fragment = new SetThemeDialogFragment();
         Bundle args = fragment.getArguments();
@@ -55,19 +52,13 @@ public class SetThemeDialogFragment extends DialogFragment implements DialogInte
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnAttach(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnCreate(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
 
         // Get passed in parameters
         Bundle args = getArguments();
@@ -93,9 +84,7 @@ public class SetThemeDialogFragment extends DialogFragment implements DialogInte
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnCreateDialog(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
 
         List<String> themeNameList = new ArrayList<String>();
         for (MaterialTheme materialTheme : MaterialTheme.getThemeList()) {
@@ -118,126 +107,86 @@ public class SetThemeDialogFragment extends DialogFragment implements DialogInte
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnCreateView(TAG, savedInstanceState);
-        }
-
-        return super.onCreateView(inflater, container, savedInstanceState);
+        View fragmentView = super.onCreateView(inflater, container, savedInstanceState);
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
+        return fragmentView;
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnViewCreated(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnActivityCreated(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
     }
 
     @Override
     public void onViewStateRestored(Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnViewStateRestored(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
     }
 
     @Override
     public void onStart() {
         super.onStart();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnStart(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnResume(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onPause() {
         super.onPause();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnPause(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnSaveInstanceState(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnStop(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnDestroyView(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnDestroy(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onDismiss(DialogInterface dialog) {
         super.onDismiss(dialog);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logMethod(TAG, "onDismiss");
-        }
+        Timber.d(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onCancel(DialogInterface dialog) {
         super.onCancel(dialog);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logMethod(TAG, "onCancel");
-        }
+        Timber.d(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onClick(DialogInterface dialog, int which) {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logMethod(TAG, "onClick");
-        }
+        Timber.d(LogUtils.METHOD_ONLY);
 
         switch (which) {
             case DialogInterface.BUTTON_NEGATIVE:

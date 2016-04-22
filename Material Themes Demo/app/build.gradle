@@ -30,4 +30,6 @@ dependencies {
     compile "com.android.support:appcompat-v7:${supportLibraryVersion}"
     compile "com.android.support:cardview-v7:${supportLibraryVersion}"
 
+    // Logging
+    compile 'com.jakewharton.timber:timber:4.1.2'
 }

@@ -9,9 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.stevenbyle.android.materialthemes.BuildConfig;
 import com.stevenbyle.android.materialthemes.R;
 import com.stevenbyle.android.materialthemes.log.LogUtils;
+
+import timber.log.Timber;
 
 /**
  * Fragment showing user interface elements that can be themed using XML in layout files.
@@ -19,12 +20,9 @@ import com.stevenbyle.android.materialthemes.log.LogUtils;
  * @author Steven Byle
  */
 public class MaterialThemeInXmlFragment extends Fragment {
-    private static final String TAG = LogUtils.generateTag(MaterialThemeInXmlFragment.class);
 
     public static MaterialThemeInXmlFragment newInstance() {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logMethod(TAG, "newInstance");
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
 
         // Create a new fragment instance
         MaterialThemeInXmlFragment fragment = new MaterialThemeInXmlFragment();
@@ -44,19 +42,13 @@ public class MaterialThemeInXmlFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnAttach(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnCreate(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
 
         // Get passed in parameters
         Bundle args = getArguments();
@@ -78,9 +70,7 @@ public class MaterialThemeInXmlFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnCreateView(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
 
         // Inflate the fragment layout into the container
         View fragmentView = inflater.inflate(R.layout.fragment_material_theme_in_xml, container, false);
@@ -107,90 +97,60 @@ public class MaterialThemeInXmlFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnViewCreated(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnActivityCreated(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
     }
 
     @Override
     public void onViewStateRestored(Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnViewStateRestored(TAG, savedInstanceState);
-        }
+        Timber.v(LogUtils.getSavedInstanceStateNullMessage(savedInstanceState));
     }
 
     @Override
     public void onStart() {
         super.onStart();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnStart(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnResume(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onPause() {
         super.onPause();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnPause(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnSaveInstanceState(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnStop(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnDestroyView(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-
-        if (BuildConfig.DEBUG) {
-            LogUtils.logOnDestroy(TAG);
-        }
+        Timber.v(LogUtils.METHOD_ONLY);
     }
 }
