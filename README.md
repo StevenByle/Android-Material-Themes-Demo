@@ -141,7 +141,7 @@ Use `@style/Widget.AppCompat.Button` (default if not set), which sets the button
 	android:text="Green Theme"/>
 ```
 <p align="left">
-  <img src="README Content/Green Button.gif" width=200/>
+  <img src="README Content/Green Button.gif" width=175/>
 </p>
 
 To get a colored version, use `@style/Widget.AppCompat.Button.Colored`, which sets the button color to `colorAccent`, using `colorControlHighlight` as an overlay for focused and pressed states.
@@ -154,7 +154,7 @@ To get a colored version, use `@style/Widget.AppCompat.Button.Colored`, which se
 	android:text="Green Theme"/>
 ```
 <p align="left">
-  <img src="README Content/Green Button Colored.gif" width=200/>
+  <img src="README Content/Green Button Colored.gif" width=175/>
 </p>
 
 ####Borderless Buttons
@@ -168,7 +168,7 @@ Use `@style/Widget.AppCompat.Button.Borderless`, which uses `colorControlHighlig
 	android:text="Green Theme"/>
 ```
 <p align="left">
-  <img src="README Content/Green Button Borderless.gif" width=200/>
+  <img src="README Content/Green Button Borderless.gif" width=175/>
 </p>
 
 To get a colored version, use `@style/Widget.AppCompat.Button.Borderless.Colored`, which sets the text color to `colorAccent`, using `colorControlHighlight` as an overlay for focused and pressed states.
@@ -181,7 +181,7 @@ To get a colored version, use `@style/Widget.AppCompat.Button.Borderless.Colored
 	android:text="Green Theme"/>
 ```
 <p align="left">
-  <img src="README Content/Green Button Borderless Colored.gif" width=200/>
+  <img src="README Content/Green Button Borderless Colored.gif" width=175/>
 </p>
 
 ####Floating Action Buttons
@@ -194,7 +194,7 @@ Use the `FloatingActionButton` from the design support library with `@style/Widg
 	android:src="@drawable/ic_palette"/>
 ```
 <p align="left">
-  <img src="README Content/Green Floating Action Button.gif" width=150/>
+  <img src="README Content/Green Floating Action Button.gif" width=125/>
 </p>
 
 ####Text Fields
@@ -212,7 +212,7 @@ Use the `TextInputLayout` from the design support library with `@style/Widget.De
 </android.support.design.widget.TextInputLayout>
 ```
 <p align="left">
-  <img src="README Content/Green Text Field.gif" width=500/>
+  <img src="README Content/Green Text Field.gif" width=400/>
 </p>
 
 ####Radio Buttons
@@ -225,7 +225,7 @@ Use `@style/Widget.AppCompat.CompoundButton.RadioButton` (default style if not s
 	android:text="Green Theme"/>
 ```
 <p align="left">
-  <img src="README Content/Green Radio Button.gif" width=200/>
+  <img src="README Content/Green Radio Button.gif" width=175/>
 </p>
 
 ####Checkboxes
@@ -238,7 +238,7 @@ Use `@style/Widget.AppCompat.CompoundButton.CheckBox` (default if not set), whic
 	android:text="Green Theme"/>
 ```
 <p align="left">
-  <img src="README Content/Green Checkbox.gif" width=200/>
+  <img src="README Content/Green Checkbox.gif" width=175/>
 </p>
 
 ####Switches
@@ -251,7 +251,7 @@ Use `@style/Widget.AppCompat.CompoundButton.Switch` (default if not set), which 
 	android:text="Green Theme"/>
 ```
 <p align="left">
-  <img src="README Content/Green Switch.gif" width=200/>
+  <img src="README Content/Green Switch.gif" width=175/>
 </p>
 
 ####Dropdown Spinners
@@ -306,7 +306,35 @@ Use `@style/Widget.AppCompat.ProgressBar` (default if not set) or `Widget.AppCom
 </p>
 
 ####Icons
-[TODO]
+Set `android:tint` to tint the icon to a solid color. More advanced tinting is supported using `DrawableCompat.setTint()` in code.
+
+```xml
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        style="@style/ImageStyle.Colored"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_launcher"
+        android:tint="?colorAccent"/>
+
+    <ImageView
+        style="@style/ImageStyle.Colored"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_palette"
+        android:tint="?colorAccent"/>
+</LinearLayout>
+```
+<p align="left">
+  <img src="README Content/Green Icons.png" width=125/>
+</p>
 
 ####Dialogs
 Set `dialogTheme` and `alertDialogTheme` in the applied theme (shown earlier above), or just pass the dialog theme in the `AlertDialog.Builder` from the support library, which sets the button text color to `colorAccent`.
@@ -319,10 +347,53 @@ Set `dialogTheme` and `alertDialogTheme` in the applied theme (shown earlier abo
 Use the `Snackbar` from the design support library, which uses `colorAccent` of the current applied theme to set the action button text color, or use `Snackbar.setActionTextColor()` to change the color.
 
 <p align="left">
-  <img src="README Content/Green Snackbar.gif" width=450/>
+  <img src="README Content/Green Snackbar.gif" width=500/>
 </p>
 
 ###Build Your Own
+Using what we've learned about styles, themes, and attributes, we can create our own custom elements that use theme attributes to colorize themselves, and are backwards compatible. A common use case is to need to show pressed states on arbitrary layouts.
 
 ####Custom Selectable Items
-[TODO]
+Use `@style/SelectableItemStyle.Rect` on a `ViewGroup` to get a rectangular pressed selection.
+
+```xml
+<LinearLayout
+    style="@style/SelectableItemStyle.Rect"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Green Theme"/>
+</LinearLayout>
+```
+<p align="left">
+  <img src="README Content/Green Selectable Rect.gif" width=200/>
+</p>
+
+To get a colored rectangular version, use `@style/SelectableItemStyle.Rect.Colored`.
+
+<p align="left">
+  <img src="README Content/Green Selectable Rect Colored.gif" width=200/>
+</p>
+
+To get a rounded rectangular version, use `@style/SelectableItemStyle.RoundedRect`.
+
+<p align="left">
+  <img src="README Content/Green Selectable Rounded Rect.gif" width=200/>
+</p>
+
+To get a colored rounded rectangular version, use `@style/SelectableItemStyle.RoundedRect.Colored`.
+
+<p align="left">
+  <img src="README Content/Green Selectable Rounded Rect Colored.gif" width=200/>
+</p>
