@@ -21,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
+            android:fitsSystemWindows="true"
             app:popupTheme="@style/AppTheme.Overlay.Light">
         </android.support.v7.widget.Toolbar>
 
