@@ -138,7 +138,9 @@ Use `@style/Widget.AppCompat.Button` (default if not set), which sets the button
 	android:layout_height="wrap_content"
 	android:text="Green Theme"/>
 ```
-[TODO SCREENSHOT]
+<p align="left">
+  <img src="README Content/Green Button.gif" width=200/>
+</p>
 
 To get a colored version, use `@style/Widget.AppCompat.Button.Colored`, which sets the button color to `colorAccent`, using `colorControlHighlight` as an overlay for focused and pressed states.
 
@@ -150,7 +152,7 @@ To get a colored version, use `@style/Widget.AppCompat.Button.Colored`, which se
 	android:text="Green Theme"/>
 ```
 <p align="left">
-  <img src="README Content/Green Button Colored.gif" width=250/>
+  <img src="README Content/Green Button Colored.gif" width=200/>
 </p>
 
 ####Borderless Buttons
@@ -163,7 +165,9 @@ Use `@style/Widget.AppCompat.Button.Borderless`, which uses `colorControlHighlig
 	android:layout_height="wrap_content"
 	android:text="Green Theme"/>
 ```
-[TODO SCREENSHOT]
+<p align="left">
+  <img src="README Content/Green Button Borderless.gif" width=200/>
+</p>
 
 To get a colored version, use `@style/Widget.AppCompat.Button.Borderless.Colored`, which sets the text color to `colorAccent`, using `colorControlHighlight` as an overlay for focused and pressed states.
 
@@ -174,8 +178,9 @@ To get a colored version, use `@style/Widget.AppCompat.Button.Borderless.Colored
 	android:layout_height="wrap_content"
 	android:text="Green Theme"/>
 ```
-[TODO SCREENSHOT]
-
+<p align="left">
+  <img src="README Content/Green Button Borderless Colored.gif" width=200/>
+</p>
 
 ####Floating Action Buttons
 Use the `FloatingActionButton` from the design support library with `@style/Widget.Design.FloatingActionButton` (default if not set), which sets the button color to `colorAccent`, using `colorControlHighlight` as an overlay for focused and pressed states.
@@ -186,10 +191,12 @@ Use the `FloatingActionButton` from the design support library with `@style/Widg
 	android:layout_height="wrap_content"
 	android:src="@drawable/ic_palette"/>
 ```
-[TODO SCREENSHOT]
+<p align="left">
+  <img src="README Content/Green Floating Action Button.gif" width=150/>
+</p>
 
 ####Text Fields
-Use the `TextInputLayout` from the design support library with `@style/Widget.Design.TextInputLayout` (default if not set), which sets the label text color to `?colorAccent`. Wrap this around an `EditText` with `@style/Widget.AppCompat.EditText` (default if not set), which sets the control colors to `colorAccent`. [TODO VERIFY]
+Use the `TextInputLayout` from the design support library with `@style/Widget.Design.TextInputLayout` (default if not set), which sets the label text color to `?colorAccent`. Wrap this around a `TextInputEditText` from the design support library with `@style/Widget.AppCompat.EditText` (default if not set), which sets the control colors to `colorAccent` when activated. 
 
 ```xml
 <android.support.design.widget.TextInputLayout
@@ -199,9 +206,12 @@ Use the `TextInputLayout` from the design support library with `@style/Widget.De
 	
 	<EditText
 	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"/></android.support.design.widget.TextInputLayout>
+	    android:layout_height="wrap_content"/>
+</android.support.design.widget.TextInputLayout>
 ```
-[TODO SCREENSHOT]
+<p align="left">
+  <img src="README Content/Green Text Field.gif" width=500/>
+</p>
 
 ####Radio Buttons
 Use `@style/Widget.AppCompat.CompoundButton.RadioButton` (default style if not set), which sets the radio button color to `colorAccent` when activated, using `colorControlHighlight` as an overlay for focused and pressed states.
