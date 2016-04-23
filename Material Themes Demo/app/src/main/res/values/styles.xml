@@ -303,6 +303,9 @@
     <style name="CheckBoxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
     </style>
 
+    <style name="SwitchStyle" parent="Widget.AppCompat.CompoundButton.Switch">
+    </style>
+
     <!-- Selectable Item Styles -->
     <style name="SelectableItemStyle">
         <item name="android:clickable">true</item>
@@ -364,15 +367,19 @@
     <style name="ProgressBarStyle" parent="Widget.AppCompat.ProgressBar">
     </style>
 
+    <style name="ProgressBarStyle.Horizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
+    </style>
+
+    <!-- Slider Styles -->
+    <style name="SeekbarStyle" parent="Widget.AppCompat.SeekBar">
+    </style>
+
     <!-- Image Styles -->
     <style name="ImageStyle">
     </style>
 
     <style name="ImageStyle.Colored">
         <item name="android:tint">?colorAccent</item>
-    </style>
-
-    <style name="ProgressBarStyle.Horizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
     </style>
 
     <!-- Card Styles -->
