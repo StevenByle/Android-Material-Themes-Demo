@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="@dimen/material_element_spacing_small">
+        android:paddingTop="@dimen/view_spacing_small">
 
         <include layout="@layout/fragment_material_theme_in_xml_buttons_raised"/>
 

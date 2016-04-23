@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
+            android:layout_marginTop="@dimen/view_spacing_medium"
             android:text="@string/material_theme_default"
             android:textAppearance="@style/TextStyle.Body2"/>
 
@@ -27,14 +27,14 @@
             style="@style/ButtonStyle.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:text="@string/material_theme_current_theme"/>
 
         <Button
             style="@style/ButtonStyle.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:text="@string/material_theme_green_theme"
             android:theme="@style/AppTheme.Green"/>
 
@@ -42,14 +42,14 @@
             style="@style/ButtonStyle.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:text="@string/material_theme_blue_theme"
             android:theme="@style/AppTheme.Blue"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
+            android:layout_marginTop="@dimen/view_spacing_medium"
             android:text="@string/material_theme_colored_text"
             android:textAppearance="@style/TextStyle.Body2"/>
 
@@ -57,14 +57,14 @@
             style="@style/ButtonStyle.Borderless.ColoredText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:text="@string/material_theme_current_theme"/>
 
         <Button
             style="@style/ButtonStyle.Borderless.ColoredText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:text="@string/material_theme_green_theme"
             android:theme="@style/AppTheme.Green"/>
 
@@ -72,7 +72,7 @@
             style="@style/ButtonStyle.Borderless.ColoredText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:text="@string/material_theme_blue_theme"
             android:theme="@style/AppTheme.Blue"/>
     </LinearLayout>

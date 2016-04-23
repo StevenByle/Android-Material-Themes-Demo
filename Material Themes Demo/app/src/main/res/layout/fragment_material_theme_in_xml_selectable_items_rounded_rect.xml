@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:text="@string/material_theme_default"
             android:textAppearance="@style/TextStyle.Body2"/>
 
@@ -27,21 +27,21 @@
             style="@style/SelectableItemStyle.RoundedRect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:adjustViewBounds="true"
                 android:src="@mipmap/ic_launcher"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:text="@string/material_theme_current_theme"
                 android:textAppearance="@style/TextStyle.Body1"/>
         </LinearLayout>
@@ -57,14 +57,14 @@
             <ImageView
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:adjustViewBounds="true"
                 android:src="@mipmap/ic_launcher"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:text="@string/material_theme_green_theme"
                 android:textAppearance="@style/TextStyle.Body1"/>
         </LinearLayout>
@@ -80,14 +80,14 @@
             <ImageView
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:adjustViewBounds="true"
                 android:src="@mipmap/ic_launcher"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:text="@string/material_theme_blue_theme"
                 android:textAppearance="@style/TextStyle.Body1"/>
         </LinearLayout>
@@ -95,7 +95,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:text="@string/material_theme_colored"
             android:textAppearance="@style/TextStyle.Body2"/>
 
@@ -103,21 +103,21 @@
             style="@style/SelectableItemStyle.RoundedRect.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:adjustViewBounds="true"
                 android:src="@mipmap/ic_launcher"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:text="@string/material_theme_current_theme"
                 android:textAppearance="@style/TextStyle.Body1"/>
         </LinearLayout>
@@ -133,14 +133,14 @@
             <ImageView
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:adjustViewBounds="true"
                 android:src="@mipmap/ic_launcher"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:text="@string/material_theme_green_theme"
                 android:textAppearance="@style/TextStyle.Body1"/>
         </LinearLayout>
@@ -156,14 +156,14 @@
             <ImageView
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:adjustViewBounds="true"
                 android:src="@mipmap/ic_launcher"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:text="@string/material_theme_blue_theme"
                 android:textAppearance="@style/TextStyle.Body1"/>
         </LinearLayout>

@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
+            android:layout_marginTop="@dimen/view_spacing_medium"
             android:text="@string/material_theme_current_theme"
             android:textAppearance="@style/TextStyle.Body2"/>
 
@@ -28,13 +28,13 @@
             style="@style/SpinnerStyle.Underlined"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:spinnerMode="dropdown"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
+            android:layout_marginTop="@dimen/view_spacing_medium"
             android:text="@string/material_theme_green_theme"
             android:textAppearance="@style/TextStyle.Body2"/>
 
@@ -43,14 +43,14 @@
             style="@style/SpinnerStyle.Underlined"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:spinnerMode="dropdown"
             android:theme="@style/AppTheme.Green"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
+            android:layout_marginTop="@dimen/view_spacing_medium"
             android:text="@string/material_theme_blue_theme"
             android:textAppearance="@style/TextStyle.Body2"/>
 
@@ -59,7 +59,7 @@
             style="@style/SpinnerStyle.Underlined"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:spinnerMode="dropdown"
             android:theme="@style/AppTheme.Blue"/>
     </LinearLayout>

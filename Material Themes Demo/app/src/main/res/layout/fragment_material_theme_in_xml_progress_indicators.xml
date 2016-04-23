@@ -19,83 +19,83 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
+            android:layout_marginTop="@dimen/view_spacing_medium"
             android:text="@string/material_theme_current_theme"
             android:textAppearance="@style/TextStyle.Body2"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:gravity="center_vertical">
 
             <ProgressBar
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:indeterminate="true"/>
 
             <ProgressBar
                 style="@style/ProgressBarStyle.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:indeterminate="true"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
+            android:layout_marginTop="@dimen/view_spacing_medium"
             android:text="@string/material_theme_green_theme"
             android:textAppearance="@style/TextStyle.Body2"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:gravity="center_vertical"
             android:theme="@style/AppTheme.Green">
 
             <ProgressBar
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:indeterminate="true"/>
 
             <ProgressBar
                 style="@style/ProgressBarStyle.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:indeterminate="true"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
+            android:layout_marginTop="@dimen/view_spacing_medium"
             android:text="@string/material_theme_blue_theme"
             android:textAppearance="@style/TextStyle.Body2"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_small"
+            android:layout_marginTop="@dimen/view_spacing_small"
             android:gravity="center_vertical"
             android:theme="@style/AppTheme.Blue">
 
             <ProgressBar
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:indeterminate="true"/>
 
             <ProgressBar
                 style="@style/ProgressBarStyle.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/material_element_spacing_small"
+                android:layout_margin="@dimen/view_spacing_small"
                 android:indeterminate="true"/>
         </LinearLayout>
     </LinearLayout>

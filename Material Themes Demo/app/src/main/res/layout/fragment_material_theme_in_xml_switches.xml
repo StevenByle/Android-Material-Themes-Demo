@@ -19,23 +19,23 @@
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
-            android:switchPadding="@dimen/material_element_spacing_extra_small"
+            android:layout_marginTop="@dimen/view_spacing_medium"
+            android:switchPadding="@dimen/view_spacing_extra_small"
             android:text="@string/material_theme_current_theme"/>
 
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
-            android:switchPadding="@dimen/material_element_spacing_extra_small"
+            android:layout_marginTop="@dimen/view_spacing_medium"
+            android:switchPadding="@dimen/view_spacing_extra_small"
             android:text="@string/material_theme_green_theme"
             android:theme="@style/AppTheme.Green"/>
 
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
-            android:switchPadding="@dimen/material_element_spacing_extra_small"
+            android:layout_marginTop="@dimen/view_spacing_medium"
+            android:switchPadding="@dimen/view_spacing_extra_small"
             android:text="@string/material_theme_blue_theme"
             android:theme="@style/AppTheme.Blue"/>
     </LinearLayout>

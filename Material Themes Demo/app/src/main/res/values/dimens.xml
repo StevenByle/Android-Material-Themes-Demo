@@ -2,20 +2,17 @@
 <resources>
 
     <!-- Spacing -->
-    <dimen name="screen_horizontal_spacing">16dp</dimen>
-    <dimen name="screen_vertical_spacing">16dp</dimen>
-    <dimen name="content_horizontal_spacing">12dp</dimen>
-    <dimen name="content_vertical_spacing">12dp</dimen>
-    <dimen name="material_element_spacing_extra_small">4dp</dimen>
-    <dimen name="material_element_spacing_small">8dp</dimen>
-    <dimen name="material_element_spacing_medium">16dp</dimen>
-    <dimen name="material_element_spacing_large">24dp</dimen>
-
-    <!-- App Bar -->
-    <dimen name="appbar_spacing_top">8dp</dimen>
+    <dimen name="screen_spacing_horizontal">16dp</dimen>
+    <dimen name="screen_spacing_vertical">16dp</dimen>
+    <dimen name="content_spacing_horizontal">12dp</dimen>
+    <dimen name="content_spacing_vertical">12dp</dimen>
+    <dimen name="view_spacing_extra_small">4dp</dimen>
+    <dimen name="view_spacing_small">8dp</dimen>
+    <dimen name="view_spacing_medium">16dp</dimen>
+    <dimen name="view_spacing_large">24dp</dimen>
 
     <!-- Floating Action Button -->
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="floating_action_button_spacing">16dp</dimen>
 
     <!-- Cards -->
     <dimen name="card_corner_radius">3dp</dimen>

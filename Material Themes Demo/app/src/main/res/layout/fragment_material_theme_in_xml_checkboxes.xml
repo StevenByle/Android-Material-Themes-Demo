@@ -19,20 +19,20 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
+            android:layout_marginTop="@dimen/view_spacing_medium"
             android:text="@string/material_theme_current_theme"/>
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
+            android:layout_marginTop="@dimen/view_spacing_medium"
             android:text="@string/material_theme_green_theme"
             android:theme="@style/AppTheme.Green"/>
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/material_element_spacing_medium"
+            android:layout_marginTop="@dimen/view_spacing_medium"
             android:text="@string/material_theme_blue_theme"
             android:theme="@style/AppTheme.Blue"/>
     </LinearLayout>

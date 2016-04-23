@@ -382,14 +382,14 @@
     </style>
 
     <style name="CardStyle.Home">
-        <item name="contentPaddingBottom">@dimen/content_vertical_spacing</item>
-        <item name="contentPaddingLeft">@dimen/content_horizontal_spacing</item>
-        <item name="contentPaddingRight">@dimen/content_horizontal_spacing</item>
-        <item name="contentPaddingTop">@dimen/content_vertical_spacing</item>
-        <item name="android:layout_marginBottom">@dimen/material_element_spacing_small</item>
-        <item name="android:layout_marginLeft">@dimen/screen_horizontal_spacing</item>
-        <item name="android:layout_marginRight">@dimen/screen_horizontal_spacing</item>
-        <item name="android:layout_marginTop">@dimen/material_element_spacing_small</item>
+        <item name="contentPaddingBottom">@dimen/content_spacing_vertical</item>
+        <item name="contentPaddingLeft">@dimen/content_spacing_horizontal</item>
+        <item name="contentPaddingRight">@dimen/content_spacing_horizontal</item>
+        <item name="contentPaddingTop">@dimen/content_spacing_vertical</item>
+        <item name="android:layout_marginBottom">@dimen/view_spacing_small</item>
+        <item name="android:layout_marginLeft">@dimen/screen_spacing_horizontal</item>
+        <item name="android:layout_marginRight">@dimen/screen_spacing_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/view_spacing_small</item>
         <item name="android:layout_gravity">center</item>
     </style>
 

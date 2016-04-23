@@ -1,7 +1,0 @@
-<!-- @formatter:off -->
-<resources>
-
-    <!-- Spacing -->
-    <dimen name="screen_horizontal_spacing">64dp</dimen>
-
-</resources>
