@@ -92,7 +92,7 @@ Now that we know how AppCompat is designed to work, let's put it all together. G
     <item name="colorAccent">@color/material_green_a700</item>
     
     <!-- AppCompat Control Attributes -->
-    <!-- Not in use for this example
+    <!-- Other control states (not in this example)
     <item name="colorButtonNormal">@color/material_green_500</item>
     <item name="colorControlNormal">@color/material_green_500</item>
     <item name="colorControlActivated">@color/material_green_500</item>
@@ -204,7 +204,7 @@ Use the `TextInputLayout` from the design support library with `@style/Widget.De
 	android:layout_height="wrap_content"
 	android:hint="Green Theme">
 	
-	<EditText
+	<android.support.design.widget.TextInputEditText
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"/>
 </android.support.design.widget.TextInputLayout>
@@ -222,7 +222,9 @@ Use `@style/Widget.AppCompat.CompoundButton.RadioButton` (default style if not s
 	android:layout_height="wrap_content"
 	android:text="Green Theme"/>
 ```
-[TODO SCREENSHOT]
+<p align="left">
+  <img src="README Content/Green Radio Button.gif" width=200/>
+</p>
 
 ####Checkboxes
 Use `@style/Widget.AppCompat.CompoundButton.CheckBox` (default if not set), which sets the checkbox color to `colorAccent` when activated, using `colorControlHighlight` as an overlay for focused and pressed states.
@@ -233,7 +235,9 @@ Use `@style/Widget.AppCompat.CompoundButton.CheckBox` (default if not set), whic
 	android:layout_height="wrap_content"
 	android:text="Green Theme"/>
 ```
-[TODO SCREENSHOT]
+<p align="left">
+  <img src="README Content/Green Checkbox.gif" width=200/>
+</p>
 
 ####Switches
 
