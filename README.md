@@ -1,11 +1,11 @@
 #Android Material Themes Made Easy
 
 <p align="center">
-  <img src="Images/Material Theme Variations.png" width=850/>
+  <img src="README Content/Material Theme Variations.png" width=850/>
 </p>
 
 ###TL;DR
-This is a demo and explanation of creating dynamically colorized [Material Design](https://www.google.com/design/spec/material-design/introduction.html) applications supporting Android 4.0 (API 15) and up. This is done with simple theme and style setup in conjunction with the [v7 AppCompat Support Library](http://developer.android.com/tools/support-library/features.html#v7-appcompat), allowing apps to brand the user interface without needing to generate assets.
+This is a demo Android application and explanation of creating dynamically colorized [Material Design](https://www.google.com/design/spec/material-design/introduction.html) applications supporting Android 4.0 (API 15) and up. The app shows the most common user interface elements tinted using an adjustable runtime theme as well as static themes. This is done with simple theme and style setup in conjunction with the [v7 AppCompat Support Library](http://developer.android.com/tools/support-library/features.html#v7-appcompat), allowing apps to brand the user interface without needing to generate assets.
 
 ###Styles And Themes
 Android was built with the concept that almost every user interface element of an app should be customizable, allowing apps to adjust their look and feel to express their brand all the while keeping the common behaviors that users already understand. To support this, Android has [styles](http://developer.android.com/guide/topics/resources/style-resource.html), which are defined in XML as collections of attributes that can be applied to [`Views`](http://developer.android.com/reference/android/view/View.html). A single style can adjust colors, dimensions, spacing, fonts, and any other customizable attributes that a `View` supports. By grouping these attributes together, a single style can be applied to many `Views`. If that style is updated, all of the `Views` using the style will update as well, without needing to adjust each and every `View`. Styles can also extend from other styles, with the ability to override and add new attributes to create multiple variations of a style. 
