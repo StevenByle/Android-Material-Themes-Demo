@@ -119,6 +119,8 @@ Now that we know how AppCompat is designed to work, let's put it all together. G
 </style>
 ```
 
+####Applying to Views
+
 Now that we have our colored theme, we can set it for our entire `Application` or `Activity` and it will set our custom AppCompat attributes to be used by all AppCompat `Views`. However, we can also theme an individual `View` or `ViewGroup` using the `android:theme` attribute, which `AppCompatActivity` handles reading and setting properly when it intercepts layouts as they are inflated. Let's assume we have set our green theme at the `Application` level, and we don't need to set our theme on each element.
 
 ```xml
@@ -240,20 +242,87 @@ Use `@style/Widget.AppCompat.CompoundButton.CheckBox` (default if not set), whic
 </p>
 
 ####Switches
+Use `@style/Widget.AppCompat.CompoundButton.Switch` (default if not set), which sets the switch color to `colorAccent` when activated, using `colorControlHighlight` as an overlay for focused and pressed states.
+
+```xml
+<Switch
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Green Theme"/>
+```
+<p align="left">
+  <img src="README Content/Green Switch.gif" width=200/>
+</p>
 
 ####Dropdown Spinners
+Use `@style/Widget.AppCompat.Spinner` (default if not set) or `@style/Widget.AppCompat.Spinner.Underlined`, which sets the underline color to `colorAccent` when activated, using `colorControlHighlight` as an overlay for focused and pressed states.
+
+```xml
+<Spinner
+    style="@style/Widget.AppCompat.Spinner.Underlined"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:spinnerMode="dropdown"/>
+```
+<p align="left">
+  <img src="README Content/Green Dropdown Spinner.gif" width=400/>
+</p>
 
 ####Sliders
+Use `@style/Widget.AppCompat.SeekBar` (default if not set), which sets the slider color to `colorAccent` when activated, using `colorControlNormal` for the unset area and `colorControlHighlight` as an overlay for focused and pressed states.
+
+```xml
+<SeekBar
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"/>
+```
+<p align="left">
+  <img src="README Content/Green Slider.gif" width=400/>
+</p>
 
 ####Progress Indicators
+Use `@style/Widget.AppCompat.ProgressBar` (default if not set) or `Widget.AppCompat.ProgressBar.Horizontal`, which sets the progress color to `colorAccent`.
+
+```xml
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"/>
+
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"/>
+</LinearLayout>
+```
+<p align="left">
+  <img src="README Content/Green Progress Indicators.gif" width=400/>
+</p>
 
 ####Icons
+[TODO]
 
 ####Dialogs
+Set `dialogTheme` and `alertDialogTheme` in the applied theme (shown earlier above), or just pass the dialog theme in the `AlertDialog.Builder` from the support library, which sets the button text color to `colorAccent`.
+
+<p align="left">
+  <img src="README Content/Green Alert Dialog.png" width=400/>
+</p>
 
 ####Snackbars
+Use the `Snackbar` from the design support library, which uses `colorAccent` of the current applied theme to set the action button text color, or use `Snackbar.setActionTextColor()` to change the color.
 
+<p align="left">
+  <img src="README Content/Green Snackbar.gif" width=450/>
+</p>
 
 ###Build Your Own
 
 ####Custom Selectable Items
+[TODO]
