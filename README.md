@@ -5,7 +5,23 @@
 </p>
 
 ###TL;DR
-This is a demo Android application and explanation of creating dynamically colorized [Material Design](https://www.google.com/design/spec/material-design/introduction.html) applications supporting Android 4.0 (API 15) and up. The app shows the most common user interface elements tinted using an adjustable runtime theme as well as static themes. This is done with simple theme and style setup in conjunction with the [v7 AppCompat Support Library](http://developer.android.com/tools/support-library/features.html#v7-appcompat), allowing apps to brand the user interface without needing to generate assets.
+This is a demo Android application and explanation of creating dynamically colorized [Material Design](https://www.google.com/design/spec/material-design/introduction.html) applications supporting Android 4.0 (API 15) and up. The app shows the most common user interface elements tinted using an adjustable runtime theme as well as static themes. This is done with simple theme and style setup in conjunction with the [v7 AppCompat Support Library](http://developer.android.com/tools/support-library/features.html#v7-appcompat), allowing apps to brand the user interface without needing to generate assets. If you just want the code, here's the quick links to the user interface elements covered.
+
+ - [Buttons](#buttons)
+ - [Borderless Buttons](#borderless-buttons)
+ - [Floating Action Buttons](#floating-action-buttons)
+ - [Text Fields](#text-fields)
+ - [Radio Buttons](#radio-buttons)
+ - [Checkboxes](#checkboxes)
+ - [Switches](#switches)
+ - [Dropdown Spinners](#dropdown-spinners)
+ - [Sliders](#sliders)
+ - [Progress Indicators](#progress-indicators)
+ - [Icons](#icons)
+ - [Dialogs](#dialogs)
+ - [Snackbars](#snackbars)
+ - [Custom Selectable Items](#custom-selectable-items)
+
 
 ###Styles And Themes
 Android was built with the concept that almost every user interface element of an app should be customizable, allowing apps to adjust their look and feel to express their brand all the while keeping the common behaviors that users already understand. To support this, Android has [styles](http://developer.android.com/guide/topics/resources/style-resource.html), which are defined in XML as collections of attributes that can be applied to [`Views`](http://developer.android.com/reference/android/view/View.html). A single style can adjust colors, dimensions, spacing, fonts, and any other customizable attributes that a `View` supports. By grouping these attributes together, a single style can be applied to many `Views`. If that style is updated, all of the `Views` using the style will update as well, without needing to adjust each and every `View`. Styles can also extend from other styles, with the ability to override and add new attributes to create multiple variations of a style. 
@@ -333,7 +349,7 @@ Set `android:tint` to tint the icon to a solid color. More advanced tinting is s
 </LinearLayout>
 ```
 <p align="left">
-  <img src="README Content/Green Icons.png" width=125/>
+  <img src="README Content/Green Icons.png" width=150/>
 </p>
 
 ####Dialogs
@@ -397,3 +413,6 @@ To get a colored rounded rectangular version, use `@style/SelectableItemStyle.Ro
 <p align="left">
   <img src="README Content/Green Selectable Rounded Rect Colored.gif" width=200/>
 </p>
+
+###Conclusions
+Making backwards compatible material design Android applications is much easier with AppCompat, especially when you understand how its styles and themes are working together to dynamically tint the user interface. With AppCompat, you should spend less time fiddling with assets and backwards compatibility, and more time focusing on actually building your application.
