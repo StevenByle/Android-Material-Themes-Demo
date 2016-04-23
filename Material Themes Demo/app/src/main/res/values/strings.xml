@@ -1,13 +1,13 @@
 <!-- @formatter:off -->
 <resources>
-    <!-- Global App -->
+    <!-- App -->
     <string name="app_name">Material Themes Made Easy</string>
 
     <!-- Home -->
     <string name="home_tab_xml">XML</string>
     <string name="home_tab_code">Code</string>
 
-    <!-- Change Theme Dialog -->
+    <!-- Set Theme Dialog -->
     <string name="set_theme_dialog_title">Set Theme</string>
     <string name="set_theme_dialog_button_positive">Set Theme</string>
     <string name="set_theme_dialog_button_negative">Cancel</string>
@@ -58,4 +58,8 @@
         <item>@string/spinner_item_4</item>
         <item>@string/spinner_item_5</item>
     </string-array>
+
+    <!-- Snackbars -->
+    <string name="snackbar_action">Action</string>
+
 </resources>

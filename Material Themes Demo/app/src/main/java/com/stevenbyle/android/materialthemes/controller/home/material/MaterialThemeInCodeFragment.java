@@ -194,7 +194,7 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
 
             case R.id.fragment_material_theme_button_snackbar_current_theme:
                 Snackbar.make(v, R.string.material_theme_current_theme, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.material_theme_current_theme, this)
+                        .setAction(R.string.snackbar_action, this)
                         .show();
                 break;
 
@@ -205,7 +205,7 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
                 a.recycle();
 
                 Snackbar.make(v, R.string.material_theme_green_theme, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.material_theme_green_theme, this)
+                        .setAction(R.string.snackbar_action, this)
                         .setActionTextColor(accentColor)
                         .show();
                 break;
@@ -217,7 +217,7 @@ public class MaterialThemeInCodeFragment extends Fragment implements OnClickList
                 a.recycle();
 
                 Snackbar.make(v, R.string.material_theme_blue_theme, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.material_theme_blue_theme, this)
+                        .setAction(R.string.snackbar_action, this)
                         .setActionTextColor(accentColor)
                         .show();
                 break;
