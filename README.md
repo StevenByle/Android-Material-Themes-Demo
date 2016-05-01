@@ -415,3 +415,19 @@ To get a colored rounded rectangular version, use `@style/SelectableItemStyle.Ro
 
 ###Conclusions
 Making backwards compatible material design Android applications is much easier with AppCompat, especially when you understand how its styles and themes are working together to dynamically tint the user interface. With AppCompat, you should spend less time fiddling with assets and backwards compatibility, and more time focusing on actually building your application.
+
+###License
+
+    Copyright 2016 Steven Byle
+    
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
