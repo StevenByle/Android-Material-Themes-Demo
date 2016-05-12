@@ -213,7 +213,7 @@ Use the `FloatingActionButton` from the design support library with `@style/Widg
 </p>
 
 ###Text Fields
-Use the `TextInputLayout` from the design support library with `@style/Widget.Design.TextInputLayout` (default if not set), which sets the label text color to `?colorAccent`. Wrap this around a `TextInputEditText` from the design support library with `@style/Widget.AppCompat.EditText` (default if not set), which sets the control colors to `colorAccent` when activated. 
+Use the `TextInputLayout` from the design support library with `@style/Widget.Design.TextInputLayout` (default if not set), which sets the label text color to `colorAccent`. Wrap this around a `TextInputEditText` from the design support library with `@style/Widget.AppCompat.EditText` (default if not set), which sets the control colors to `colorAccent` when activated. 
 
 ```xml
 <android.support.design.widget.TextInputLayout
@@ -302,7 +302,8 @@ Use `@style/Widget.AppCompat.ProgressBar` (default if not set) or `Widget.AppCom
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical">
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
 
     <ProgressBar
         android:layout_width="wrap_content"
