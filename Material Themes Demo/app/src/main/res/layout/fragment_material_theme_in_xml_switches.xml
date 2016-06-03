@@ -16,14 +16,14 @@
             android:text="@string/material_theme_switches"
             android:textAppearance="@style/TextStyle.Title"/>
 
-        <Switch
+        <android.support.v7.widget.SwitchCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/view_spacing_medium"
             android:switchPadding="@dimen/view_spacing_extra_small"
             android:text="@string/material_theme_current_theme"/>
 
-        <Switch
+        <android.support.v7.widget.SwitchCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/view_spacing_medium"
@@ -31,7 +31,7 @@
             android:text="@string/material_theme_green_theme"
             android:theme="@style/AppTheme.Green"/>
 
-        <Switch
+        <android.support.v7.widget.SwitchCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/view_spacing_medium"
