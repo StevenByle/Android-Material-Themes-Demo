@@ -257,10 +257,10 @@ Use `@style/Widget.AppCompat.CompoundButton.CheckBox` (default if not set), whic
 </p>
 
 ###Switches
-Use `@style/Widget.AppCompat.CompoundButton.Switch` (default if not set), which sets the switch color to `colorAccent` when activated, using `colorControlHighlight` as an overlay for focused and pressed states.
+Use `@style/Widget.AppCompat.CompoundButton.Switch` (default if not set), which sets the switch color to `colorAccent` when activated, using `colorControlHighlight` as an overlay for focused and pressed states. Note, due to the significant different in appearance of the Material switch vs the Holo switch, you must use `android.support.v7.widget.SwitchCompat` explicitly as AppCompat will not automatically replace `Switch` elements on pre Android 5.0 (API 21).
 
 ```xml
-<Switch
+<android.support.v7.widget.SwitchCompat
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
 	android:text="Green Theme"/>
