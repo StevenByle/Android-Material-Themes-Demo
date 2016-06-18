@@ -24,7 +24,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     // Google Support Libraries
-    def supportLibraryVersion = '23.3.0'
+    def supportLibraryVersion = '23.4.0'
     compile "com.android.support:support-v13:${supportLibraryVersion}"
     compile "com.android.support:design:${supportLibraryVersion}"
     compile "com.android.support:appcompat-v7:${supportLibraryVersion}"
