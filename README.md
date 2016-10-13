@@ -332,7 +332,6 @@ Set `android:tint` to tint the icon to a solid color. More advanced tinting is s
     android:orientation="horizontal">
 
     <ImageView
-        style="@style/ImageStyle.Colored"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:adjustViewBounds="true"
@@ -340,7 +339,6 @@ Set `android:tint` to tint the icon to a solid color. More advanced tinting is s
         android:tint="?colorAccent"/>
 
     <ImageView
-        style="@style/ImageStyle.Colored"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:adjustViewBounds="true"
